@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,13 @@
 		E53048A62645F423004BB80D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E53048A52645F423004BB80D /* Preview Assets.xcassets */; };
 		E53048B12645F423004BB80D /* GatherQRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048B02645F423004BB80D /* GatherQRTests.swift */; };
 		E53048BC2645F423004BB80D /* GatherQRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048BB2645F423004BB80D /* GatherQRUITests.swift */; };
+		E53048CB2646800A004BB80D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E53048CA2646800A004BB80D /* Realm */; };
+		E53048CD2646800A004BB80D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E53048CC2646800A004BB80D /* RealmSwift */; };
+		E53048D026468339004BB80D /* QRInfoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048CF26468339004BB80D /* QRInfoEntity.swift */; };
+		E53048D3264684BD004BB80D /* QRInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048D2264684BD004BB80D /* QRInfoModel.swift */; };
+		E53048D626468610004BB80D /* QRCodeUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048D526468610004BB80D /* QRCodeUtility.swift */; };
+		E53048D826474163004BB80D /* QRCodePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048D726474163004BB80D /* QRCodePreviewView.swift */; };
+		E53048DB26474302004BB80D /* QRCodeInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048DA26474302004BB80D /* QRCodeInfoRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +52,11 @@
 		E53048B72645F423004BB80D /* GatherQRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GatherQRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E53048BB2645F423004BB80D /* GatherQRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatherQRUITests.swift; sourceTree = "<group>"; };
 		E53048BD2645F423004BB80D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E53048CF26468339004BB80D /* QRInfoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRInfoEntity.swift; sourceTree = "<group>"; };
+		E53048D2264684BD004BB80D /* QRInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRInfoModel.swift; sourceTree = "<group>"; };
+		E53048D526468610004BB80D /* QRCodeUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeUtility.swift; sourceTree = "<group>"; };
+		E53048D726474163004BB80D /* QRCodePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodePreviewView.swift; sourceTree = "<group>"; };
+		E53048DA26474302004BB80D /* QRCodeInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeInfoRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E53048CD2646800A004BB80D /* RealmSwift in Frameworks */,
+				E53048CB2646800A004BB80D /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +109,11 @@
 		E530489D2645F422004BB80D /* GatherQR */ = {
 			isa = PBXGroup;
 			children = (
+				E53048D9264742B1004BB80D /* Views */,
+				E53048D426468600004BB80D /* Utility */,
+				E53048CE26468016004BB80D /* Realm */,
+				E53048D1264684AB004BB80D /* Model */,
 				E530489E2645F422004BB80D /* GatherQRApp.swift */,
-				E53048A02645F422004BB80D /* ContentView.swift */,
 				E53048A22645F423004BB80D /* Assets.xcassets */,
 				E53048A72645F423004BB80D /* Info.plist */,
 				E53048A42645F423004BB80D /* Preview Content */,
@@ -130,6 +147,40 @@
 			path = GatherQRUITests;
 			sourceTree = "<group>";
 		};
+		E53048CE26468016004BB80D /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				E53048CF26468339004BB80D /* QRInfoEntity.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		E53048D1264684AB004BB80D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E53048D2264684BD004BB80D /* QRInfoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E53048D426468600004BB80D /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				E53048D526468610004BB80D /* QRCodeUtility.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		E53048D9264742B1004BB80D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E53048A02645F422004BB80D /* ContentView.swift */,
+				E53048D726474163004BB80D /* QRCodePreviewView.swift */,
+				E53048DA26474302004BB80D /* QRCodeInfoRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +197,10 @@
 			dependencies = (
 			);
 			name = GatherQR;
+			packageProductDependencies = (
+				E53048CA2646800A004BB80D /* Realm */,
+				E53048CC2646800A004BB80D /* RealmSwift */,
+			);
 			productName = GatherQR;
 			productReference = E530489B2645F422004BB80D /* GatherQR.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +272,9 @@
 				Base,
 			);
 			mainGroup = E53048922645F422004BB80D;
+			packageReferences = (
+				E53048C92646800A004BB80D /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = E530489C2645F422004BB80D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,7 +317,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E53048D3264684BD004BB80D /* QRInfoModel.swift in Sources */,
+				E53048D626468610004BB80D /* QRCodeUtility.swift in Sources */,
+				E53048DB26474302004BB80D /* QRCodeInfoRow.swift in Sources */,
 				E53048A12645F422004BB80D /* ContentView.swift in Sources */,
+				E53048D826474163004BB80D /* QRCodePreviewView.swift in Sources */,
+				E53048D026468339004BB80D /* QRInfoEntity.swift in Sources */,
 				E530489F2645F422004BB80D /* GatherQRApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,6 +643,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E53048C92646800A004BB80D /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.7.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E53048CA2646800A004BB80D /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E53048C92646800A004BB80D /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		E53048CC2646800A004BB80D /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E53048C92646800A004BB80D /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E53048932645F422004BB80D /* Project object */;
 }

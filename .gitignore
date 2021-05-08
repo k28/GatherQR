@@ -22,6 +22,20 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 
+## Obj-C/Swift specific
+*.hmap
+
 ## Gcc Patch
 /*.gcno
+
+## Swift Package Manager
+Packages/
+Package.pins
+Package.resolved
+*.xcodeproj
+
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
 

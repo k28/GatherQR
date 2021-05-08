@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    var item: QRInfoModelProtocol
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        HStack {
+            Text("Hello!")
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(item: QRInfoModel())
     }
 }
