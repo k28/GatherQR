@@ -20,7 +20,7 @@ struct QRCodeInfoRow: View {
 struct QRCodeInfoRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ContentView(item: QRInfoModel())
+            QRCodeInfoRow(item: QRInfoModel())
         }
         .previewLayout(.fixed(width: 300, height: 70))
 

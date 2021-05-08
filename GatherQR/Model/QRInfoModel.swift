@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 protocol QRInfoModelProtocol {
+    var id: Int { get }
     var title: String { get set }
     var value: String { get set }
     
@@ -17,6 +18,7 @@ protocol QRInfoModelProtocol {
 }
 
 struct QRInfoModel: QRInfoModelProtocol {
+    var id: Int = 0
     var title: String = "Sample Code"
     var value: String = "Hello World"
     

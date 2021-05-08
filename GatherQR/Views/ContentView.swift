@@ -8,17 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
-    var item: QRInfoModelProtocol
+    var qecodeList: QRInfoListProtocol
     
     var body: some View {
-        HStack {
-            Text("Hello!")
+        NavigationView {
+            List {
+                ForEach(qecodeList.qrInfoList(), id: \.id) { item in
+                    NavigationLink(destination: QRCodePreviewView(item: item)) {
+                        QRCodeInfoRow(item: item)
+                    }
+                }
+            }
+            
+            .navigationTitle("QRCode List")
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(item: QRInfoModel())
+        ContentView(qecodeList: QRInfoList())
     }
 }
