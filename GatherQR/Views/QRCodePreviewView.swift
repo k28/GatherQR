@@ -9,6 +9,7 @@ import SwiftUI
 
 struct QRCodePreviewView: View {
     var item: QRInfoModelProtocol
+    @State var brightness: CGFloat = 1.0
     
     var body: some View {
         VStack {
@@ -17,6 +18,18 @@ struct QRCodePreviewView: View {
                 .scaledToFit()
         }
         .navigationTitle(item.title)
+        
+        .onAppear() {
+            if UIScreen.main.brightness != 1.0 {
+                brightness = UIScreen.main.brightness
+                UIScreen.main.brightness = 1.0
+            }
+        }
+        .onDisappear() {
+            if brightness != 1.0 {
+                UIScreen.main.brightness = brightness
+            }
+        }
     }
 }
 
