@@ -8,19 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selection = 0
     var qecodeList: QRInfoListProtocol
     
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(qecodeList.qrInfoList(), id: \.id) { item in
-                    NavigationLink(destination: QRCodePreviewView(item: item)) {
-                        QRCodeInfoRow(item: item)
+        TabView(selection: $selection) {
+            QRCodeInfoList(qecodeList: qecodeList)
+                .tabItem {
+                    VStack {
+                        Image(systemName: "list.dash")
+                        Text("QRCodeList")
                     }
-                }
-            }
-            
-            .navigationTitle("QRCode List")
+                }.tag(0)
+            ScanQRCodeView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "qrcode.viewfinder")
+                        Text("Add")
+                    }
+                }.tag(1)
+            // TODO 情報表示のTabを追加する
         }
     }
 }

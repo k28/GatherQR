@@ -14,10 +14,11 @@ protocol QRInfoListProtocol {
 struct QRInfoList: QRInfoListProtocol {
 
     func qrInfoList() -> [QRInfoModelProtocol] {
-        return [
-            QRInfoModel(id: 0, title: "first", value: "Apple"),
-            QRInfoModel(id: 1, title: "second", value: "Orange"),
-        ]
+        var list = [QRInfoModelProtocol]()
+        for i in 1..<10 {
+            list.append(QRInfoModel(id: i, title: "\(i) item", value: "Apple"))
+        }
+        return list
     }
 
 }
