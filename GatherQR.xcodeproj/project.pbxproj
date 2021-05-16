@@ -23,6 +23,10 @@
 		E53048DD264744C4004BB80D /* QRInfoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048DC264744C4004BB80D /* QRInfoList.swift */; };
 		E53ABD97264FC346009AFAB3 /* QRCodeInfoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53ABD96264FC346009AFAB3 /* QRCodeInfoList.swift */; };
 		E53ABD99264FC81E009AFAB3 /* ScanQRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53ABD98264FC81E009AFAB3 /* ScanQRCodeView.swift */; };
+		E53ABD9B264FCD75009AFAB3 /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53ABD9A264FCD75009AFAB3 /* ScannerViewModel.swift */; };
+		E53ABD9D264FCFBA009AFAB3 /* QRCodeCameraDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53ABD9C264FCFBA009AFAB3 /* QRCodeCameraDelegate.swift */; };
+		E53ABD9F264FD1B8009AFAB3 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53ABD9E264FD1B8009AFAB3 /* CameraPreview.swift */; };
+		E53ABDA126509F40009AFAB3 /* QRCodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53ABDA026509F40009AFAB3 /* QRCodeScannerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		E53048DC264744C4004BB80D /* QRInfoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRInfoList.swift; sourceTree = "<group>"; };
 		E53ABD96264FC346009AFAB3 /* QRCodeInfoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeInfoList.swift; sourceTree = "<group>"; };
 		E53ABD98264FC81E009AFAB3 /* ScanQRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeView.swift; sourceTree = "<group>"; };
+		E53ABD9A264FCD75009AFAB3 /* ScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
+		E53ABD9C264FCFBA009AFAB3 /* QRCodeCameraDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeCameraDelegate.swift; sourceTree = "<group>"; };
+		E53ABD9E264FD1B8009AFAB3 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+		E53ABDA026509F40009AFAB3 /* QRCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +174,8 @@
 			children = (
 				E53048D2264684BD004BB80D /* QRInfoModel.swift */,
 				E53048DC264744C4004BB80D /* QRInfoList.swift */,
+				E53ABD9A264FCD75009AFAB3 /* ScannerViewModel.swift */,
+				E53ABD9C264FCFBA009AFAB3 /* QRCodeCameraDelegate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,10 +191,12 @@
 		E53048D9264742B1004BB80D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E53ABD9E264FD1B8009AFAB3 /* CameraPreview.swift */,
 				E53048A02645F422004BB80D /* ContentView.swift */,
-				E53048D726474163004BB80D /* QRCodePreviewView.swift */,
-				E53048DA26474302004BB80D /* QRCodeInfoRow.swift */,
 				E53ABD96264FC346009AFAB3 /* QRCodeInfoList.swift */,
+				E53048DA26474302004BB80D /* QRCodeInfoRow.swift */,
+				E53048D726474163004BB80D /* QRCodePreviewView.swift */,
+				E53ABDA026509F40009AFAB3 /* QRCodeScannerView.swift */,
 				E53ABD98264FC81E009AFAB3 /* ScanQRCodeView.swift */,
 			);
 			path = Views;
@@ -327,9 +339,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E53048D3264684BD004BB80D /* QRInfoModel.swift in Sources */,
+				E53ABD9F264FD1B8009AFAB3 /* CameraPreview.swift in Sources */,
 				E53ABD97264FC346009AFAB3 /* QRCodeInfoList.swift in Sources */,
+				E53ABD9B264FCD75009AFAB3 /* ScannerViewModel.swift in Sources */,
+				E53ABD9D264FCFBA009AFAB3 /* QRCodeCameraDelegate.swift in Sources */,
 				E53048D626468610004BB80D /* QRCodeUtility.swift in Sources */,
 				E53048DB26474302004BB80D /* QRCodeInfoRow.swift in Sources */,
+				E53ABDA126509F40009AFAB3 /* QRCodeScannerView.swift in Sources */,
 				E53048A12645F422004BB80D /* ContentView.swift in Sources */,
 				E53048D826474163004BB80D /* QRCodePreviewView.swift in Sources */,
 				E53048D026468339004BB80D /* QRInfoEntity.swift in Sources */,
