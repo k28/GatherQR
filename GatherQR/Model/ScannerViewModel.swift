@@ -5,20 +5,20 @@
 //  Created by K.Hatano on 2021/05/15.
 //
 
-import Foundation
+import UIKit
 
 class ScannerViewModel: ObservableObject {
     
     /// Defines how offten we are goint to try looking for a new QR-code in the camera frame
     let scanInterval: Double = 1.0
     
-    @Published var touchIsOn = false
+    @Published var torchIsOn = false
     @Published var lastQRCode: String = "Qr-code goes here..."
+    @Published var qrCodeFound = false
     
     func onFoundQRCode(_ code: String) {
         self.lastQRCode = code
-        
-        NSLog("kitakita \(code)")
+        self.qrCodeFound = true
     }
     
 }

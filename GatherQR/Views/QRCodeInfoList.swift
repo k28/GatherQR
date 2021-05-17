@@ -13,7 +13,7 @@ struct QRCodeInfoList: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(qecodeList.qrInfoList(), id: \.id) { item in
+                ForEach(qecodeList.qrInfoList(), id: \.uuid) { item in
                     NavigationLink(destination: QRCodePreviewView(item: item)) {
                         QRCodeInfoRow(item: item)
                     }
