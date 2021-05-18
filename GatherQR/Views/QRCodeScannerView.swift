@@ -9,7 +9,7 @@ import SwiftUI
 import UIKit
 import AVFoundation
 
-struct QRCodeScannerView: UIViewRepresentable {
+final class QRCodeScannerView: UIViewRepresentable {
     
     var supportedBarcodeTypes: [AVMetadataObject.ObjectType] = [.qr]
     typealias UIViewType = CameraPreview
@@ -17,6 +17,7 @@ struct QRCodeScannerView: UIViewRepresentable {
     private let session = AVCaptureSession()
     private let delegate = QRCodeCameraDelegate()
     private let metadataOutput = AVCaptureMetadataOutput()
+    private var cameraView_: CameraPreview?
     
     func onTorchLight(isOn: Bool) -> QRCodeScannerView {
         if let backCamera = AVCaptureDevice.default(for: .video) {
@@ -75,7 +76,15 @@ struct QRCodeScannerView: UIViewRepresentable {
     }
     
     func makeUIView(context: UIViewRepresentableContext<QRCodeScannerView>) -> QRCodeScannerView.UIViewType {
+        // makeUIView was called twice, and the camera was slow to start.
+        // Cache CameraPreview and return it thereafter.
+        
+        if cameraView_ != nil {
+            return cameraView_!
+        }
+        
         let cameraView = CameraPreview(session: session)
+        cameraView_ = cameraView
         
         #if targetEnvironment(simulator)
         cameraView.createSimulatorView(delegate: self.delegate)
