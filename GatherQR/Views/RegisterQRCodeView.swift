@@ -28,9 +28,13 @@ struct RegisterQRCodeView: View {
                     }
                     
                     Section {
-                        Button(action: { viewModel.registerQRCode() }, label: {
+                        Button(action: {
+                            viewModel.registerQRCode()
+                            presentationMode.wrappedValue.dismiss()
+                        }, label: {
                             Text("追加")
                         })
+                        .disabled(viewModel.isEnableSave == false)
                     }
                 }
                 .navigationTitle("QRコードの追加")

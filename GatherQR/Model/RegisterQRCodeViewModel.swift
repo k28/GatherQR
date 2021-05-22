@@ -10,12 +10,25 @@ import UIKit
 class RegisterQRCodeViewModel: ObservableObject {
     
     var qrCode: String = ""
-    var title: String = ""
+    var title: String = "" {
+        didSet {
+            validate()
+        }
+    }
     var createDate = Date()
+    
+    @Published var isEnableSave: Bool = false
         
     init(qrCode: String) {
         self.qrCode = qrCode
         self.createDate = Date()
+    }
+    
+    func validate() {
+        isEnableSave = false
+        if title.isEmpty { return }
+        
+        isEnableSave = true
     }
     
     func qrCodeImage() -> UIImage {
