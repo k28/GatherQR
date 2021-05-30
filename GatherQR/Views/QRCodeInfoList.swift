@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct QRCodeInfoList: View {
-    var qecodeList: QRInfoListProtocol
+    var model: QRInfoListProtocol
+    @State var qrcodeList: [QRInfoModelProtocol] = []
 
     var body: some View {
         NavigationView {
             List {
-                ForEach(qecodeList.qrInfoList(), id: \.uuid) { item in
+                ForEach(qrcodeList, id: \.uuid) { item in
                     NavigationLink(destination: QRCodePreviewView(item: item)) {
                         QRCodeInfoRow(item: item)
                     }
@@ -21,11 +22,19 @@ struct QRCodeInfoList: View {
             }
             .navigationTitle("QRCode List")
         }
+        .onAppear() {
+            qrcodeList = model.qrInfoList()
+        }
+    }
+    
+    func reloadData() {
+        qrcodeList = model.qrInfoList()
     }
 }
 
 struct QRCodeInfoList_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(qecodeList: QRInfoList())
+        let model = QRInfoList()
+        ContentView(qecodeList: model)
     }
 }

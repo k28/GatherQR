@@ -12,8 +12,9 @@ struct ContentView: View {
     var qecodeList: QRInfoListProtocol
     
     var body: some View {
+        let qrInfoList = QRCodeInfoList(model: qecodeList)
         TabView(selection: $selection) {
-            QRCodeInfoList(qecodeList: qecodeList)
+            qrInfoList
                 .tabItem {
                     VStack {
                         Image(systemName: "list.dash")
@@ -28,6 +29,12 @@ struct ContentView: View {
                     }
                 }.tag(1)
             // TODO 情報表示のTabを追加する
+                .onChange(of: selection){ selection in
+                    if selection == 0 {
+                        // Viewをリフレッシュさせたい...
+                        qrInfoList.reloadData()
+                    }
+                }
         }
     }
 }
