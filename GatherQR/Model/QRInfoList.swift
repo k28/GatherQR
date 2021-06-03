@@ -9,6 +9,9 @@ import Foundation
 
 protocol QRInfoListProtocol {
     func qrInfoList() -> [QRInfoModelProtocol]
+    
+    /// 指定された項目を削除する
+    func remove(item: QRInfoModelProtocol) -> Bool
 }
 
 struct QRInfoList: QRInfoListProtocol {
@@ -23,6 +26,14 @@ struct QRInfoList: QRInfoListProtocol {
         return list
         #else
         return loadFromDB()
+        #endif
+    }
+    
+    func remove(item: QRInfoModelProtocol) -> Bool {
+        #if targetEnvironment(simulator)
+        return true
+        #else
+        return QRInfoEntity.remove(uuid: item.uuid)
         #endif
     }
     

@@ -19,11 +19,26 @@ struct QRCodeInfoList: View {
                         QRCodeInfoRow(item: item)
                     }
                 }
+                .onDelete(perform: removeItem)
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    EditButton()
+                }
             }
             .navigationTitle("QRCode List")
         }
         .onAppear() {
             qrcodeList = model.qrInfoList()
+        }
+    }
+    
+    func removeItem(offsets: IndexSet) {
+        offsets.forEach { index in
+            let deleteItem = qrcodeList[index]
+            if model.remove(item: deleteItem) {
+                self.qrcodeList.remove(at: index)
+            }
         }
     }
     

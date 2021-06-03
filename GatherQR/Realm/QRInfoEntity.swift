@@ -27,6 +27,22 @@ extension QRInfoEntity {
         return entiry
     }
     
+    /// 指定された項目を削除する
+    static func remove(uuid: String) -> Bool {
+        let realm = RealmUtility.defaultRealm()
+        let deleteItem = realm.objects(QRInfoEntity.self).filter("uuid == %@", uuid)
+        print("deleteItem.count = \(deleteItem.count)")
+        if deleteItem.count == 0 {
+            return false
+        }
+        
+        try? realm.write {
+            realm.delete(deleteItem)
+        }
+        
+        return true
+    }
+    
     static func upsert(uuid: String, title: String, value: String) {
         
         // TODO upsertできるようにする
