@@ -12,7 +12,14 @@ struct QRCodeInfoRow: View {
     
     var body: some View {
         HStack {
-            Text(item.title)
+            VStack(alignment: .leading) {
+                Text(item.title)
+                    .font(.title)
+                    .foregroundColor(.primary)
+                Text(item.createDateString())
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            }
         }
     }
 }
