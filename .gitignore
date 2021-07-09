@@ -39,3 +39,8 @@ Package.resolved
 *.dSYM.zip
 *.dSYM
 
+# CocoaPods
+Pods
+
+# Application specific
+GoogleService-Info.plist

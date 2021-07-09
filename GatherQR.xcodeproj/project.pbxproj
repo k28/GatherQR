@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0287938F39FAF8F7BD5D074C /* Pods_GatherQR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C3C5C4BE9C567ABA06575A8 /* Pods_GatherQR.framework */; };
+		059ABF15A51095014E29ADB5 /* Pods_GatherQR_GatherQRUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D3C162CBF9D071E8A480F3 /* Pods_GatherQR_GatherQRUITests.framework */; };
+		30D4AA644A3B0C98FAE2E2B5 /* Pods_GatherQRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95F98541221BDA2FC235A51B /* Pods_GatherQRTests.framework */; };
+		E50D56DD2698E4D90057ED8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E50D56DC2698E4D90057ED8C /* GoogleService-Info.plist */; };
+		E50D56DE2698E4D90057ED8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E50D56DC2698E4D90057ED8C /* GoogleService-Info.plist */; };
+		E50D56DF2698E4D90057ED8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E50D56DC2698E4D90057ED8C /* GoogleService-Info.plist */; };
 		E530489F2645F422004BB80D /* GatherQRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E530489E2645F422004BB80D /* GatherQRApp.swift */; };
 		E53048A12645F422004BB80D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048A02645F422004BB80D /* ContentView.swift */; };
 		E53048A32645F423004BB80D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E53048A22645F423004BB80D /* Assets.xcassets */; };
 		E53048A62645F423004BB80D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E53048A52645F423004BB80D /* Preview Assets.xcassets */; };
 		E53048B12645F423004BB80D /* GatherQRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048B02645F423004BB80D /* GatherQRTests.swift */; };
 		E53048BC2645F423004BB80D /* GatherQRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048BB2645F423004BB80D /* GatherQRUITests.swift */; };
-		E53048CB2646800A004BB80D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E53048CA2646800A004BB80D /* Realm */; };
-		E53048CD2646800A004BB80D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E53048CC2646800A004BB80D /* RealmSwift */; };
+		E53048CB2646800A004BB80D /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = E53048CA2646800A004BB80D /* SwiftPackageProductDependency */; };
+		E53048CD2646800A004BB80D /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = E53048CC2646800A004BB80D /* SwiftPackageProductDependency */; };
 		E53048D026468339004BB80D /* QRInfoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048CF26468339004BB80D /* QRInfoEntity.swift */; };
 		E53048D3264684BD004BB80D /* QRInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048D2264684BD004BB80D /* QRInfoModel.swift */; };
 		E53048D626468610004BB80D /* QRCodeUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048D526468610004BB80D /* QRCodeUtility.swift */; };
@@ -50,6 +56,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		060D80D79D7EDA074703D2B6 /* Pods-GatherQRTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GatherQRTests.release.xcconfig"; path = "Target Support Files/Pods-GatherQRTests/Pods-GatherQRTests.release.xcconfig"; sourceTree = "<group>"; };
+		1C3C5C4BE9C567ABA06575A8 /* Pods_GatherQR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GatherQR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46D3C162CBF9D071E8A480F3 /* Pods_GatherQR_GatherQRUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GatherQR_GatherQRUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75BA4D4EDBE732051EDC9801 /* Pods-GatherQR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GatherQR.release.xcconfig"; path = "Target Support Files/Pods-GatherQR/Pods-GatherQR.release.xcconfig"; sourceTree = "<group>"; };
+		8413ED43541D367C7D73A88B /* Pods-GatherQR-GatherQRUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GatherQR-GatherQRUITests.release.xcconfig"; path = "Target Support Files/Pods-GatherQR-GatherQRUITests/Pods-GatherQR-GatherQRUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9270CE1B903EB1276F03D856 /* Pods-GatherQRTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GatherQRTests.debug.xcconfig"; path = "Target Support Files/Pods-GatherQRTests/Pods-GatherQRTests.debug.xcconfig"; sourceTree = "<group>"; };
+		95F98541221BDA2FC235A51B /* Pods_GatherQRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GatherQRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE93543294FCF177FE907229 /* Pods-GatherQR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GatherQR.debug.xcconfig"; path = "Target Support Files/Pods-GatherQR/Pods-GatherQR.debug.xcconfig"; sourceTree = "<group>"; };
+		E50D56DC2698E4D90057ED8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E530489B2645F422004BB80D /* GatherQR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GatherQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E530489E2645F422004BB80D /* GatherQRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatherQRApp.swift; sourceTree = "<group>"; };
 		E53048A02645F422004BB80D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +92,7 @@
 		E53ABDA226514682009AFAB3 /* RegisterQRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterQRCodeView.swift; sourceTree = "<group>"; };
 		E53ABDA42651482C009AFAB3 /* RegisterQRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterQRCodeViewModel.swift; sourceTree = "<group>"; };
 		E53ABDA62651582B009AFAB3 /* RealmUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUtility.swift; sourceTree = "<group>"; };
+		FA58F7778495429C4E7B52AB /* Pods-GatherQR-GatherQRUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GatherQR-GatherQRUITests.debug.xcconfig"; path = "Target Support Files/Pods-GatherQR-GatherQRUITests/Pods-GatherQR-GatherQRUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +100,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E53048CD2646800A004BB80D /* RealmSwift in Frameworks */,
-				E53048CB2646800A004BB80D /* Realm in Frameworks */,
+				E53048CD2646800A004BB80D /* BuildFile in Frameworks */,
+				E53048CB2646800A004BB80D /* BuildFile in Frameworks */,
+				0287938F39FAF8F7BD5D074C /* Pods_GatherQR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30D4AA644A3B0C98FAE2E2B5 /* Pods_GatherQRTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,12 +118,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				059ABF15A51095014E29ADB5 /* Pods_GatherQR_GatherQRUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1CEE315C274DF0F9887124C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C3C5C4BE9C567ABA06575A8 /* Pods_GatherQR.framework */,
+				46D3C162CBF9D071E8A480F3 /* Pods_GatherQR_GatherQRUITests.framework */,
+				95F98541221BDA2FC235A51B /* Pods_GatherQRTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDE79B38CB95E34114EFA35B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE93543294FCF177FE907229 /* Pods-GatherQR.debug.xcconfig */,
+				75BA4D4EDBE732051EDC9801 /* Pods-GatherQR.release.xcconfig */,
+				FA58F7778495429C4E7B52AB /* Pods-GatherQR-GatherQRUITests.debug.xcconfig */,
+				8413ED43541D367C7D73A88B /* Pods-GatherQR-GatherQRUITests.release.xcconfig */,
+				9270CE1B903EB1276F03D856 /* Pods-GatherQRTests.debug.xcconfig */,
+				060D80D79D7EDA074703D2B6 /* Pods-GatherQRTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E53048922645F422004BB80D = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +156,8 @@
 				E53048AF2645F423004BB80D /* GatherQRTests */,
 				E53048BA2645F423004BB80D /* GatherQRUITests */,
 				E530489C2645F422004BB80D /* Products */,
+				CDE79B38CB95E34114EFA35B /* Pods */,
+				A1CEE315C274DF0F9887124C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +180,7 @@
 				E53048D1264684AB004BB80D /* Model */,
 				E530489E2645F422004BB80D /* GatherQRApp.swift */,
 				E53048A22645F423004BB80D /* Assets.xcassets */,
+				E50D56DC2698E4D90057ED8C /* GoogleService-Info.plist */,
 				E53048A72645F423004BB80D /* Info.plist */,
 				E53048A42645F423004BB80D /* Preview Content */,
 			);
@@ -218,9 +264,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E53048C02645F423004BB80D /* Build configuration list for PBXNativeTarget "GatherQR" */;
 			buildPhases = (
+				D5CC315958B5279B9D9598A9 /* [CP] Check Pods Manifest.lock */,
 				E53048972645F422004BB80D /* Sources */,
 				E53048982645F422004BB80D /* Frameworks */,
 				E53048992645F422004BB80D /* Resources */,
+				FC43E82F28336913C34D61AC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -228,8 +276,8 @@
 			);
 			name = GatherQR;
 			packageProductDependencies = (
-				E53048CA2646800A004BB80D /* Realm */,
-				E53048CC2646800A004BB80D /* RealmSwift */,
+				E53048CA2646800A004BB80D /* SwiftPackageProductDependency */,
+				E53048CC2646800A004BB80D /* SwiftPackageProductDependency */,
 			);
 			productName = GatherQR;
 			productReference = E530489B2645F422004BB80D /* GatherQR.app */;
@@ -239,6 +287,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E53048C32645F423004BB80D /* Build configuration list for PBXNativeTarget "GatherQRTests" */;
 			buildPhases = (
+				29E33DC61D0A3F7058225F07 /* [CP] Check Pods Manifest.lock */,
 				E53048A82645F423004BB80D /* Sources */,
 				E53048A92645F423004BB80D /* Frameworks */,
 				E53048AA2645F423004BB80D /* Resources */,
@@ -257,9 +306,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E53048C62645F423004BB80D /* Build configuration list for PBXNativeTarget "GatherQRUITests" */;
 			buildPhases = (
+				4ED5372BEE435C70F1D2A04C /* [CP] Check Pods Manifest.lock */,
 				E53048B32645F423004BB80D /* Sources */,
 				E53048B42645F423004BB80D /* Frameworks */,
 				E53048B52645F423004BB80D /* Resources */,
+				8D6EC550DB3F8FB0D976C0F7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -303,7 +354,7 @@
 			);
 			mainGroup = E53048922645F422004BB80D;
 			packageReferences = (
-				E53048C92646800A004BB80D /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				E53048C92646800A004BB80D /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = E530489C2645F422004BB80D /* Products */;
 			projectDirPath = "";
@@ -323,6 +374,7 @@
 			files = (
 				E53048A62645F423004BB80D /* Preview Assets.xcassets in Resources */,
 				E53048A32645F423004BB80D /* Assets.xcassets in Resources */,
+				E50D56DD2698E4D90057ED8C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +382,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E50D56DE2698E4D90057ED8C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,10 +390,114 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E50D56DF2698E4D90057ED8C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29E33DC61D0A3F7058225F07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GatherQRTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4ED5372BEE435C70F1D2A04C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GatherQR-GatherQRUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D6EC550DB3F8FB0D976C0F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GatherQR-GatherQRUITests/Pods-GatherQR-GatherQRUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GatherQR-GatherQRUITests/Pods-GatherQR-GatherQRUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GatherQR-GatherQRUITests/Pods-GatherQR-GatherQRUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5CC315958B5279B9D9598A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GatherQR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC43E82F28336913C34D61AC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GatherQR/Pods-GatherQR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GatherQR/Pods-GatherQR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GatherQR/Pods-GatherQR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E53048972645F422004BB80D /* Sources */ = {
@@ -517,6 +674,7 @@
 		};
 		E53048C12645F423004BB80D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE93543294FCF177FE907229 /* Pods-GatherQR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -539,6 +697,7 @@
 		};
 		E53048C22645F423004BB80D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75BA4D4EDBE732051EDC9801 /* Pods-GatherQR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -561,6 +720,7 @@
 		};
 		E53048C42645F423004BB80D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9270CE1B903EB1276F03D856 /* Pods-GatherQRTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -583,6 +743,7 @@
 		};
 		E53048C52645F423004BB80D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 060D80D79D7EDA074703D2B6 /* Pods-GatherQRTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -605,6 +766,7 @@
 		};
 		E53048C72645F423004BB80D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA58F7778495429C4E7B52AB /* Pods-GatherQR-GatherQRUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -625,6 +787,7 @@
 		};
 		E53048C82645F423004BB80D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8413ED43541D367C7D73A88B /* Pods-GatherQR-GatherQRUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -685,7 +848,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E53048C92646800A004BB80D /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+		E53048C92646800A004BB80D /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa";
 			requirement = {
@@ -696,14 +859,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E53048CA2646800A004BB80D /* Realm */ = {
+		E53048CA2646800A004BB80D /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E53048C92646800A004BB80D /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			package = E53048C92646800A004BB80D /* RemoteSwiftPackageReference */;
 			productName = Realm;
 		};
-		E53048CC2646800A004BB80D /* RealmSwift */ = {
+		E53048CC2646800A004BB80D /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E53048C92646800A004BB80D /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			package = E53048C92646800A004BB80D /* RemoteSwiftPackageReference */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
