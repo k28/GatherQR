@@ -44,31 +44,20 @@ extension QRInfoEntity {
     }
     
     static func upsert(uuid: String, title: String, value: String) {
-        
-        // TODO upsertできるようにする
-        
         let realm = RealmUtility.defaultRealm()
-//        if let entity = realm.objects(QRInfoEntity.self).filter("uuid = \(uuid)").first {
-//            try? realm.write {
-//                entity.title = title
-//                entity.value = value
-//            }
-//        } else {
-//            let entity = make(value: value)
-//            entity.uuid = uuid
-//            entity.title = title
-//            try? realm.write {
-//                realm.add(entity)
-//            }
-//        }
-        
-        let entity = make(value: value)
-        entity.uuid = uuid
-        entity.title = title
-        try? realm.write {
-            realm.add(entity)
+        if let entity = realm.objects(QRInfoEntity.self).filter(#"uuid = '\#(uuid)'"#).first {
+            try? realm.write {
+                entity.title = title
+                entity.value = value
+            }
+        } else {
+            let entity = make(value: value)
+            entity.uuid = uuid
+            entity.title = title
+            try? realm.write {
+                realm.add(entity)
+            }
         }
-
     }
 }
 
