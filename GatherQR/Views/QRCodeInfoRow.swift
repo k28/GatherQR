@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct QRCodeInfoRow: View {
-    var item: QRInfoModelProtocol
+    @ObservedObject var item: QRCodeInfoRowViewModel
+    @State var editButtonDidSelect = false
     
     var body: some View {
         HStack {
@@ -20,6 +21,25 @@ struct QRCodeInfoRow: View {
                     .font(.subheadline)
                     .foregroundColor(.secondary)
             }
+            
+            Spacer()
+            
+            Image(systemName: "pencil.circle")
+                .foregroundColor(.gray)
+                .onTapGesture {
+                    print("Button Pushed!!")
+                    editButtonDidSelect = true
+                }
+            
+            NavigationLink(destination: RegisterQRCodeView(viewModel: RegisterQRCodeViewModel(info: item.qrInfoModel, onUpdate: { model in
+                item.title = model.title
+            } )),
+                           isActive: $editButtonDidSelect) {
+                EmptyView()
+            }
+            .frame(width: 0, height: 0)
+            .opacity(0.0)
+            .buttonStyle(PlainButtonStyle())
         }
     }
 }
@@ -27,7 +47,7 @@ struct QRCodeInfoRow: View {
 struct QRCodeInfoRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            QRCodeInfoRow(item: QRInfoModel())
+            QRCodeInfoRow(item: QRCodeInfoRowViewModel(model: QRInfoModel()))
         }
         .previewLayout(.fixed(width: 300, height: 70))
 

@@ -32,12 +32,12 @@ struct RegisterQRCodeView: View {
                             viewModel.registerQRCode()
                             presentationMode.wrappedValue.dismiss()
                         }, label: {
-                            Text("追加")
+                            Text("登録")
                         })
                         .disabled(viewModel.isEnableSave == false)
                     }
                 }
-                .navigationTitle("QRコードの追加")
+                .navigationTitle("QRコードの登録")
             }
         }
     }

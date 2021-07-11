@@ -16,7 +16,7 @@ struct QRCodeInfoList: View {
             List {
                 ForEach(qrcodeList, id: \.uuid) { item in
                     NavigationLink(destination: QRCodePreviewView(item: item)) {
-                        QRCodeInfoRow(item: item)
+                        QRCodeInfoRow(item: QRCodeInfoRowViewModel(model: item))
                     }
                 }
                 .onDelete(perform: removeItem)

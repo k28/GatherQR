@@ -19,8 +19,8 @@
 		E53048A62645F423004BB80D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E53048A52645F423004BB80D /* Preview Assets.xcassets */; };
 		E53048B12645F423004BB80D /* GatherQRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048B02645F423004BB80D /* GatherQRTests.swift */; };
 		E53048BC2645F423004BB80D /* GatherQRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048BB2645F423004BB80D /* GatherQRUITests.swift */; };
-		E53048CB2646800A004BB80D /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = E53048CA2646800A004BB80D /* SwiftPackageProductDependency */; };
-		E53048CD2646800A004BB80D /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = E53048CC2646800A004BB80D /* SwiftPackageProductDependency */; };
+		E53048CB2646800A004BB80D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E53048CA2646800A004BB80D /* Realm */; };
+		E53048CD2646800A004BB80D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E53048CC2646800A004BB80D /* RealmSwift */; };
 		E53048D026468339004BB80D /* QRInfoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048CF26468339004BB80D /* QRInfoEntity.swift */; };
 		E53048D3264684BD004BB80D /* QRInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048D2264684BD004BB80D /* QRInfoModel.swift */; };
 		E53048D626468610004BB80D /* QRCodeUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048D526468610004BB80D /* QRCodeUtility.swift */; };
@@ -36,6 +36,7 @@
 		E53ABDA326514682009AFAB3 /* RegisterQRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53ABDA226514682009AFAB3 /* RegisterQRCodeView.swift */; };
 		E53ABDA52651482C009AFAB3 /* RegisterQRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53ABDA42651482C009AFAB3 /* RegisterQRCodeViewModel.swift */; };
 		E53ABDA72651582B009AFAB3 /* RealmUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53ABDA62651582B009AFAB3 /* RealmUtility.swift */; };
+		E5AE06B2269AF778001802B3 /* QRCodeInfoRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AE06B1269AF778001802B3 /* QRCodeInfoRowViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		E53ABDA226514682009AFAB3 /* RegisterQRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterQRCodeView.swift; sourceTree = "<group>"; };
 		E53ABDA42651482C009AFAB3 /* RegisterQRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterQRCodeViewModel.swift; sourceTree = "<group>"; };
 		E53ABDA62651582B009AFAB3 /* RealmUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUtility.swift; sourceTree = "<group>"; };
+		E5AE06B1269AF778001802B3 /* QRCodeInfoRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeInfoRowViewModel.swift; sourceTree = "<group>"; };
 		FA58F7778495429C4E7B52AB /* Pods-GatherQR-GatherQRUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GatherQR-GatherQRUITests.debug.xcconfig"; path = "Target Support Files/Pods-GatherQR-GatherQRUITests/Pods-GatherQR-GatherQRUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,8 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E53048CD2646800A004BB80D /* BuildFile in Frameworks */,
-				E53048CB2646800A004BB80D /* BuildFile in Frameworks */,
+				E53048CD2646800A004BB80D /* RealmSwift in Frameworks */,
+				E53048CB2646800A004BB80D /* Realm in Frameworks */,
 				0287938F39FAF8F7BD5D074C /* Pods_GatherQR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,7 +147,6 @@
 				9270CE1B903EB1276F03D856 /* Pods-GatherQRTests.debug.xcconfig */,
 				060D80D79D7EDA074703D2B6 /* Pods-GatherQRTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -230,6 +231,7 @@
 				E53ABD9A264FCD75009AFAB3 /* ScannerViewModel.swift */,
 				E53ABD9C264FCFBA009AFAB3 /* QRCodeCameraDelegate.swift */,
 				E53ABDA42651482C009AFAB3 /* RegisterQRCodeViewModel.swift */,
+				E5AE06B1269AF778001802B3 /* QRCodeInfoRowViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,8 +278,8 @@
 			);
 			name = GatherQR;
 			packageProductDependencies = (
-				E53048CA2646800A004BB80D /* SwiftPackageProductDependency */,
-				E53048CC2646800A004BB80D /* SwiftPackageProductDependency */,
+				E53048CA2646800A004BB80D /* Realm */,
+				E53048CC2646800A004BB80D /* RealmSwift */,
 			);
 			productName = GatherQR;
 			productReference = E530489B2645F422004BB80D /* GatherQR.app */;
@@ -354,7 +356,7 @@
 			);
 			mainGroup = E53048922645F422004BB80D;
 			packageReferences = (
-				E53048C92646800A004BB80D /* RemoteSwiftPackageReference */,
+				E53048C92646800A004BB80D /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = E530489C2645F422004BB80D /* Products */;
 			projectDirPath = "";
@@ -513,6 +515,7 @@
 				E53048DB26474302004BB80D /* QRCodeInfoRow.swift in Sources */,
 				E53ABDA52651482C009AFAB3 /* RegisterQRCodeViewModel.swift in Sources */,
 				E53ABDA126509F40009AFAB3 /* QRCodeScannerView.swift in Sources */,
+				E5AE06B2269AF778001802B3 /* QRCodeInfoRowViewModel.swift in Sources */,
 				E53048A12645F422004BB80D /* ContentView.swift in Sources */,
 				E53ABDA72651582B009AFAB3 /* RealmUtility.swift in Sources */,
 				E53048D826474163004BB80D /* QRCodePreviewView.swift in Sources */,
@@ -848,7 +851,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E53048C92646800A004BB80D /* RemoteSwiftPackageReference */ = {
+		E53048C92646800A004BB80D /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa";
 			requirement = {
@@ -859,14 +862,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E53048CA2646800A004BB80D /* SwiftPackageProductDependency */ = {
+		E53048CA2646800A004BB80D /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E53048C92646800A004BB80D /* RemoteSwiftPackageReference */;
+			package = E53048C92646800A004BB80D /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = Realm;
 		};
-		E53048CC2646800A004BB80D /* SwiftPackageProductDependency */ = {
+		E53048CC2646800A004BB80D /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E53048C92646800A004BB80D /* RemoteSwiftPackageReference */;
+			package = E53048C92646800A004BB80D /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

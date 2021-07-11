@@ -16,12 +16,25 @@ class RegisterQRCodeViewModel: ObservableObject {
         }
     }
     var createDate = Date()
+    var uuid = UUID().uuidString
+    var info: QRInfoModelProtocol? = nil
+    
+    var onUpdateModel: ((_ model: RegisterQRCodeViewModel) -> Void) = { _ in }
     
     @Published var isEnableSave: Bool = false
         
     init(qrCode: String) {
         self.qrCode = qrCode
         self.createDate = Date()
+    }
+    
+    init(info: QRInfoModelProtocol, onUpdate: @escaping ((_ model: RegisterQRCodeViewModel) -> Void)) {
+        self.qrCode = info.value
+        self.title = info.title
+        self.uuid = info.uuid
+        self.createDate = info.createDate
+        self.info = info
+        self.onUpdateModel = onUpdate
     }
     
     func validate() {
@@ -39,7 +52,9 @@ class RegisterQRCodeViewModel: ObservableObject {
         // TODO QRCode情報を保存するコード
         #if targetEnvironment(simulator)
         #else
-        QRInfoEntity.upsert(uuid: UUID().uuidString, title: title, value: qrCode)
+        QRInfoEntity.upsert(uuid: uuid, title: title, value: qrCode)
         #endif
+        
+        onUpdateModel(self)
     }
 }
