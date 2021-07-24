@@ -13,33 +13,28 @@ struct RegisterQRCodeView: View {
     @ObservedObject var viewModel: RegisterQRCodeViewModel
     
     var body: some View {
-        NavigationView {
-            VStack {
-                
-                Form {
-                    Section {
-                        TextField("タイトルを入力してください。", text: $viewModel.title)
-                    }
-                    
-                    Section {
-                        Image(uiImage: viewModel.qrCodeImage())
-                            .resizable()
-                            .scaledToFit()
-                    }
-                    
-                    Section {
-                        Button(action: {
-                            viewModel.registerQRCode()
-                            presentationMode.wrappedValue.dismiss()
-                        }, label: {
-                            Text("登録")
-                        })
-                        .disabled(viewModel.isEnableSave == false)
-                    }
-                }
-                .navigationTitle("QRコードの登録")
+        Form {
+            Section {
+                TextField("タイトルを入力してください。", text: $viewModel.title)
+            }
+            
+            Section {
+                Image(uiImage: viewModel.qrCodeImage())
+                    .resizable()
+                    .scaledToFit()
+            }
+            
+            Section {
+                Button(action: {
+                    viewModel.registerQRCode()
+                    presentationMode.wrappedValue.dismiss()
+                }, label: {
+                    Text("登録")
+                })
+                .disabled(viewModel.isEnableSave == false)
             }
         }
+        .navigationTitle("QRコードの登録")
     }
 }
 
