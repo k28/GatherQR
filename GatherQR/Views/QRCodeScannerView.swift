@@ -114,6 +114,17 @@ final class QRCodeScannerView: UIViewRepresentable {
         uiView.session.startRunning()
     }
     
+    func stopCameraRunning() {
+        if session.isRunning {
+            session.stopRunning()
+        }
+    }
+    
+    func startCameraRunning() {
+        if !session.isRunning {
+            session.startRunning()
+        }
+    }
     
     func updateUIView(_ uiView: CameraPreview, context: UIViewRepresentableContext<QRCodeScannerView>) {
         uiView.setContentHuggingPriority(.defaultHigh, for: .vertical)

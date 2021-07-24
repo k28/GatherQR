@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    enum TabSelection: Int {
+        case qrInfoList = 0
+        case scanQRCode = 1
+        case unknown
+        
+        static func make(_ section: Int) -> TabSelection {
+            return TabSelection.init(rawValue: section) ?? .unknown
+        }
+    }
+    
     @State private var selection = 0
     var qecodeList: QRInfoListProtocol
+    let scanQRCodeView = ScanQRCodeView()
     
     var body: some View {
         let qrInfoList = QRCodeInfoList(model: qecodeList)
@@ -20,19 +32,30 @@ struct ContentView: View {
                         Image(systemName: "list.dash")
                         Text("QRCodeList")
                     }
-                }.tag(0)
-            ScanQRCodeView()
+                }.tag(TabSelection.qrInfoList.rawValue)
+            scanQRCodeView
                 .tabItem {
                     VStack {
                         Image(systemName: "qrcode.viewfinder")
                         Text("Add")
                     }
-                }.tag(1)
+                }.tag(TabSelection.scanQRCode.rawValue)
             // TODO 情報表示のTabを追加する
+                
+                // Tabが切り替わった時の処理などを記述する
                 .onChange(of: selection){ selection in
-                    if selection == 0 {
-                        // Viewをリフレッシュさせたい...
+                    switch TabSelection.make(selection) {
+                    case .qrInfoList:
                         qrInfoList.reloadData()
+                    case .scanQRCode:
+                        scanQRCodeView.onViewAppeard()
+                    case .unknown:
+                        break
+                    }
+                    
+                    if TabSelection.make(selection) != .scanQRCode {
+                        // QRコード取り込み画面以外
+                        scanQRCodeView.onViewDisappeard()
                     }
                 }
         }

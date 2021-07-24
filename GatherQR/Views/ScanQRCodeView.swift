@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ScanQRCodeView: View {
     @ObservedObject var viewModel = ScannerViewModel()
+    let qrCodeScannerView = QRCodeScannerView()
     
     var body: some View {
         NavigationView {
@@ -21,7 +22,7 @@ struct ScanQRCodeView: View {
                 }
                 
                 // View Contents
-                QRCodeScannerView()
+                qrCodeScannerView
                     .found(r: self.viewModel.onFoundQRCode(_:))
                     .onTorchLight(isOn: self.viewModel.torchIsOn)
                     .interval(delay: self.viewModel.scanInterval)
@@ -55,6 +56,15 @@ struct ScanQRCodeView: View {
             }
         }
     }
+    
+    func onViewDisappeard() {
+        qrCodeScannerView.stopCameraRunning()
+    }
+    
+    func onViewAppeard() {
+        qrCodeScannerView.startCameraRunning()
+    }
+    
 }
 
 struct ScanQRCodeView_Previews: PreviewProvider {
