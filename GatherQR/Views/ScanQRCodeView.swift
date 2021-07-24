@@ -26,6 +26,12 @@ struct ScanQRCodeView: View {
                     .found(r: self.viewModel.onFoundQRCode(_:))
                     .onTorchLight(isOn: self.viewModel.torchIsOn)
                     .interval(delay: self.viewModel.scanInterval)
+                    .onAppear() {
+                        onViewAppeard()
+                    }
+                    .onDisappear() {
+                        onViewDisappeard()
+                    }
                 
                 VStack {
                     VStack {
