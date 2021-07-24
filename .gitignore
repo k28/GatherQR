@@ -44,3 +44,5 @@ Pods
 
 # Application specific
 GoogleService-Info.plist
+
+.DS_Store
