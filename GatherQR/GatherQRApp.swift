@@ -19,7 +19,10 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct GatherQRApp: App {
+    
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @Environment(\.scenePhase) private var scenePhase
+    
     var body: some Scene {
         WindowGroup {
             ContentView(qecodeList: QRInfoList())

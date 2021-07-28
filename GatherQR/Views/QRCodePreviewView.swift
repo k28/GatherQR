@@ -9,6 +9,7 @@ import SwiftUI
 
 struct QRCodePreviewView: View {
     var item: QRInfoModelProtocol
+    @State var isViewAppear = false
     @State var brightness: CGFloat = 1.0
     
     var body: some View {
@@ -20,17 +21,42 @@ struct QRCodePreviewView: View {
         .navigationTitle(item.title)
         
         .onAppear() {
-            if UIScreen.main.brightness != 1.0 {
-                brightness = UIScreen.main.brightness
-                UIScreen.main.brightness = 1.0
-            }
+            isViewAppear = true
+            moveBrightnessMaxIfNeed()
         }
         .onDisappear() {
-            if brightness != 1.0 {
-                UIScreen.main.brightness = brightness
-            }
+            isViewAppear = false
+            backBrightnessToBefore()
+        }
+        .onReceive(NotificationCenter.default.publisher(
+            for: UIApplication.willResignActiveNotification
+        )) { _ in
+            backBrightnessToBefore()
+        }
+        .onReceive(NotificationCenter.default.publisher(
+            for: UIApplication.didBecomeActiveNotification
+        )) { _ in
+            moveBrightnessMaxIfNeed()
+        }
+
+    }
+    
+    func moveBrightnessMaxIfNeed() {
+        if !isViewAppear {
+            return
+        }
+        if UIScreen.main.brightness != 1.0 {
+            brightness = UIScreen.main.brightness
+            UIScreen.main.brightness = 1.0
         }
     }
+    
+    func backBrightnessToBefore() {
+        if brightness != 1.0 {
+            UIScreen.main.brightness = brightness
+        }
+    }
+    
 }
 
 struct QRCodePreviewView_Previews: PreviewProvider {
