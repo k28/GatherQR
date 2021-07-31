@@ -25,6 +25,20 @@ struct QRCodeInfoList: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
+                ToolbarItem(placement: .bottomBar) {
+                    Spacer()
+                }
+                ToolbarItem(placement: .bottomBar) {
+                    let scanQRCodeView = ScanQRCodeView()
+                    NavigationLink(destination:
+                                    scanQRCodeView
+                    ) {
+                        VStack {
+                            Image(systemName: "qrcode.viewfinder")
+                            Text("Add").font(.footnote)
+                        }
+                    }
+                }
             }
             .navigationTitle("QRCode List")
         }
