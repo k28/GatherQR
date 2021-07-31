@@ -15,7 +15,7 @@ struct ScanQRCodeView: View {
         ZStack {
             // Link
             NavigationLink(
-                destination: RegisterQRCodeView(viewModel: RegisterQRCodeViewModel(qrCode: viewModel.lastQRCode)),
+                destination: RegisterQRCodeView(viewModel: RegisterQRCodeViewModel(qrCode: viewModel.lastQRCode), mode: .Add),
                 isActive: $viewModel.qrCodeFound) {
                 EmptyView()
             }

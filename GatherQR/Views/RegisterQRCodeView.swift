@@ -9,8 +9,22 @@ import SwiftUI
 
 /// QRコード登録・編集画面
 struct RegisterQRCodeView: View {
+    
+    enum Mode {
+        case Add
+        case Edit
+        
+        var title: String {
+            switch self {
+            case .Add:  return "QRコードの登録"
+            case .Edit: return "編集"
+            }
+        }
+    }
+    
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var viewModel: RegisterQRCodeViewModel
+    let mode: Mode
     
     var body: some View {
         Form {
@@ -28,18 +42,22 @@ struct RegisterQRCodeView: View {
                 Button(action: {
                     viewModel.registerQRCode()
                     presentationMode.wrappedValue.dismiss()
-                }, label: {
-                    Text("登録")
-                })
+                }) {
+                    HStack {
+                        Spacer()
+                        Text("登録")
+                        Spacer()
+                    }
+                }
                 .disabled(viewModel.isEnableSave == false)
             }
         }
-        .navigationTitle("QRコードの登録")
+        .navigationTitle(mode.title)
     }
 }
 
 struct RegisterQRCodeView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterQRCodeView(viewModel: RegisterQRCodeViewModel(qrCode: "TestQRcode"))
+        RegisterQRCodeView(viewModel: RegisterQRCodeViewModel(qrCode: "TestQRcode"), mode: .Add)
     }
 }

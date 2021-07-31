@@ -33,7 +33,7 @@ struct QRCodeInfoRow: View {
             
             NavigationLink(destination: RegisterQRCodeView(viewModel: RegisterQRCodeViewModel(info: item.qrInfoModel, onUpdate: { model in
                 item.title = model.title
-            } )),
+            } ), mode: .Edit),
                            isActive: $editButtonDidSelect) {
                 EmptyView()
             }
