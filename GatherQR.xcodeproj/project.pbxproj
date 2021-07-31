@@ -175,15 +175,12 @@
 		E530489D2645F422004BB80D /* GatherQR */ = {
 			isa = PBXGroup;
 			children = (
+				E5E78E3B26B5F7EF00E1B3ED /* Resources */,
 				E53048D426468600004BB80D /* Utility */,
 				E53048CE26468016004BB80D /* Realm */,
 				E53048D9264742B1004BB80D /* Views */,
 				E53048D1264684AB004BB80D /* Model */,
 				E530489E2645F422004BB80D /* GatherQRApp.swift */,
-				E53048A22645F423004BB80D /* Assets.xcassets */,
-				E50D56DC2698E4D90057ED8C /* GoogleService-Info.plist */,
-				E53048A72645F423004BB80D /* Info.plist */,
-				E53048A42645F423004BB80D /* Preview Content */,
 			);
 			path = GatherQR;
 			sourceTree = "<group>";
@@ -257,6 +254,17 @@
 				E53ABDA226514682009AFAB3 /* RegisterQRCodeView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E5E78E3B26B5F7EF00E1B3ED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E53048A42645F423004BB80D /* Preview Content */,
+				E53048A22645F423004BB80D /* Assets.xcassets */,
+				E50D56DC2698E4D90057ED8C /* GoogleService-Info.plist */,
+				E53048A72645F423004BB80D /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -683,10 +691,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2021072501;
-				DEVELOPMENT_ASSET_PATHS = "\"GatherQR/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"GatherQR/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = GatherQR/Info.plist;
+				INFOPLIST_FILE = GatherQR/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -709,10 +717,10 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2021072501;
-				DEVELOPMENT_ASSET_PATHS = "\"GatherQR/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"GatherQR/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = GatherQR/Info.plist;
+				INFOPLIST_FILE = GatherQR/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
