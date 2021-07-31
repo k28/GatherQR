@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  GatherQR
+
+  Created by K.Hatano on 2021/08/01.
+  
+*/
+
+/* Common */
+"Add" = "追加";
+"Edit" = "編集";
+"Register" = "登録";
+
+
+/* QRCodeInfoList */
+"QR code List" = "QRコード一覧";
+
+/* ScanQRCodeView */
+"Keep scanning for QR-codes" = "QRコードを探しています...";
+"Add QR Code" = "QRコードを追加";
+
+/* RegisterQRCodeView */
+"Register QR code" = "QRコードの登録";
+"Please input the Title" = "タイトルを入力してください。";
+

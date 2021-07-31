@@ -29,3 +29,5 @@ struct GatherQRApp: App {
         }
     }
 }
+
+let app = AppCommon()

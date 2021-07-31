@@ -13,11 +13,12 @@ class ScannerViewModel: ObservableObject {
     let scanInterval: Double = 1.0
     
     @Published var torchIsOn = false
-    @Published var lastQRCode: String = "Qr-code goes here..."
+    @Published var lastQRCode: String = ""
     @Published var qrCodeFound = false
     
     func onFoundQRCode(_ code: String) {
-        self.lastQRCode = code
+        // 読み込んだQRコードは一旦非表示にする(続けて読み込むときに前のが表示されちゃうので)
+        // self.lastQRCode = code
         self.qrCodeFound = true
     }
     

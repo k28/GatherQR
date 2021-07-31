@@ -37,6 +37,9 @@
 		E53ABDA52651482C009AFAB3 /* RegisterQRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53ABDA42651482C009AFAB3 /* RegisterQRCodeViewModel.swift */; };
 		E53ABDA72651582B009AFAB3 /* RealmUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53ABDA62651582B009AFAB3 /* RealmUtility.swift */; };
 		E5AE06B2269AF778001802B3 /* QRCodeInfoRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AE06B1269AF778001802B3 /* QRCodeInfoRowViewModel.swift */; };
+		E5E4E78926B6013500377898 /* Infoplist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5E4E78B26B6013500377898 /* Infoplist.strings */; };
+		E5E78E3F26B5FA7A00E1B3ED /* AppCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E78E3E26B5FA7A00E1B3ED /* AppCommon.swift */; };
+		E5E78E4026B5FC7300E1B3ED /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5E78E4226B5FC7300E1B3ED /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +97,11 @@
 		E53ABDA42651482C009AFAB3 /* RegisterQRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterQRCodeViewModel.swift; sourceTree = "<group>"; };
 		E53ABDA62651582B009AFAB3 /* RealmUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUtility.swift; sourceTree = "<group>"; };
 		E5AE06B1269AF778001802B3 /* QRCodeInfoRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeInfoRowViewModel.swift; sourceTree = "<group>"; };
+		E5E4E78626B5FD1900377898 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E5E4E78A26B6013500377898 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Infoplist.strings; sourceTree = "<group>"; };
+		E5E4E78C26B6013A00377898 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Infoplist.strings; sourceTree = "<group>"; };
+		E5E78E3E26B5FA7A00E1B3ED /* AppCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCommon.swift; sourceTree = "<group>"; };
+		E5E78E4126B5FC7300E1B3ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FA58F7778495429C4E7B52AB /* Pods-GatherQR-GatherQRUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GatherQR-GatherQRUITests.debug.xcconfig"; path = "Target Support Files/Pods-GatherQR-GatherQRUITests/Pods-GatherQR-GatherQRUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -237,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				E53048D526468610004BB80D /* QRCodeUtility.swift */,
+				E5E78E3E26B5FA7A00E1B3ED /* AppCommon.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -259,10 +268,12 @@
 		E5E78E3B26B5F7EF00E1B3ED /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E5E78E4226B5FC7300E1B3ED /* Localizable.strings */,
 				E53048A42645F423004BB80D /* Preview Content */,
 				E53048A22645F423004BB80D /* Assets.xcassets */,
 				E50D56DC2698E4D90057ED8C /* GoogleService-Info.plist */,
 				E53048A72645F423004BB80D /* Info.plist */,
+				E5E4E78B26B6013500377898 /* Infoplist.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -361,6 +372,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = E53048922645F422004BB80D;
 			packageReferences = (
@@ -383,7 +395,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E53048A62645F423004BB80D /* Preview Assets.xcassets in Resources */,
+				E5E78E4026B5FC7300E1B3ED /* Localizable.strings in Resources */,
 				E53048A32645F423004BB80D /* Assets.xcassets in Resources */,
+				E5E4E78926B6013500377898 /* Infoplist.strings in Resources */,
 				E50D56DD2698E4D90057ED8C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +531,7 @@
 				E53048D3264684BD004BB80D /* QRInfoModel.swift in Sources */,
 				E53ABD9F264FD1B8009AFAB3 /* CameraPreview.swift in Sources */,
 				E53ABD97264FC346009AFAB3 /* QRCodeInfoList.swift in Sources */,
+				E5E78E3F26B5FA7A00E1B3ED /* AppCommon.swift in Sources */,
 				E53ABD9B264FCD75009AFAB3 /* ScannerViewModel.swift in Sources */,
 				E53ABD9D264FCFBA009AFAB3 /* QRCodeCameraDelegate.swift in Sources */,
 				E53048D626468610004BB80D /* QRCodeUtility.swift in Sources */,
@@ -566,11 +581,33 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		E5E4E78B26B6013500377898 /* Infoplist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5E4E78A26B6013500377898 /* ja */,
+				E5E4E78C26B6013A00377898 /* en */,
+			);
+			name = Infoplist.strings;
+			sourceTree = "<group>";
+		};
+		E5E78E4226B5FC7300E1B3ED /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5E78E4126B5FC7300E1B3ED /* en */,
+				E5E4E78626B5FD1900377898 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		E53048BE2645F423004BB80D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -632,6 +669,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

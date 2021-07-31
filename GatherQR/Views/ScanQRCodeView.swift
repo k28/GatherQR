@@ -34,7 +34,7 @@ struct ScanQRCodeView: View {
             
             VStack {
                 VStack {
-                    Text("Keep scanning for QR-codes")
+                    Text(app.loadString("Keep scanning for QR-codes"))
                         .font(.subheadline)
                     Text(self.viewModel.lastQRCode)
                         .bold()
@@ -59,7 +59,7 @@ struct ScanQRCodeView: View {
                 .cornerRadius(10)
             }.padding()
 
-            .navigationTitle("QRコードを追加")
+            .navigationTitle(app.loadString("Add QR Code"))
         }
 
     }

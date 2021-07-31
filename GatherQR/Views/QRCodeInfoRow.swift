@@ -27,7 +27,6 @@ struct QRCodeInfoRow: View {
             Image(systemName: "pencil.circle")
                 .foregroundColor(.gray)
                 .onTapGesture {
-                    print("Button Pushed!!")
                     editButtonDidSelect = true
                 }
             

@@ -1,0 +1,9 @@
+/* 
+  Infoplist.strings
+  GatherQR
+
+  Created by K.Hatano on 2021/08/01.
+  
+*/
+
+"NSCameraUsageDescription" = "Use the camera to scan the QR code.";

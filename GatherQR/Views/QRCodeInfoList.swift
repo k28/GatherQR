@@ -35,12 +35,12 @@ struct QRCodeInfoList: View {
                     ) {
                         VStack {
                             Image(systemName: "qrcode.viewfinder")
-                            Text("Add").font(.footnote)
+                            Text(app.loadString("Add")).font(.footnote)
                         }
                     }
                 }
             }
-            .navigationTitle("QRCode List")
+            .navigationTitle(app.loadString("QR code List"))
         }
         .onAppear() {
             qrcodeList = model.qrInfoList()

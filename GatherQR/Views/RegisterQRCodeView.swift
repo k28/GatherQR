@@ -16,8 +16,8 @@ struct RegisterQRCodeView: View {
         
         var title: String {
             switch self {
-            case .Add:  return "QRコードの登録"
-            case .Edit: return "編集"
+            case .Add:  return app.loadString("Register QR code")
+            case .Edit: return app.loadString("Edit")
             }
         }
     }
@@ -29,7 +29,7 @@ struct RegisterQRCodeView: View {
     var body: some View {
         Form {
             Section {
-                TextField("タイトルを入力してください。", text: $viewModel.title)
+                TextField(app.loadString("Please input the Title"), text: $viewModel.title)
             }
             
             Section {
@@ -45,7 +45,7 @@ struct RegisterQRCodeView: View {
                 }) {
                     HStack {
                         Spacer()
-                        Text("登録")
+                        Text(app.loadString("Register"))
                         Spacer()
                     }
                 }
