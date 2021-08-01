@@ -5,13 +5,15 @@
 //  Created by K.Hatano on 2021/08/01.
 //
 
-import Foundation
+import UIKit
 
 /**
  アプリケーション共通のユーティリティクラス
  */
 class AppCommon {
     
+    func initialize() {
+    }
 }
 
 extension AppCommon {

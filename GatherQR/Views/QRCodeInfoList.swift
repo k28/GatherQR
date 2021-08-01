@@ -8,42 +8,83 @@
 import SwiftUI
 
 struct QRCodeInfoList: View {
+    @State private var refresh = UUID()
     var model: QRInfoListProtocol
     @State var qrcodeList: [QRInfoModelProtocol] = []
+    @State private var showingScanView = false
+
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(qrcodeList, id: \.uuid) { item in
-                    NavigationLink(destination: QRCodePreviewView(item: item)) {
-                        QRCodeInfoRow(item: QRCodeInfoRowViewModel(model: item))
+            ZStack {
+                List {
+                    ForEach(qrcodeList, id: \.uuid) { item in
+                        NavigationLink(destination: QRCodePreviewView(item: item)) {
+                            QRCodeInfoRow(item: QRCodeInfoRowViewModel(model: item))
+                        }
+                    }
+                    .onDelete(perform: removeItem)
+                    
+                }
+                
+                // QRコードをスキャンして登録する画面
+                NavigationLink(destination: ScanQRCodeView(), isActive: $showingScanView) {
+                    EmptyView()
+                }
+                
+                // Bottom Add Button
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            showingScanView = true
+                        }) {
+                            ZStack {
+                                VStack {
+                                    Image(systemName: "qrcode.viewfinder")
+                                        .resizable()
+                                        .frame(width: 32, height: 32, alignment: .center)
+                                        .accentColor(.white)
+                                        .padding([.bottom], 10)
+                                }
+                                .frame(width: 78, height: 78)
+                                
+                                Text(app.loadString("Add"))
+                                    .accentColor(.white)
+                                    .font(.footnote)
+                                    .offset(x: 0, y: 23)
+                            }
+                        }
+                        .background(Color.blue)
+                        .cornerRadius(38.5)
+                        .padding()
+                        .shadow(color: Color.black.opacity(0.3),
+                                radius: 3,
+                                x: 3,
+                                y: 3)
                     }
                 }
-                .onDelete(perform: removeItem)
+                
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
-                ToolbarItem(placement: .bottomBar) {
-                    Spacer()
-                }
-                ToolbarItem(placement: .bottomBar) {
-                    let scanQRCodeView = ScanQRCodeView()
-                    NavigationLink(destination:
-                                    scanQRCodeView
-                    ) {
-                        VStack {
-                            Image(systemName: "qrcode.viewfinder")
-                            Text(app.loadString("Add")).font(.footnote)
-                        }
-                    }
-                }
             }
+            .id(refresh)
             .navigationTitle(app.loadString("QR code List"))
         }
+//        .onReceive(NotificationCenter.default.publisher(
+//            for: UIApplication.willResignActiveNotification
+//        )) { _ in
+//            let list = model.qrInfoList()
+//            if list.count != qrcodeList.count {
+//                qrcodeList = model.qrInfoList()
+//            }
+//        }
         .onAppear() {
-            qrcodeList = model.qrInfoList()
+            reloadData()
         }
     }
     
