@@ -10,6 +10,8 @@ import SwiftUI
 /// QRコード登録・編集画面
 struct RegisterQRCodeView: View {
     
+    @EnvironmentObject var object: ObservedInfo
+    
     enum Mode {
         case Add
         case Edit
@@ -41,6 +43,9 @@ struct RegisterQRCodeView: View {
             Section {
                 Button(action: {
                     viewModel.registerQRCode()
+                    if mode == .Add {
+                        object.reloadData()
+                    }
                     presentationMode.wrappedValue.dismiss()
                 }) {
                     HStack {

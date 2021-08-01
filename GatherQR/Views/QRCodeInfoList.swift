@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct QRCodeInfoList: View {
+    @EnvironmentObject var object: ObservedInfo
+    
     @State private var refresh = UUID()
     var model: QRInfoListProtocol
-    @State var qrcodeList: [QRInfoModelProtocol] = []
+//    @State var qrcodeList: [QRInfoModelProtocol] = []
     @State private var showingScanView = false
 
 
@@ -18,7 +20,7 @@ struct QRCodeInfoList: View {
         NavigationView {
             ZStack {
                 List {
-                    ForEach(qrcodeList, id: \.uuid) { item in
+                    ForEach(object.qrcodeList, id: \.uuid) { item in
                         NavigationLink(destination: QRCodePreviewView(item: item)) {
                             QRCodeInfoRow(item: QRCodeInfoRowViewModel(model: item))
                         }
@@ -75,6 +77,7 @@ struct QRCodeInfoList: View {
             .id(refresh)
             .navigationTitle(app.loadString("QR code List"))
         }
+        .environmentObject(object)
 //        .onReceive(NotificationCenter.default.publisher(
 //            for: UIApplication.willResignActiveNotification
 //        )) { _ in
@@ -83,23 +86,23 @@ struct QRCodeInfoList: View {
 //                qrcodeList = model.qrInfoList()
 //            }
 //        }
-        .onAppear() {
-            reloadData()
-        }
+//        .onAppear() {
+//            reloadData()
+//        }
     }
     
     func removeItem(offsets: IndexSet) {
         offsets.forEach { index in
-            let deleteItem = qrcodeList[index]
+            let deleteItem = object.qrcodeList[index]
             if model.remove(item: deleteItem) {
-                self.qrcodeList.remove(at: index)
+                object.qrcodeList.remove(at: index)
             }
         }
     }
     
-    func reloadData() {
-        qrcodeList = model.qrInfoList()
-    }
+//    func reloadData() {
+//        qrcodeList = model.qrInfoList()
+//    }
 }
 
 struct QRCodeInfoList_Previews: PreviewProvider {
