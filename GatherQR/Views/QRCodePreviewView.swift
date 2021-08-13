@@ -11,15 +11,15 @@ struct QRCodePreviewView: View {
     var item: QRInfoModelProtocol
     @State var isViewAppear = false
     @State var brightness: CGFloat = 1.0
-    
+
     var body: some View {
         VStack {
-            Image(uiImage: item.qrcode())
-                .resizable()
-                .scaledToFit()
+            GeometryReader { geometry in
+                QRCodeImageView(image: item.qrcode(), viewSize: geometry.size)
+            }
         }
+
         .navigationTitle(item.title)
-        
         .onAppear() {
             isViewAppear = true
             moveBrightnessMaxIfNeed()

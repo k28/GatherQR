@@ -37,6 +37,7 @@
 		E53ABDA52651482C009AFAB3 /* RegisterQRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53ABDA42651482C009AFAB3 /* RegisterQRCodeViewModel.swift */; };
 		E53ABDA72651582B009AFAB3 /* RealmUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53ABDA62651582B009AFAB3 /* RealmUtility.swift */; };
 		E5AB67C826B6AAF6006F34CA /* ObservedInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB67C726B6AAF6006F34CA /* ObservedInfo.swift */; };
+		E5AB67CA26C60487006F34CA /* QRCodeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB67C926C60487006F34CA /* QRCodeImageView.swift */; };
 		E5AE06B2269AF778001802B3 /* QRCodeInfoRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AE06B1269AF778001802B3 /* QRCodeInfoRowViewModel.swift */; };
 		E5E4E78926B6013500377898 /* Infoplist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5E4E78B26B6013500377898 /* Infoplist.strings */; };
 		E5E78E3F26B5FA7A00E1B3ED /* AppCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E78E3E26B5FA7A00E1B3ED /* AppCommon.swift */; };
@@ -98,6 +99,7 @@
 		E53ABDA42651482C009AFAB3 /* RegisterQRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterQRCodeViewModel.swift; sourceTree = "<group>"; };
 		E53ABDA62651582B009AFAB3 /* RealmUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUtility.swift; sourceTree = "<group>"; };
 		E5AB67C726B6AAF6006F34CA /* ObservedInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedInfo.swift; sourceTree = "<group>"; };
+		E5AB67C926C60487006F34CA /* QRCodeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeImageView.swift; sourceTree = "<group>"; };
 		E5AE06B1269AF778001802B3 /* QRCodeInfoRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeInfoRowViewModel.swift; sourceTree = "<group>"; };
 		E5E4E78626B5FD1900377898 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E5E4E78A26B6013500377898 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Infoplist.strings; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				E53ABDA026509F40009AFAB3 /* QRCodeScannerView.swift */,
 				E53ABD98264FC81E009AFAB3 /* ScanQRCodeView.swift */,
 				E53ABDA226514682009AFAB3 /* RegisterQRCodeView.swift */,
+				E5AB67C926C60487006F34CA /* QRCodeImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				E5AB67C826B6AAF6006F34CA /* ObservedInfo.swift in Sources */,
 				E53048D026468339004BB80D /* QRInfoEntity.swift in Sources */,
 				E53048DD264744C4004BB80D /* QRInfoList.swift in Sources */,
+				E5AB67CA26C60487006F34CA /* QRCodeImageView.swift in Sources */,
 				E530489F2645F422004BB80D /* GatherQRApp.swift in Sources */,
 				E53ABD99264FC81E009AFAB3 /* ScanQRCodeView.swift in Sources */,
 			);

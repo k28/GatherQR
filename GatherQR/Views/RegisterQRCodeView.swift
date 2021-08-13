@@ -27,34 +27,42 @@ struct RegisterQRCodeView: View {
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var viewModel: RegisterQRCodeViewModel
     let mode: Mode
+    let maxImageSize: CGFloat = 250
     
     var body: some View {
-        Form {
-            Section {
-                TextField(app.loadString("Please input the Title"), text: $viewModel.title)
-            }
-            
-            Section {
-                Image(uiImage: viewModel.qrCodeImage())
-                    .resizable()
-                    .scaledToFit()
-            }
-            
-            Section {
-                Button(action: {
-                    viewModel.registerQRCode()
-                    if mode == .Add {
-                        object.reloadData()
-                    }
-                    presentationMode.wrappedValue.dismiss()
-                }) {
+        GeometryReader { geometry in
+            Form {
+                Section {
+                    TextField(app.loadString("Please input the Title"), text: $viewModel.title)
+                }
+                
+                Section {
                     HStack {
                         Spacer()
-                        Text(app.loadString("Register"))
+                        Image(uiImage: viewModel.qrCodeImage())
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                                .frame(width: min(maxImageSize, geometry.size.width), height: min(maxImageSize, geometry.size.height), alignment: .center)
                         Spacer()
                     }
                 }
-                .disabled(viewModel.isEnableSave == false)
+                
+                Section {
+                    Button(action: {
+                        viewModel.registerQRCode()
+                        if mode == .Add {
+                            object.reloadData()
+                        }
+                        presentationMode.wrappedValue.dismiss()
+                    }) {
+                        HStack {
+                            Spacer()
+                            Text(app.loadString("Register"))
+                            Spacer()
+                        }
+                    }
+                    .disabled(viewModel.isEnableSave == false)
+                }
             }
         }
         .navigationTitle(mode.title)
