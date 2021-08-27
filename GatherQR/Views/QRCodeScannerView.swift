@@ -111,7 +111,7 @@ final class QRCodeScannerView: UIViewRepresentable {
     }
 
     static func dismantleUIView(_ uiView: CameraPreview, coordinator: ()) {
-        uiView.session.startRunning()
+        uiView.session.stopRunning()
     }
     
     func stopCameraRunning() {
