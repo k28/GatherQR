@@ -31,6 +31,9 @@ struct ScanQRCodeView: View {
                 .onDisappear() {
                     onViewDisappeard()
                 }
+                .onRotate { orientation in
+                    qrCodeScannerView.rotationChange(orientation)
+                }
             
             VStack {
                 VStack {

@@ -18,6 +18,7 @@ final class QRCodeScannerView: UIViewRepresentable {
     private let delegate = QRCodeCameraDelegate()
     private let metadataOutput = AVCaptureMetadataOutput()
     private var cameraView_: CameraPreview?
+    private var previewLayer: AVCaptureVideoPreviewLayer?
     
     func onTorchLight(isOn: Bool) -> QRCodeScannerView {
         if let backCamera = AVCaptureDevice.default(for: .video) {
@@ -63,12 +64,15 @@ final class QRCodeScannerView: UIViewRepresentable {
                     metadataOutput.metadataObjectTypes = supportedBarcodeTypes
                     metadataOutput.setMetadataObjectsDelegate(delegate, queue: DispatchQueue.main)
                 }
-                let previewLayer = AVCaptureVideoPreviewLayer(session: session)
+                previewLayer = AVCaptureVideoPreviewLayer(session: session)
+                if previewLayer!.connection?.isVideoOrientationSupported ?? false {
+                    previewLayer!.connection?.videoOrientation = interfaceOrientationToVideoOrientation(orientation: app.interfaceOrientation)
+                }
                 
                 uiView.backgroundColor = .gray
-                previewLayer.videoGravity = .resizeAspectFill
-                uiView.layer.addSublayer(previewLayer)
-                uiView.previewLayer = previewLayer
+                previewLayer!.videoGravity = .resizeAspectFill
+                uiView.layer.addSublayer(previewLayer!)
+                uiView.previewLayer = previewLayer!
                 
                 session.startRunning()
             }
@@ -106,6 +110,25 @@ final class QRCodeScannerView: UIViewRepresentable {
                         self.setupCamera(uiView)
                     }
                 }
+            }
+        }
+    }
+    
+    private func interfaceOrientationToVideoOrientation(orientation: UIInterfaceOrientation) -> AVCaptureVideoOrientation {
+        switch orientation {
+        case .portrait:           return .portrait
+        case .portraitUpsideDown: return .portraitUpsideDown
+        case .landscapeLeft:      return .landscapeLeft
+        case .landscapeRight:     return .landscapeRight
+        default:
+            return .portrait
+        }
+    }
+    
+    func rotationChange(_ orientation: UIDeviceOrientation) {
+        if let previewLayer = previewLayer {
+            if previewLayer.connection?.isVideoOrientationSupported ?? false {
+                previewLayer.connection?.videoOrientation = interfaceOrientationToVideoOrientation(orientation: app.interfaceOrientation)
             }
         }
     }

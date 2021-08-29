@@ -23,6 +23,13 @@ class AppCommon {
 }
 
 extension AppCommon {
+    
+    var interfaceOrientation: UIInterfaceOrientation {
+        if let interfaceOrientation = UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.windowScene?.interfaceOrientation {
+            return interfaceOrientation
+        }
+        return .portrait
+    }
 
     /// ローカライズ文字列を読み込みます
     /// - Parameter key: Localize ID
