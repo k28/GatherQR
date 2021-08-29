@@ -50,7 +50,7 @@ struct ScanQRCodeView: View {
                 
                 HStack {
                     Button(action: {
-                        
+                        self.viewModel.torchIsOn.toggle()
                     }, label: {
                         Image(systemName: self.viewModel.torchIsOn ? "bolt.fill" : "bolt.slash.fill")
                             .imageScale(.large)
