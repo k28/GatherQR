@@ -6,6 +6,12 @@
 //
 
 import UIKit
+import FirebaseAnalytics
+
+enum AnalyticsItemID: String {
+    case ShowCode
+    case EditCode
+}
 
 /**
  アプリケーション共通のユーティリティクラス
@@ -28,6 +34,18 @@ extension AppCommon {
         }
         
         return str
+    }
+    
+    /// FireBaseのAnalyticsを追加します。
+    /// - Parameters:
+    ///   - itemID: ItemのID
+    ///   - ItemName: Itemの名称
+    func logEventCount(itemID: AnalyticsItemID, ItemName: String) {
+        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+            AnalyticsParameterItemID: "id-\(itemID.rawValue)",
+          AnalyticsParameterItemName: ItemName,
+          AnalyticsParameterContentType: "cont",
+        ])
     }
     
 }

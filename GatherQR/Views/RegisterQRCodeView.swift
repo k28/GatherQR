@@ -22,6 +22,15 @@ struct RegisterQRCodeView: View {
             case .Edit: return app.loadString("Edit")
             }
         }
+        
+        var itemName: String {
+            switch self {
+            case .Add:
+                return "Add"
+            case .Edit:
+                return "Edit"
+            }
+        }
     }
     
     @Environment(\.presentationMode) var presentationMode
@@ -53,6 +62,7 @@ struct RegisterQRCodeView: View {
                         if mode == .Add {
                             object.reloadData()
                         }
+                        app.logEventCount(itemID: .EditCode, ItemName: mode.itemName)
                         presentationMode.wrappedValue.dismiss()
                     }) {
                         HStack {
