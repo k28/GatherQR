@@ -23,6 +23,17 @@ struct QRInfoList: QRInfoListProtocol {
         for i in 1..<10 {
             list.append(QRInfoModel(title: "\(i) item", value: "Apple"))
         }
+
+        // 日本語版スクリーンショット
+//        list.append(QRInfoModel(title: "保育園 健", value: "Ken"))
+//        list.append(QRInfoModel(title: "保育園 岳", value: "Gaku"))
+//        list.append(QRInfoModel(title: "Home Page", value: "https://gatherqr.web.app/"))
+        
+        // 英語版スクリーンショット
+//        list.append(QRInfoModel(title: "Access Log", value: "LogLogLog"))
+//        list.append(QRInfoModel(title: "Access Log 2", value: "Log2LogLogLog2"))
+//        list.append(QRInfoModel(title: "Home Page", value: "https://gatherqr.web.app/"))
+
         return list
         #else
         return loadFromDB()
