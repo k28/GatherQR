@@ -39,7 +39,7 @@ struct ScanQRCodeView: View {
                 VStack {
                     Text(app.loadString("Keep scanning for QR-codes"))
                         .font(.subheadline)
-                    Text(self.viewModel.lastQRCode)
+                    Text("")
                         .bold()
                         .lineLimit(5)
                         .padding()
