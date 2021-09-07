@@ -17,6 +17,8 @@ class ScannerViewModel: ObservableObject {
     @Published var qrCodeFound = false
     
     func onFoundQRCode(_ code: String) {
+        if self.qrCodeFound {}  // 既に表示していたらスキップ
+        
         self.lastQRCode = code
         self.qrCodeFound = true
     }
