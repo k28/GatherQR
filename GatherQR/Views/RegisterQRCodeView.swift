@@ -54,6 +54,9 @@ struct RegisterQRCodeView: View {
                                 .frame(width: min(maxImageSize, geometry.size.width), height: min(maxImageSize, geometry.size.height), alignment: .center)
                         Spacer()
                     }
+                    Text(viewModel.qrCode)
+                        .font(.footnote)
+                        .foregroundColor(.secondary)
                 }
                 
                 Section {
