@@ -182,6 +182,7 @@
 		E57E196526FE7B8A0005DC6C /* WatchGatherQRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchGatherQRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57E196926FE7B8A0005DC6C /* WatchGatherQRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchGatherQRUITests.swift; sourceTree = "<group>"; };
 		E57E196B26FE7B8A0005DC6C /* WatchGatherQRUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchGatherQRUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E57E197E26FE84AB0005DC6C /* GatherQR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GatherQR.entitlements; sourceTree = "<group>"; };
 		E591136026DB1D37007E25B9 /* DeviceRotationViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRotationViewModifier.swift; sourceTree = "<group>"; };
 		E5AB67C726B6AAF6006F34CA /* ObservedInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedInfo.swift; sourceTree = "<group>"; };
 		E5AB67C926C60487006F34CA /* QRCodeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeImageView.swift; sourceTree = "<group>"; };
@@ -301,6 +302,7 @@
 		E530489D2645F422004BB80D /* GatherQR */ = {
 			isa = PBXGroup;
 			children = (
+				E57E197E26FE84AB0005DC6C /* GatherQR.entitlements */,
 				E591135F26DB1D21007E25B9 /* Extention */,
 				E5E78E3B26B5F7EF00E1B3ED /* Resources */,
 				E53048D426468600004BB80D /* Utility */,
@@ -1078,6 +1080,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GatherQR/GatherQR.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2021090801;
@@ -1104,6 +1107,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GatherQR/GatherQR.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2021090801;
