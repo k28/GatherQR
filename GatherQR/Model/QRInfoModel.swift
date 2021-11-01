@@ -28,7 +28,11 @@ struct QRInfoModel: QRInfoModelProtocol {
         // TODO SaveCodeHere..
     }
     
-    func qrcode() -> UIImage {        
+    func qrcode() -> UIImage {
+        #if os(watchOS)
+        return UIImage(named: "sample-qr") ?? UIImage(systemName: "star.fill")!
+        #else
         return QRCodeUtility.makeQRCode(value) ?? UIImage(systemName: "star.fill")!
+        #endif
     }
 }
