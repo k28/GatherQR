@@ -8,12 +8,19 @@
 import SwiftUI
 
 struct WatchQRCodeListView: View {
+    
+    @EnvironmentObject var qrcodeList: WatchQRInfoList
+    
     var body: some View {
-        NavigationLink(destination: {
-            WatchQRCodePreviewView(item: QRInfoModel())
-        }) {
-            Text("Show QRCode!")
+        
+        List {
+            ForEach(qrcodeList.qrInfoList, id: \.uuid) { item in
+                NavigationLink(destination: WatchQRCodePreviewView(item: item)) {
+                    Text(item.title)
+                }
+            }
         }
+        
     }
 }
 

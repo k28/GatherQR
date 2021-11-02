@@ -15,6 +15,7 @@ class QRInfoEntity: Object {
     @objc dynamic var title: String = ""
     @objc dynamic var value: String = ""
     @objc dynamic var createDate: Date = Date()
+    @objc dynamic var lastUpdate: Date = Date()
 }
 
 extension QRInfoEntity {
@@ -49,11 +50,13 @@ extension QRInfoEntity {
             try? realm.write {
                 entity.title = title
                 entity.value = value
+                entity.lastUpdate = Date()
             }
         } else {
             let entity = make(value: value)
             entity.uuid = uuid
             entity.title = title
+            entity.lastUpdate = Date()
             try? realm.write {
                 realm.add(entity)
             }

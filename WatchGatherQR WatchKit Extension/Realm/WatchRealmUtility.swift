@@ -1,24 +1,25 @@
 //
-//  RealmUtility.swift
-//  GatherQR
+//  WatchRealmUtility.swift
+//  WatchGatherQR WatchKit Extension
 //
-//  Created by K.Hatano on 2021/05/16.
+//  Created by K.Hatano on 2021/11/02.
 //
 
 import Foundation
 import RealmSwift
 
-enum RealmUtility {
+
+enum WatchRealmUtility {
 }
 
-extension RealmUtility {
+extension WatchRealmUtility {
     
     static func defaultRealm() -> Realm {
         /// Realmのスキーマバージョンを指定する
-        let schemaVersion: UInt64 = 1
+        let schemaVersion: UInt64 = 0
         
         let configration = Realm.Configuration(schemaVersion: schemaVersion)
         return try! Realm(configuration: configration)
     }
+    
 }
-

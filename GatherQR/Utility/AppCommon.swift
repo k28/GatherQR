@@ -18,7 +18,11 @@ enum AnalyticsItemID: String {
  */
 class AppCommon {
     
+    let watchSyncManager: WatchSyncManager = WatchSyncManager()
+    
     func initialize() {
+        let watchConnector = WatchConnector(delegate: watchSyncManager)
+        self.watchSyncManager.watchConnector = watchConnector
     }
 }
 

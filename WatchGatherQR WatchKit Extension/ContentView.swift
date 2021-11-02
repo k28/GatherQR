@@ -10,11 +10,16 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         WatchQRCodeListView()
+            .onAppear {
+                app.syncWithPhone()
+            }
+            .environmentObject(app.watchQRInfoList)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(WatchQRInfoList())
     }
 }

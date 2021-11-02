@@ -7,12 +7,6 @@
 
 import Foundation
 
-protocol QRInfoListProtocol {
-    func qrInfoList() -> [QRInfoModelProtocol]
-    
-    /// 指定された項目を削除する
-    func remove(item: QRInfoModelProtocol) -> Bool
-}
 
 struct QRInfoList: QRInfoListProtocol {
 

@@ -9,12 +9,12 @@ import SwiftUI
 
 struct WatchQRCodePreviewView: View {
     
-    var item: QRInfoModelProtocol
+    var item: WatchQRInfoProtocol
     
     var body: some View {
         VStack {
             GeometryReader { geometry in
-                QRCodeImageView(image: item.qrcode(), viewSize: geometry.size)
+                QRCodeImageView(image: item.qrCode, viewSize: geometry.size)
             }
         }
         .navigationBarTitleDisplayMode(.inline)
