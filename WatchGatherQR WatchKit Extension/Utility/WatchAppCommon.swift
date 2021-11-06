@@ -21,7 +21,7 @@ class WatchAppCommon {
     }
     
     func syncWithPhone() {
-        print("syncWithPhone start")
+        // print("syncWithPhone start")
         phoneSyncManager.syncList()
     }
     

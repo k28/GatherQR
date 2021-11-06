@@ -12,17 +12,18 @@ class WatchSyncManager: WatchConnectorDelegate {
     var watchConnector: WatchConnector!
     
     func onReceiveMessage(_ message: [String : Any]) {
-        print("onReceiveMessage \(message)")
+        // print("onReceiveMessage \(message)")
         guard let kind = message[MessageKey.Kind.rawValue] as? String else {
             print("Unknown kind")
             return
         }
+        // print("onReceiveMessage kind=\(kind)")
         
         switch kind {
         case MessageKind.GetList.rawValue:
             let getListResponse = GetListResponse(qrcodelist: QRInfoList())
             let message = getListResponse.makeMessage()
-            print("response message =\(message)")
+            // print("response message =\(message)")
             watchConnector.sendMessage(message: message)
             break
         case MessageKind.QRInfoRequest.rawValue:
@@ -38,7 +39,7 @@ class WatchSyncManager: WatchConnectorDelegate {
     
     func qrInfoRequest(_ data: [String : Any]) {
         guard let uuidList = data["uuidlist"] as? [String] else {
-            print("uuidList is not support type or nil")
+            // print("uuidList is not support type or nil")
             return
         }
         
@@ -49,7 +50,7 @@ class WatchSyncManager: WatchConnectorDelegate {
         }
         
         for i in filterdList {
-            print("send qrcode info \(i.uuid)")
+            // print("send qrcode info \(i.uuid)")
             let response = QRInfoResponse(qrCodeInfoList: [i])
             watchConnector.sendMessage(message: response.makeMessage())
         }

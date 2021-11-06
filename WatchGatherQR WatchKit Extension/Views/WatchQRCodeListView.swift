@@ -10,6 +10,7 @@ import SwiftUI
 struct WatchQRCodeListView: View {
     
     @EnvironmentObject var qrcodeList: WatchQRInfoList
+    @Environment(\.scenePhase) private var scenePhase
     
     var body: some View {
         
@@ -19,6 +20,24 @@ struct WatchQRCodeListView: View {
                     Text(item.title)
                 }
             }
+        }
+        .onChange(of: scenePhase) { phase in
+            switch phase {
+            case .active:
+                // Sync when this view become active.
+                // (not call this method on the first time this application launch, because the view did not created.)
+                app.syncWithPhone()
+                break
+            case .inactive:
+                // The app has become inactive.
+                break
+            case .background:
+                // The app has moved to the background.
+                break
+            @unknown default:
+                fatalError("The app has entered an unknown state.")
+            }
+
         }
         
     }
