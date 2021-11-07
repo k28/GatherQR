@@ -14,3 +14,22 @@ protocol WatchQRInfoProtocol {
     var lastUpdate: Date { get }
     var qrCode: UIImage { get }
 }
+
+class WatchQRInfoStb: WatchQRInfoProtocol {
+    var uuid: String = ""
+    
+    var title: String = ""
+    
+    var lastUpdate: Date = Date()
+    
+    var qrCode: UIImage {
+        return UIImage(systemName: "star.fill")!
+    }
+    
+    static func make(title: String) -> WatchQRInfoStb {
+        let model = WatchQRInfoStb()
+        model.title = title
+        return model
+    }
+    
+}

@@ -27,6 +27,10 @@ extension WatchQRInfoList {
     func loadFromDB() {
         qrInfoList.removeAll()
         
+        #if targetEnvironment(simulator)
+        qrInfoList.append(WatchQRInfoStb.make(title: "Test 1"))
+        qrInfoList.append(WatchQRInfoStb.make(title: "Test 2"))
+        #else
         let result = WatchRealmUtility.defaultRealm().objects(WatchQRInfoEntity.self)
         for i in 0..<result.count {
             let item = result[i]
@@ -35,6 +39,7 @@ extension WatchQRInfoList {
             }
             qrInfoList.append(item.copy() as! WatchQRInfoProtocol)
         }
+        #endif
     }
     
     func reload() {

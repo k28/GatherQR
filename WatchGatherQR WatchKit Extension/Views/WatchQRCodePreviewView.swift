@@ -17,6 +17,7 @@ struct WatchQRCodePreviewView: View {
                 QRCodeImageView(image: item.qrCode, viewSize: geometry.size)
             }
         }
+        .navigationTitle(item.title)
         .navigationBarTitleDisplayMode(.inline)
     }
     
@@ -24,6 +25,6 @@ struct WatchQRCodePreviewView: View {
 
 struct WatchQRCodePreviewView_Previews: PreviewProvider {
     static var previews: some View {
-        WatchQRCodePreviewView(item: QRInfoModel())
+        WatchQRCodePreviewView(item: WatchQRInfoStb.make(title: "Test 1"))
     }
 }
