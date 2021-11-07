@@ -29,19 +29,19 @@ class WatchConnector: NSObject, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        print("activationDidCompleteWith state=\(activationState.rawValue)")
+        // print("activationDidCompleteWith state=\(activationState.rawValue)")
     }
     
     func sessionDidBecomeInactive(_ session: WCSession) {
-        print("sessionDidBecomeInactive")
+        // print("sessionDidBecomeInactive")
     }
     
     func sessionDidDeactivate(_ session: WCSession) {
-        print("sessionDidDeactivate")
+        // print("sessionDidDeactivate")
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        print("didRecieveMessage \(message)")
+        // print("didRecieveMessage \(message)")
         delegate?.onReceiveMessage(message)
     }
     

@@ -77,7 +77,7 @@
 		E57E196026FE7B8A0005DC6C /* WatchGatherQRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57E195F26FE7B8A0005DC6C /* WatchGatherQRTests.swift */; };
 		E57E196A26FE7B8A0005DC6C /* WatchGatherQRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57E196926FE7B8A0005DC6C /* WatchGatherQRUITests.swift */; };
 		E57E196C26FE7B8A0005DC6C /* WatchGatherQRUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57E196B26FE7B8A0005DC6C /* WatchGatherQRUITestsLaunchTests.swift */; };
-		E57E196F26FE7B8A0005DC6C /* WatchGatherQR.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E57E193926FE7B880005DC6C /* WatchGatherQR.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E57E196F26FE7B8A0005DC6C /* GatherQR.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E57E193926FE7B880005DC6C /* GatherQR.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E591136126DB1D37007E25B9 /* DeviceRotationViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591136026DB1D37007E25B9 /* DeviceRotationViewModifier.swift */; };
 		E5AB67C826B6AAF6006F34CA /* ObservedInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB67C726B6AAF6006F34CA /* ObservedInfo.swift */; };
 		E5AB67CA26C60487006F34CA /* QRCodeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB67C926C60487006F34CA /* QRCodeImageView.swift */; };
@@ -139,7 +139,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				E57E196F26FE7B8A0005DC6C /* WatchGatherQR.app in Embed Watch Content */,
+				E57E196F26FE7B8A0005DC6C /* GatherQR.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,7 +212,7 @@
 		E56C52B42730FE9100D33780 /* WatchAppCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAppCommon.swift; sourceTree = "<group>"; };
 		E56C52B62731018200D33780 /* QRInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRInfoRequest.swift; sourceTree = "<group>"; };
 		E56C52B92731025700D33780 /* QRInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRInfoResponse.swift; sourceTree = "<group>"; };
-		E57E193926FE7B880005DC6C /* WatchGatherQR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchGatherQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E57E193926FE7B880005DC6C /* GatherQR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GatherQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57E193B26FE7B8A0005DC6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E57E194126FE7B8A0005DC6C /* WatchGatherQR WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchGatherQR WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57E194626FE7B8A0005DC6C /* GatherQRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatherQRApp.swift; sourceTree = "<group>"; };
@@ -340,7 +340,7 @@
 				E530489B2645F422004BB80D /* GatherQR.app */,
 				E53048AC2645F423004BB80D /* GatherQRTests.xctest */,
 				E53048B72645F423004BB80D /* GatherQRUITests.xctest */,
-				E57E193926FE7B880005DC6C /* WatchGatherQR.app */,
+				E57E193926FE7B880005DC6C /* GatherQR.app */,
 				E57E194126FE7B8A0005DC6C /* WatchGatherQR WatchKit Extension.appex */,
 				E57E195B26FE7B8A0005DC6C /* WatchGatherQRTests.xctest */,
 				E57E196526FE7B8A0005DC6C /* WatchGatherQRUITests.xctest */,
@@ -646,7 +646,7 @@
 			);
 			name = WatchGatherQR;
 			productName = WatchGatherQR;
-			productReference = E57E193926FE7B880005DC6C /* WatchGatherQR.app */;
+			productReference = E57E193926FE7B880005DC6C /* GatherQR.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		E57E194026FE7B8A0005DC6C /* WatchGatherQR WatchKit Extension */ = {
@@ -1221,7 +1221,7 @@
 				CODE_SIGN_ENTITLEMENTS = GatherQR/GatherQR.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2021110601;
+				CURRENT_PROJECT_VERSION = 2021110701;
 				DEVELOPMENT_ASSET_PATHS = "\"GatherQR/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				ENABLE_PREVIEWS = YES;
@@ -1248,7 +1248,7 @@
 				CODE_SIGN_ENTITLEMENTS = GatherQR/GatherQR.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2021110601;
+				CURRENT_PROJECT_VERSION = 2021110701;
 				DEVELOPMENT_ASSET_PATHS = "\"GatherQR/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				ENABLE_PREVIEWS = YES;
@@ -1364,16 +1364,15 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2021110601;
+				CURRENT_PROJECT_VERSION = 2021110701;
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = WatchGatherQR_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = WatchGatherQR;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.k28.ios.GatherQR;
 				MARKETING_VERSION = 1.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GatherQR;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1392,16 +1391,15 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2021110601;
+				CURRENT_PROJECT_VERSION = 2021110701;
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = WatchGatherQR_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = WatchGatherQR;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.k28.ios.GatherQR;
 				MARKETING_VERSION = 1.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GatherQR;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1417,13 +1415,13 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2021110601;
+				CURRENT_PROJECT_VERSION = 2021110701;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchGatherQR WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WatchGatherQR WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "WatchGatherQR WatchKit Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "GatherQR WatchKit Extension";
 				INFOPLIST_KEY_CLKComplicationPrincipalClass = WatchGatherQR_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1449,13 +1447,13 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2021110601;
+				CURRENT_PROJECT_VERSION = 2021110701;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchGatherQR WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WatchGatherQR WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "WatchGatherQR WatchKit Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "GatherQR WatchKit Extension";
 				INFOPLIST_KEY_CLKComplicationPrincipalClass = WatchGatherQR_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (

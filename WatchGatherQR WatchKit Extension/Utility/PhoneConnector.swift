@@ -31,11 +31,11 @@ class PhoneConnector: NSObject, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        print("activationDidCompleteWith state=\(activationState.rawValue)")
+        // print("activationDidCompleteWith state=\(activationState.rawValue)")
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        print("didReceiveMessage message = \(message)")
+        // print("didReceiveMessage message = \(message)")
         DispatchQueue.main.async {
             self.delegate?.onReceiveMessage(message)
         }
