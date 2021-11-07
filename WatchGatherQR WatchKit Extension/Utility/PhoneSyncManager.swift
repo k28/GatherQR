@@ -54,6 +54,7 @@ class PhoneSyncManager: PhoneConnectorDelegate {
             return
         }
         
+        var deleteUUIDs = app.watchQRInfoList.uuidList
         var needUpdateList = [String]()
         
         for info in qrcodeList {
@@ -65,9 +66,17 @@ class PhoneSyncManager: PhoneConnectorDelegate {
                 print("analyzeGetListResponse 9999")
                 continue
             }
+            
             if app.watchQRInfoList.needUpdate(uuid: uuid, lastUpdate: lastUpdate) {
                 needUpdateList.append(uuid)
             }
+            
+            deleteUUIDs.removeAll(where: {$0 == uuid})
+        }
+        
+        // 削除されていた項目をリストから削除する
+        if !deleteUUIDs.isEmpty {
+            app.watchQRInfoList.deleteItems(uuids: deleteUUIDs)
         }
         
         if needUpdateList.count > 0 {

@@ -9,7 +9,8 @@ import Foundation
 import RealmSwift
 import UIKit
 
-class WatchQRInfoEntity: Object, WatchQRInfoProtocol {
+class WatchQRInfoEntity: Object, WatchQRInfoProtocol, NSCopying {
+    
     @objc dynamic var uuid: String = UUID().uuidString
     @objc dynamic var order: Int = 0
     @objc dynamic var title: String = ""
@@ -22,6 +23,16 @@ class WatchQRInfoEntity: Object, WatchQRInfoProtocol {
         }
         
         return imageData
+    }
+
+    func copy(with zone: NSZone? = nil) -> Any {
+        let entity = WatchQRInfoEntity()
+        entity.uuid = self.uuid
+        entity.order = self.order
+        entity.title = self.title
+        entity.imageData = self.imageData
+        entity.lastUpdate = self.lastUpdate
+        return entity
     }
 }
 
@@ -49,6 +60,17 @@ extension WatchQRInfoEntity {
             try? realm.write {
                 realm.add(entity)
             }
+        }
+    }
+    
+    static func delete(uuid: String) {
+        let realm = WatchRealmUtility.defaultRealm()
+        let deleteItem = realm.objects(WatchQRInfoEntity.self).filter("uuid == %@", uuid)
+        if deleteItem.isEmpty {
+            return
+        }
+        try? realm.write {
+            realm.delete(deleteItem)
         }
     }
     

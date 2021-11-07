@@ -30,7 +30,10 @@ extension WatchQRInfoList {
         let result = WatchRealmUtility.defaultRealm().objects(WatchQRInfoEntity.self)
         for i in 0..<result.count {
             let item = result[i]
-            qrInfoList.append(item)
+            if item.isInvalidated {
+                continue
+            }
+            qrInfoList.append(item.copy() as! WatchQRInfoProtocol)
         }
     }
     
@@ -44,6 +47,22 @@ extension WatchQRInfoList {
         }
         
         return (info.lastUpdate != lastUpdate)
+    }
+    
+    func deleteItems(uuids: [String]) {
+        for uuid in uuids {
+            qrInfoList.removeAll(where: {$0.uuid == uuid})
+            WatchQRInfoEntity.delete(uuid: uuid)
+        }
+        reload()
+    }
+    
+    var uuidList: [String] {
+        var ids: [String] = []
+        for item in qrInfoList {
+            ids.append(item.uuid)
+        }
+        return ids
     }
     
 }
