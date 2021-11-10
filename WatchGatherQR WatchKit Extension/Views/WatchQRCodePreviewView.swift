@@ -19,6 +19,13 @@ struct WatchQRCodePreviewView: View {
         }
         .navigationTitle(item.title)
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            // Make sure that the screen rotates so that it doesn't disappear when turn the wrist.
+            WKExtension.shared().isAutorotating = true
+        }
+        .onDisappear {
+            WKExtension.shared().isAutorotating = false
+        }
     }
     
 }
