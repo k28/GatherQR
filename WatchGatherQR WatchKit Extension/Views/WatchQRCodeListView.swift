@@ -14,11 +14,25 @@ struct WatchQRCodeListView: View {
     
     var body: some View {
         
-        List {
-            ForEach(qrcodeList.qrInfoList, id: \.uuid) { item in
-                NavigationLink(destination: WatchQRCodePreviewView(item: item)) {
-                    Text(item.title)
+        Group {
+            if !qrcodeList.qrInfoList.isEmpty {
+                List {
+                    ForEach(qrcodeList.qrInfoList, id: \.uuid) { item in
+                        NavigationLink(destination: WatchQRCodePreviewView(item: item)) {
+                            Text(item.title)
+                        }
+                    }
                 }
+            } else {
+                VStack {
+                    ProgressView()
+                        .padding(.all, 16)
+                    Spacer()
+                    Text(app.loadString("Data syncing...\nPlease hold your iPhone close."))
+                        .font(.body)
+                    Spacer()
+                }
+                .padding()
             }
         }
         .onChange(of: scenePhase) { phase in
@@ -46,5 +60,10 @@ struct WatchQRCodeListView: View {
 struct WatchQRCodeListView_Previews: PreviewProvider {
     static var previews: some View {
         WatchQRCodeListView()
+//            .preferredColorScheme(.light)
+            .environmentObject(WatchQRInfoList())
+//        WatchQRCodeListView()
+//            .preferredColorScheme(.dark)
+//            .environmentObject(WatchQRInfoList())
     }
 }

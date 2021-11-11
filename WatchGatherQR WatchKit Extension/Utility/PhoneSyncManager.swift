@@ -12,6 +12,7 @@ import CoreAudio
 class PhoneSyncManager: PhoneConnectorDelegate {
     
     var phoneConnector: PhoneConnector!
+    var isFirstTime = false
     
     init() {
     }
@@ -19,6 +20,21 @@ class PhoneSyncManager: PhoneConnectorDelegate {
     func syncList() {
         if phoneConnector.isReachable {
             phoneConnector.send(message: GetList().makeMessage())
+        } else if isFirstTime {
+            retryUntilReachable()
+        }
+       
+        isFirstTime = true
+    }
+    
+    func retryUntilReachable() {
+        if phoneConnector.isReachable {
+            phoneConnector.send(message: GetList().makeMessage())
+        } else {
+            // 初回で同期できていないので、3秒毎に同期できるか確認する
+            DispatchQueue.global(qos: .default).asyncAfter(deadline: .now() + 3, execute: {
+                self.retryUntilReachable()
+            })
         }
     }
     
