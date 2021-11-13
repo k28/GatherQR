@@ -32,6 +32,9 @@ class WatchSyncManager: WatchConnectorDelegate {
             }
             qrInfoRequest(data)
             break
+        case MessageKind.ShowWatchQRCode.rawValue:
+            app.logSelectContent(contentType: .show_on_watch)
+            break
         default:
             break
         }

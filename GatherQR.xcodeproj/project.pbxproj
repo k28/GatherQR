@@ -36,6 +36,8 @@
 		E53ABDA326514682009AFAB3 /* RegisterQRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53ABDA226514682009AFAB3 /* RegisterQRCodeView.swift */; };
 		E53ABDA52651482C009AFAB3 /* RegisterQRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53ABDA42651482C009AFAB3 /* RegisterQRCodeViewModel.swift */; };
 		E53ABDA72651582B009AFAB3 /* RealmUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53ABDA62651582B009AFAB3 /* RealmUtility.swift */; };
+		E541E26D273FA14300B35BC0 /* ShowWatchQRCodeMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E541E26C273FA14300B35BC0 /* ShowWatchQRCodeMessage.swift */; };
+		E541E26E273FA43000B35BC0 /* ShowWatchQRCodeMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E541E26C273FA14300B35BC0 /* ShowWatchQRCodeMessage.swift */; };
 		E555E3E1272E369F00BCBCC1 /* QRInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048D2264684BD004BB80D /* QRInfoModel.swift */; };
 		E555E3E3272E36EF00BCBCC1 /* QRCodeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB67C926C60487006F34CA /* QRCodeImageView.swift */; };
 		E555E3E6272E378000BCBCC1 /* WatchQRCodePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E555E3E5272E378000BCBCC1 /* WatchQRCodePreviewView.swift */; };
@@ -194,6 +196,7 @@
 		E53ABDA226514682009AFAB3 /* RegisterQRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterQRCodeView.swift; sourceTree = "<group>"; };
 		E53ABDA42651482C009AFAB3 /* RegisterQRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterQRCodeViewModel.swift; sourceTree = "<group>"; };
 		E53ABDA62651582B009AFAB3 /* RealmUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUtility.swift; sourceTree = "<group>"; };
+		E541E26C273FA14300B35BC0 /* ShowWatchQRCodeMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowWatchQRCodeMessage.swift; sourceTree = "<group>"; };
 		E555E3E5272E378000BCBCC1 /* WatchQRCodePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchQRCodePreviewView.swift; sourceTree = "<group>"; };
 		E555E3E7272E38E300BCBCC1 /* WatchQRCodeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchQRCodeListView.swift; sourceTree = "<group>"; };
 		E56C528A272FC30200D33780 /* WatchConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnector.swift; sourceTree = "<group>"; };
@@ -469,6 +472,7 @@
 				E56C52992730BFE100D33780 /* GetListResponse.swift */,
 				E56C52B62731018200D33780 /* QRInfoRequest.swift */,
 				E56C52B92731025700D33780 /* QRInfoResponse.swift */,
+				E541E26C273FA14300B35BC0 /* ShowWatchQRCodeMessage.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -728,6 +732,7 @@
 					};
 					E57E193826FE7B880005DC6C = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1310;
 					};
 					E57E194026FE7B8A0005DC6C = {
 						CreatedOnToolsVersion = 13.0;
@@ -955,6 +960,7 @@
 				E56C52BC273113F200D33780 /* WatchQRInfoProtocol.swift in Sources */,
 				E56C52BA2731025700D33780 /* QRInfoResponse.swift in Sources */,
 				E53ABDA52651482C009AFAB3 /* RegisterQRCodeViewModel.swift in Sources */,
+				E541E26D273FA14300B35BC0 /* ShowWatchQRCodeMessage.swift in Sources */,
 				E56C52972730BD6600D33780 /* GetList.swift in Sources */,
 				E53ABDA126509F40009AFAB3 /* QRCodeScannerView.swift in Sources */,
 				E56C52A82730E79200D33780 /* AppResult.swift in Sources */,
@@ -995,6 +1001,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E541E26E273FA43000B35BC0 /* ShowWatchQRCodeMessage.swift in Sources */,
 				E56C52982730BD6600D33780 /* GetList.swift in Sources */,
 				E57E194B26FE7B8A0005DC6C /* NotificationController.swift in Sources */,
 				E555E3E6272E378000BCBCC1 /* WatchQRCodePreviewView.swift in Sources */,
@@ -1362,6 +1369,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2021111101;
@@ -1370,12 +1378,18 @@
 				IBSC_MODULE = WatchGatherQR_WatchKit_Extension;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.k28.ios.GatherQR;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR.watchkitapp;
 				PRODUCT_NAME = GatherQR;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 8.0;
@@ -1389,6 +1403,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2021111101;
@@ -1397,6 +1412,11 @@
 				IBSC_MODULE = WatchGatherQR_WatchKit_Extension;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.k28.ios.GatherQR;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR.watchkitapp;
 				PRODUCT_NAME = GatherQR;

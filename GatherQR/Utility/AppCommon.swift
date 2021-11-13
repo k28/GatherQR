@@ -57,7 +57,6 @@ extension AppCommon {
     func logSelectContent(contentType: AnalyticsSelectContentType) {
         Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
             AnalyticsParameterContentType: contentType.rawValue,
-            // AnalyticsParameterContentType: "count",
         ])
     }
     

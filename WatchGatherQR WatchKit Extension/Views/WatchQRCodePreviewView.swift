@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WatchQRCodePreviewView: View {
     
+    @Environment(\.scenePhase) private var scenePhase
     var item: WatchQRInfoProtocol
     
     var body: some View {
@@ -22,10 +23,28 @@ struct WatchQRCodePreviewView: View {
         .onAppear {
             // Make sure that the screen rotates so that it doesn't disappear when turn the wrist.
             WKExtension.shared().isAutorotating = true
+            app.phoneSyncManager.sendShowQRCode()
         }
         .onDisappear {
             WKExtension.shared().isAutorotating = false
         }
+        .onChange(of: scenePhase) { phase in
+            switch phase {
+            case .active:
+                app.phoneSyncManager.sendShowQRCode()
+                break
+            case .inactive:
+                // The app has become inactive.
+                break
+            case .background:
+                // The app has moved to the background.
+                break
+            @unknown default:
+                fatalError("The app has entered an unknown state.")
+            }
+
+        }
+
     }
     
 }

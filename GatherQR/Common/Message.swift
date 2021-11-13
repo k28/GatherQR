@@ -17,6 +17,7 @@ enum MessageKind: String {
     case GetListResponse
     case QRInfoRequest
     case QRInfoResponse
+    case ShowWatchQRCode
 }
 
 protocol Message {

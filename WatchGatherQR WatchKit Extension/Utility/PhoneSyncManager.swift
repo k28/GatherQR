@@ -45,6 +45,12 @@ class PhoneSyncManager: PhoneConnectorDelegate {
         }
     }
     
+    func sendShowQRCode() {
+        if phoneConnector.isReachable {
+            phoneConnector.send(message: ShowWatchQRCodeMessage().makeMessage())
+        }
+    }
+    
     func onReceiveMessage(_ message: [String : Any]) {
         guard let kind = message[MessageKey.Kind.rawValue] as? String else {
             return
