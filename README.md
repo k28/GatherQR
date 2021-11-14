@@ -2,5 +2,5 @@
 iOS QRCode Gather Application
 
 - iOS 14.x and later
-- XCode 12.5
+- XCode 13.1
 
