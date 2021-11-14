@@ -65,7 +65,7 @@ struct RegisterQRCodeView: View {
                         if mode == .Add {
                             object.reloadData()
                         }
-                        app.logEventCount(itemID: .EditCode, ItemName: mode.itemName)
+                        app.logSelectContent(contentType: .edit_code)
                         presentationMode.wrappedValue.dismiss()
                     }) {
                         HStack {

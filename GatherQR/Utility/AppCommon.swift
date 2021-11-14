@@ -8,9 +8,12 @@
 import UIKit
 import FirebaseAnalytics
 
-enum AnalyticsItemID: String {
-    case ShowCode
-    case EditCode
+enum AnalyticsSelectContentType: String {
+    // case count  => Ver. 1.01までのselect_contentの集計結果
+    case show_code
+    case show_on_watch
+    case edit_code
+    case delete_code
 }
 
 /**
@@ -18,7 +21,11 @@ enum AnalyticsItemID: String {
  */
 class AppCommon {
     
+    let watchSyncManager: WatchSyncManager = WatchSyncManager()
+    
     func initialize() {
+        let watchConnector = WatchConnector(delegate: watchSyncManager)
+        self.watchSyncManager.watchConnector = watchConnector
     }
 }
 
@@ -47,11 +54,9 @@ extension AppCommon {
     /// - Parameters:
     ///   - itemID: ItemのID
     ///   - ItemName: Itemの名称
-    func logEventCount(itemID: AnalyticsItemID, ItemName: String) {
+    func logSelectContent(contentType: AnalyticsSelectContentType) {
         Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
-            AnalyticsParameterItemID: "id-\(itemID.rawValue)",
-          AnalyticsParameterItemName: ItemName,
-          AnalyticsParameterContentType: "cont",
+            AnalyticsParameterContentType: contentType.rawValue,
         ])
     }
     

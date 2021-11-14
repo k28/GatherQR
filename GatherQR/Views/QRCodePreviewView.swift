@@ -23,7 +23,7 @@ struct QRCodePreviewView: View {
         .onAppear() {
             isViewAppear = true
             moveBrightnessMaxIfNeed()
-            app.logEventCount(itemID: .ShowCode, ItemName: "Show")
+            app.logSelectContent(contentType: .show_code)
         }
         .onDisappear() {
             isViewAppear = false

@@ -13,6 +13,7 @@ protocol QRInfoModelProtocol {
     var title: String { get set }
     var value: String { get set }
     var createDate: Date { get }
+    var lastUpdate: Date { get }
     
     func save()
     func qrcode() -> UIImage
@@ -23,12 +24,25 @@ struct QRInfoModel: QRInfoModelProtocol {
     var title: String = "Sample Code"
     var value: String = "Hello World"
     var createDate: Date = Date()
+    var lastUpdate: Date = Date()
     
     func save() {
         // TODO SaveCodeHere..
     }
     
-    func qrcode() -> UIImage {        
+    func qrcode() -> UIImage {
+        #if os(watchOS)
+        return UIImage(named: "sample-qr") ?? UIImage(systemName: "star.fill")!
+        #else
         return QRCodeUtility.makeQRCode(value) ?? UIImage(systemName: "star.fill")!
+        #endif
     }
+}
+
+extension QRInfoModel: WatchQRInfoProtocol {
+    var qrCode: UIImage {
+        return qrcode()
+    }
+    
+    
 }

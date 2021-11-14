@@ -96,7 +96,7 @@ struct QRCodeInfoList: View {
             let deleteItem = object.qrcodeList[index]
             if model.remove(item: deleteItem) {
                 object.qrcodeList.remove(at: index)
-                app.logEventCount(itemID: .EditCode, ItemName: "Delete")
+                app.logSelectContent(contentType: .delete_code)
             }
         }
     }
