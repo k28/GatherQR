@@ -42,6 +42,7 @@
 		E555E3E3272E36EF00BCBCC1 /* QRCodeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB67C926C60487006F34CA /* QRCodeImageView.swift */; };
 		E555E3E6272E378000BCBCC1 /* WatchQRCodePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E555E3E5272E378000BCBCC1 /* WatchQRCodePreviewView.swift */; };
 		E555E3E8272E38E300BCBCC1 /* WatchQRCodeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E555E3E7272E38E300BCBCC1 /* WatchQRCodeListView.swift */; };
+		E56B39ED2767840C00B75EF8 /* ScannerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B39EC2767840C00B75EF8 /* ScannerViewModelTests.swift */; };
 		E56C528B272FC30200D33780 /* WatchConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C528A272FC30200D33780 /* WatchConnector.swift */; };
 		E56C528E272FCA4E00D33780 /* PhoneConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C528D272FCA4E00D33780 /* PhoneConnector.swift */; };
 		E56C52942730BBCA00D33780 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C52932730BBCA00D33780 /* Message.swift */; };
@@ -199,6 +200,7 @@
 		E541E26C273FA14300B35BC0 /* ShowWatchQRCodeMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowWatchQRCodeMessage.swift; sourceTree = "<group>"; };
 		E555E3E5272E378000BCBCC1 /* WatchQRCodePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchQRCodePreviewView.swift; sourceTree = "<group>"; };
 		E555E3E7272E38E300BCBCC1 /* WatchQRCodeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchQRCodeListView.swift; sourceTree = "<group>"; };
+		E56B39EC2767840C00B75EF8 /* ScannerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModelTests.swift; sourceTree = "<group>"; };
 		E56C528A272FC30200D33780 /* WatchConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnector.swift; sourceTree = "<group>"; };
 		E56C528D272FCA4E00D33780 /* PhoneConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConnector.swift; sourceTree = "<group>"; };
 		E56C52932730BBCA00D33780 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 		E53048AF2645F423004BB80D /* GatherQRTests */ = {
 			isa = PBXGroup;
 			children = (
+				E56B39EB276783E400B75EF8 /* Model */,
 				E53048B02645F423004BB80D /* GatherQRTests.swift */,
 				E53048B22645F423004BB80D /* Info.plist */,
 			);
@@ -451,6 +454,14 @@
 				E555E3E7272E38E300BCBCC1 /* WatchQRCodeListView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E56B39EB276783E400B75EF8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E56B39EC2767840C00B75EF8 /* ScannerViewModelTests.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E56C528C272FC9D300D33780 /* Utility */ = {
@@ -986,6 +997,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E53048B12645F423004BB80D /* GatherQRTests.swift in Sources */,
+				E56B39ED2767840C00B75EF8 /* ScannerViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
