@@ -29,12 +29,16 @@ class RegisterQRCodeViewModel: ObservableObject {
     }
     
     init(info: QRInfoModelProtocol, onUpdate: @escaping ((_ model: RegisterQRCodeViewModel) -> Void)) {
+        updateInfo(info)
+        self.onUpdateModel = onUpdate
+    }
+    
+    func updateInfo(_ info: QRInfoModelProtocol) {
         self.qrCode = info.value
         self.title = info.title
         self.uuid = info.uuid
         self.createDate = info.createDate
         self.info = info
-        self.onUpdateModel = onUpdate
     }
     
     func validate() {

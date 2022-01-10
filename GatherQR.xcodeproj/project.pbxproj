@@ -1228,7 +1228,7 @@
 				CODE_SIGN_ENTITLEMENTS = GatherQR/GatherQR.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2021111301;
+				CURRENT_PROJECT_VERSION = 2022011001;
 				DEVELOPMENT_ASSET_PATHS = "\"GatherQR/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				ENABLE_PREVIEWS = YES;
@@ -1238,7 +1238,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.10;
+				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1255,7 +1255,7 @@
 				CODE_SIGN_ENTITLEMENTS = GatherQR/GatherQR.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2021111301;
+				CURRENT_PROJECT_VERSION = 2022011001;
 				DEVELOPMENT_ASSET_PATHS = "\"GatherQR/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				ENABLE_PREVIEWS = YES;
@@ -1265,7 +1265,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.10;
+				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1372,7 +1372,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2021111301;
+				CURRENT_PROJECT_VERSION = 2022011001;
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = WatchGatherQR_WatchKit_Extension;
@@ -1383,7 +1383,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.10;
+				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR.watchkitapp;
 				PRODUCT_NAME = GatherQR;
 				SDKROOT = watchos;
@@ -1406,7 +1406,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2021111301;
+				CURRENT_PROJECT_VERSION = 2022011001;
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = WatchGatherQR_WatchKit_Extension;
@@ -1417,7 +1417,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.10;
+				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR.watchkitapp;
 				PRODUCT_NAME = GatherQR;
 				SDKROOT = watchos;
@@ -1435,7 +1435,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2021111301;
+				CURRENT_PROJECT_VERSION = 2022011001;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchGatherQR WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				ENABLE_PREVIEWS = YES;
@@ -1449,7 +1449,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.10;
+				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -1467,7 +1467,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2021111301;
+				CURRENT_PROJECT_VERSION = 2022011001;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchGatherQR WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				ENABLE_PREVIEWS = YES;
@@ -1481,7 +1481,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.10;
+				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;

@@ -30,15 +30,22 @@ struct QRCodeInfoRow: View {
                     editButtonDidSelect = true
                 }
             
-            NavigationLink(destination: RegisterQRCodeView(viewModel: RegisterQRCodeViewModel(info: item.qrInfoModel, onUpdate: { model in
+            // RegisterQRCodeViewに渡すViewModel. 後で情報を更新する必要があるのでインスタンスを生成して保持しておく。
+            let registerQRCodeViewModel = RegisterQRCodeViewModel(info: item.qrInfoModel, onUpdate: { model in
                 item.title = model.title
-            } ), mode: .Edit),
+            })
+            NavigationLink(destination: RegisterQRCodeView(viewModel: registerQRCodeViewModel, mode: .Edit),
                            isActive: $editButtonDidSelect) {
                 EmptyView()
             }
             .frame(width: 0, height: 0)
             .opacity(0.0)
             .buttonStyle(PlainButtonStyle())
+            .onAppear(perform: {
+                // RegisterQRCodeViewで編集して登録せずに戻った時に編集前の情報に戻すためにregisterQRCodeViewModelを再度設定し直す。
+                // 「登録」した時もCallされるが、その時にはitemのqrInfoModelも更新されている状態なので問題ない。
+                registerQRCodeViewModel.updateInfo(item.qrInfoModel)
+            })
         }
     }
 }
