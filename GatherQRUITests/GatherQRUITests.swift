@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import GatherQR
 
 class GatherQRUITests: XCTestCase {
 
@@ -29,6 +30,30 @@ class GatherQRUITests: XCTestCase {
 
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let addButton = app.buttons["qrcodelist_add_button"]
+        addButton.tap()
+        
+        _ = app.waitForExistence(timeout: 0.5)
+        app.otherElements["scanqrcodeview_"].tap()
+        
+        _ = app.waitForExistence(timeout: 0.5)
+        let titleTextField = app.textFields.matching(identifier: "registerqrcodeview_title_text_field").firstMatch
+        let registerButton = app.buttons["registerqrcodeview_register_button"]
+        
+        titleTextField.tap()
+        titleTextField.typeText("UITestTitle")
+        app.buttons["Return"].tap()
+        // Simulatorだと10秒待たないと、登録ボタンが有効にならない
+        sleep(11)
+        _ = app.waitForExistence(timeout: 0.5)
+
+        registerButton.tap()
+        
+        // 戻るボタンを押してTop画面に戻る
+        _ = app.waitForExistence(timeout: 0.5)
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        
+        //　追加したModelが新しく追加されていること
     }
 
     func testLaunchPerformance() throws {

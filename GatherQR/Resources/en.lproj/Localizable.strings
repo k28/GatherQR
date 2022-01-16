@@ -18,10 +18,12 @@
 /* ScanQRCodeView */
 "Keep scanning for QR-codes" = "Keep scanning for QR-codes";
 "Add QR Code" = "Add QR Code";
+"Rescan QR Code" = "Rescan QR Code";
 
 /* RegisterQRCodeView */
 "Register QR code" = "Register QR code";
 "Please input the Title" = "Please input the Title";
+"Rescan" = "Rescan";
 
 /* WatchGatherQR */
 "Data syncing...\nPlease hold your iPhone close." = "Data syncing...\nPlease hold your iPhone close.";

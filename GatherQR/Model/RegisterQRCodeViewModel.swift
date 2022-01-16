@@ -29,12 +29,16 @@ class RegisterQRCodeViewModel: ObservableObject {
     }
     
     init(info: QRInfoModelProtocol, onUpdate: @escaping ((_ model: RegisterQRCodeViewModel) -> Void)) {
+        updateInfo(info)
+        self.onUpdateModel = onUpdate
+    }
+    
+    func updateInfo(_ info: QRInfoModelProtocol) {
         self.qrCode = info.value
         self.title = info.title
         self.uuid = info.uuid
         self.createDate = info.createDate
         self.info = info
-        self.onUpdateModel = onUpdate
     }
     
     func validate() {
@@ -51,6 +55,7 @@ class RegisterQRCodeViewModel: ObservableObject {
     func registerQRCode() {
         // TODO QRCode情報を保存するコード
         #if targetEnvironment(simulator)
+        QRInfoList.tmpList.append(QRInfoModel(title: title, value: qrCode))
         #else
         QRInfoEntity.upsert(uuid: uuid, title: title, value: qrCode)
         #endif
