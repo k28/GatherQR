@@ -8,21 +8,30 @@
 import SwiftUI
 
 struct ScanQRCodeView: View {
+    
+    enum Mode {
+        case Add
+        case Edit
+    }
+    
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @ObservedObject var viewModel = ScannerViewModel()
     let qrCodeScannerView = QRCodeScannerView()
+    let mode: Mode
+    var registerQRCodeViewModel: RegisterQRCodeViewModel
     
     var body: some View {
         ZStack {
             // Link
             NavigationLink(
-                destination: RegisterQRCodeView(viewModel: RegisterQRCodeViewModel(qrCode: viewModel.lastQRCode), mode: .Add),
+                destination: RegisterQRCodeView(viewModel: self.registerQRCodeViewModel, mode: .Add),
                 isActive: $viewModel.qrCodeFound) {
-                EmptyView()
-            }
+                    EmptyView()
+                }
             
             // View Contents
             qrCodeScannerView
-                .found(r: self.viewModel.onFoundQRCode(_:))
+                .found(r: self.onFoundQRCode(_:))
                 .onTorchLight(isOn: self.viewModel.torchIsOn)
                 .interval(delay: self.viewModel.scanInterval)
                 .onAppear() {
@@ -34,6 +43,7 @@ struct ScanQRCodeView: View {
                 .onRotate { orientation in
                     qrCodeScannerView.rotationChange(orientation)
                 }
+                .accessibility(identifier: "scanqrcodeview_")
             
             VStack {
                 VStack {
@@ -62,7 +72,7 @@ struct ScanQRCodeView: View {
                 .cornerRadius(10)
             }.padding()
 
-            .navigationTitle(app.loadString("Add QR Code"))
+            .navigationTitle(navigationTitle())
         }
 
     }
@@ -75,10 +85,31 @@ struct ScanQRCodeView: View {
         qrCodeScannerView.startCameraRunning()
     }
     
+    private func navigationTitle() -> String {
+        switch mode {
+        case .Add:
+            return app.loadString("Add QR Code")
+        case .Edit:
+            return app.loadString("Rescan QR Code")
+        }
+    }
+    
+    /// QRコードが見つかった時にCallされます
+    private func onFoundQRCode(_ s: String) {
+        self.registerQRCodeViewModel.qrCode = s
+        
+        switch mode {
+        case .Add:
+            self.viewModel.onFoundQRCode(s)
+        case .Edit:
+            self.presentationMode.wrappedValue.dismiss()
+        }
+    }
+    
 }
 
 struct ScanQRCodeView_Previews: PreviewProvider {
     static var previews: some View {
-        ScanQRCodeView()
+        ScanQRCodeView(mode: .Add, registerQRCodeViewModel: RegisterQRCodeViewModel(qrCode: ""))
     }
 }

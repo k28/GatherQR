@@ -10,25 +10,31 @@ import Foundation
 
 struct QRInfoList: QRInfoListProtocol {
 
+    #if targetEnvironment(simulator)
+    static var tmpList = [QRInfoModelProtocol]();
+    #endif
+    
     func qrInfoList() -> [QRInfoModelProtocol] {
         
         #if targetEnvironment(simulator)
-        var list = [QRInfoModelProtocol]()
+        if QRInfoList.tmpList.count > 0 {
+            return QRInfoList.tmpList
+        }
         for i in 1..<10 {
-            list.append(QRInfoModel(title: "\(i) item", value: "Apple"))
+            QRInfoList.tmpList.append(QRInfoModel(title: "\(i) item", value: "Apple"))
         }
 
         // 日本語版スクリーンショット
-//        list.append(QRInfoModel(title: "保育園 健", value: "Ken"))
-//        list.append(QRInfoModel(title: "保育園 岳", value: "Gaku"))
-//        list.append(QRInfoModel(title: "Home Page", value: "https://gatherqr.web.app/"))
+//        QRInfoList.tmpList.append(QRInfoModel(title: "保育園 健", value: "Ken"))
+//        QRInfoList.tmpList.append(QRInfoModel(title: "保育園 岳", value: "Gaku"))
+//        QRInfoList.tmpList.append(QRInfoModel(title: "Home Page", value: "https://gatherqr.web.app/"))
         
         // 英語版スクリーンショット
-//        list.append(QRInfoModel(title: "Access Log", value: "LogLogLog"))
-//        list.append(QRInfoModel(title: "Access Log 2", value: "Log2LogLogLog2"))
-//        list.append(QRInfoModel(title: "Home Page", value: "https://gatherqr.web.app/"))
+//        QRInfoList.tmpList.append(QRInfoModel(title: "Access Log", value: "LogLogLog"))
+//        QRInfoList.tmpList.append(QRInfoModel(title: "Access Log 2", value: "Log2LogLogLog2"))
+//        QRInfoList.tmpList.append(QRInfoModel(title: "Home Page", value: "https://gatherqr.web.app/"))
 
-        return list
+        return QRInfoList.tmpList
         #else
         return loadFromDB()
         #endif
@@ -36,6 +42,7 @@ struct QRInfoList: QRInfoListProtocol {
     
     func remove(item: QRInfoModelProtocol) -> Bool {
         #if targetEnvironment(simulator)
+        QRInfoList.tmpList.removeAll(where: {$0.uuid == item.uuid})
         return true
         #else
         return QRInfoEntity.remove(uuid: item.uuid)

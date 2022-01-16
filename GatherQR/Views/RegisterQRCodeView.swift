@@ -37,44 +37,69 @@ struct RegisterQRCodeView: View {
     @ObservedObject var viewModel: RegisterQRCodeViewModel
     let mode: Mode
     let maxImageSize: CGFloat = 250
+    @State private var showingScanView = false
     
     var body: some View {
         GeometryReader { geometry in
-            Form {
-                Section {
-                    TextField(app.loadString("Please input the Title"), text: $viewModel.title)
+            ZStack {
+                // QRコードをスキャンして登録する画面
+                NavigationLink(destination: ScanQRCodeView(mode: .Edit, registerQRCodeViewModel: self.viewModel), isActive: $showingScanView) {
+                    EmptyView()
                 }
-                
-                Section {
-                    HStack {
-                        Spacer()
-                        Image(uiImage: viewModel.qrCodeImage())
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                                .frame(width: min(maxImageSize, geometry.size.width), height: min(maxImageSize, geometry.size.height), alignment: .center)
-                        Spacer()
+                Form {
+                    Section {
+                        TextField(app.loadString("Please input the Title"), text: $viewModel.title)
+                            .accessibility(identifier: "registerqrcodeview_title_text_field")
                     }
-                    Text(viewModel.qrCode)
-                        .font(.footnote)
-                        .foregroundColor(.secondary)
-                }
-                
-                Section {
-                    Button(action: {
-                        viewModel.registerQRCode()
-                        if mode == .Add {
-                            object.reloadData()
-                        }
-                        app.logSelectContent(contentType: .edit_code)
-                        presentationMode.wrappedValue.dismiss()
-                    }) {
+                    
+                    Section {
                         HStack {
                             Spacer()
-                            Text(app.loadString("Register"))
+                            Image(uiImage: viewModel.qrCodeImage())
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                    .frame(width: min(maxImageSize, geometry.size.width), height: min(maxImageSize, geometry.size.height), alignment: .center)
                             Spacer()
                         }
+                        Text(viewModel.qrCode)
+                            .font(.footnote)
+                            .foregroundColor(.secondary)
+                        if mode == .Edit {
+                            Button(action: {
+                                self.showingScanView = true
+                            }) {
+                                HStack {
+                                    Spacer()
+                                    HStack {
+                                        Image(systemName: "qrcode.viewfinder")
+                                            .resizable()
+                                            .frame(width: 24, height: 24, alignment: .center)
+                                        Text("Rescan")
+                                    }
+                                    Spacer()
+                                }
+                            }
+                        }
                     }
-                    .disabled(viewModel.isEnableSave == false)
+                    
+                    Section {
+                        Button(action: {
+                            viewModel.registerQRCode()
+                            if mode == .Add {
+                                object.reloadData()
+                            }
+                            app.logSelectContent(contentType: .edit_code)
+                            presentationMode.wrappedValue.dismiss()
+                        }) {
+                            HStack {
+                                Spacer()
+                                Text(app.loadString("Register"))
+                                Spacer()
+                            }
+                        }
+                        .disabled(viewModel.isEnableSave == false)
+                        .accessibility(identifier: "registerqrcodeview_register_button")
+                    }
                 }
             }
         }
@@ -84,6 +109,6 @@ struct RegisterQRCodeView: View {
 
 struct RegisterQRCodeView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterQRCodeView(viewModel: RegisterQRCodeViewModel(qrCode: "TestQRcode"), mode: .Add)
+        RegisterQRCodeView(viewModel: RegisterQRCodeViewModel(qrCode: "TestQRcode"), mode: .Edit)
     }
 }

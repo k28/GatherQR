@@ -30,7 +30,7 @@ struct QRCodeInfoList: View {
                 }
                 
                 // QRコードをスキャンして登録する画面
-                NavigationLink(destination: ScanQRCodeView(), isActive: $showingScanView) {
+                NavigationLink(destination: ScanQRCodeView(mode: .Add, registerQRCodeViewModel: RegisterQRCodeViewModel(qrCode: "")), isActive: $showingScanView) {
                     EmptyView()
                 }
                 
@@ -65,6 +65,7 @@ struct QRCodeInfoList: View {
                                 radius: 3,
                                 x: 3,
                                 y: 3)
+                        .accessibility(identifier: "qrcodelist_add_button")
                     }
                 }
                 
