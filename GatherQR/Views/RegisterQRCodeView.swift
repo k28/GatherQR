@@ -49,6 +49,7 @@ struct RegisterQRCodeView: View {
                 Form {
                     Section {
                         TextField(app.loadString("Please input the Title"), text: $viewModel.title)
+                            .accessibility(identifier: "registerqrcodeview_title_text_field")
                     }
                     
                     Section {
@@ -97,6 +98,7 @@ struct RegisterQRCodeView: View {
                             }
                         }
                         .disabled(viewModel.isEnableSave == false)
+                        .accessibility(identifier: "registerqrcodeview_register_button")
                     }
                 }
             }

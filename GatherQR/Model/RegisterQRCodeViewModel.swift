@@ -55,6 +55,7 @@ class RegisterQRCodeViewModel: ObservableObject {
     func registerQRCode() {
         // TODO QRCode情報を保存するコード
         #if targetEnvironment(simulator)
+        QRInfoList.tmpList.append(QRInfoModel(title: title, value: qrCode))
         #else
         QRInfoEntity.upsert(uuid: uuid, title: title, value: qrCode)
         #endif

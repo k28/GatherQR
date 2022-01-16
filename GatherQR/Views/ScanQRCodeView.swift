@@ -43,6 +43,7 @@ struct ScanQRCodeView: View {
                 .onRotate { orientation in
                     qrCodeScannerView.rotationChange(orientation)
                 }
+                .accessibility(identifier: "scanqrcodeview_")
             
             VStack {
                 VStack {

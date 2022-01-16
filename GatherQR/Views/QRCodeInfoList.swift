@@ -65,6 +65,7 @@ struct QRCodeInfoList: View {
                                 radius: 3,
                                 x: 3,
                                 y: 3)
+                        .accessibility(identifier: "qrcodelist_add_button")
                     }
                 }
                 
