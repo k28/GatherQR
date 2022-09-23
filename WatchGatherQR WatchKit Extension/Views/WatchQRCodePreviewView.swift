@@ -22,11 +22,11 @@ struct WatchQRCodePreviewView: View {
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             // Make sure that the screen rotates so that it doesn't disappear when turn the wrist.
-            WKExtension.shared().isAutorotating = true
+            WKApplication.shared().isAutorotating = true
             app.phoneSyncManager.sendShowQRCode()
         }
         .onDisappear {
-            WKExtension.shared().isAutorotating = false
+            WKApplication.shared().isAutorotating = false
         }
         .onChange(of: scenePhase) { phase in
             switch phase {

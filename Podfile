@@ -10,6 +10,7 @@ target 'GatherQR' do
   pod 'Firebase/Analytics'
   # or pod ‘Firebase/AnalyticsWithoutAdIdSupport’
   # for Analytics without IDFA collection capability
+  pod 'RealmSwift'
 
 
   target 'GatherQRTests' do
@@ -18,6 +19,32 @@ target 'GatherQR' do
   end
 
   target 'GatherQRUITests' do
+    # Pods for testing
+  end
+
+end
+
+target 'LockScreenWidgetExtension' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for LockScreenWidgetExtension
+
+end
+
+target 'WatchGatherQR' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for WatchGatherQR
+  pod 'RealmSwift'
+
+  target 'WatchGatherQRTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'WatchGatherQRUITests' do
     # Pods for testing
   end
 
