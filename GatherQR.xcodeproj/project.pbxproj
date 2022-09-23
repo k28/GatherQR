@@ -82,6 +82,13 @@
 		E57E196C26FE7B8A0005DC6C /* WatchGatherQRUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57E196B26FE7B8A0005DC6C /* WatchGatherQRUITestsLaunchTests.swift */; };
 		E57E196F26FE7B8A0005DC6C /* GatherQR.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E57E193926FE7B880005DC6C /* GatherQR.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E591136126DB1D37007E25B9 /* DeviceRotationViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591136026DB1D37007E25B9 /* DeviceRotationViewModifier.swift */; };
+		E592849828DD172000DE8E39 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E592849728DD172000DE8E39 /* WidgetKit.framework */; };
+		E592849A28DD172000DE8E39 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E592849928DD172000DE8E39 /* SwiftUI.framework */; };
+		E592849D28DD172000DE8E39 /* LockScreenWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592849C28DD172000DE8E39 /* LockScreenWidget.swift */; };
+		E59284A028DD172000DE8E39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E592849F28DD172000DE8E39 /* Assets.xcassets */; };
+		E59284A228DD172000DE8E39 /* LockScreenWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E592849E28DD172000DE8E39 /* LockScreenWidget.intentdefinition */; };
+		E59284A328DD172000DE8E39 /* LockScreenWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E592849E28DD172000DE8E39 /* LockScreenWidget.intentdefinition */; };
+		E59284A628DD172000DE8E39 /* LockScreenWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E592849628DD172000DE8E39 /* LockScreenWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E5AB67C826B6AAF6006F34CA /* ObservedInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB67C726B6AAF6006F34CA /* ObservedInfo.swift */; };
 		E5AB67CA26C60487006F34CA /* QRCodeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB67C926C60487006F34CA /* QRCodeImageView.swift */; };
 		E5AE06B2269AF778001802B3 /* QRCodeInfoRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AE06B1269AF778001802B3 /* QRCodeInfoRowViewModel.swift */; };
@@ -133,6 +140,13 @@
 			remoteGlobalIDString = E57E193826FE7B880005DC6C;
 			remoteInfo = WatchGatherQR;
 		};
+		E59284A428DD172000DE8E39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E53048932645F422004BB80D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E592849528DD172000DE8E39;
+			remoteInfo = LockScreenWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -156,6 +170,17 @@
 				E57E194226FE7B8A0005DC6C /* WatchGatherQR WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E59284A728DD172000DE8E39 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E59284A628DD172000DE8E39 /* LockScreenWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -236,6 +261,13 @@
 		E57E196B26FE7B8A0005DC6C /* WatchGatherQRUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchGatherQRUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E57E197E26FE84AB0005DC6C /* GatherQR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GatherQR.entitlements; sourceTree = "<group>"; };
 		E591136026DB1D37007E25B9 /* DeviceRotationViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRotationViewModifier.swift; sourceTree = "<group>"; };
+		E592849628DD172000DE8E39 /* LockScreenWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LockScreenWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E592849728DD172000DE8E39 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		E592849928DD172000DE8E39 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		E592849C28DD172000DE8E39 /* LockScreenWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenWidget.swift; sourceTree = "<group>"; };
+		E592849E28DD172000DE8E39 /* LockScreenWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = LockScreenWidget.intentdefinition; sourceTree = "<group>"; };
+		E592849F28DD172000DE8E39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E59284A128DD172000DE8E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5AB67C726B6AAF6006F34CA /* ObservedInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedInfo.swift; sourceTree = "<group>"; };
 		E5AB67C926C60487006F34CA /* QRCodeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeImageView.swift; sourceTree = "<group>"; };
 		E5AE06B1269AF778001802B3 /* QRCodeInfoRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeInfoRowViewModel.swift; sourceTree = "<group>"; };
@@ -297,6 +329,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E592849328DD172000DE8E39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E592849A28DD172000DE8E39 /* SwiftUI.framework in Frameworks */,
+				E592849828DD172000DE8E39 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -306,6 +347,8 @@
 				1C3C5C4BE9C567ABA06575A8 /* Pods_GatherQR.framework */,
 				46D3C162CBF9D071E8A480F3 /* Pods_GatherQR_GatherQRUITests.framework */,
 				95F98541221BDA2FC235A51B /* Pods_GatherQRTests.framework */,
+				E592849728DD172000DE8E39 /* WidgetKit.framework */,
+				E592849928DD172000DE8E39 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -333,6 +376,7 @@
 				E57E194526FE7B8A0005DC6C /* WatchGatherQR WatchKit Extension */,
 				E57E195E26FE7B8A0005DC6C /* WatchGatherQRTests */,
 				E57E196826FE7B8A0005DC6C /* WatchGatherQRUITests */,
+				E592849B28DD172000DE8E39 /* LockScreenWidget */,
 				E530489C2645F422004BB80D /* Products */,
 				CDE79B38CB95E34114EFA35B /* Pods */,
 				A1CEE315C274DF0F9887124C /* Frameworks */,
@@ -349,6 +393,7 @@
 				E57E194126FE7B8A0005DC6C /* WatchGatherQR WatchKit Extension.appex */,
 				E57E195B26FE7B8A0005DC6C /* WatchGatherQRTests.xctest */,
 				E57E196526FE7B8A0005DC6C /* WatchGatherQRUITests.xctest */,
+				E592849628DD172000DE8E39 /* LockScreenWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -567,6 +612,17 @@
 			path = Extention;
 			sourceTree = "<group>";
 		};
+		E592849B28DD172000DE8E39 /* LockScreenWidget */ = {
+			isa = PBXGroup;
+			children = (
+				E592849C28DD172000DE8E39 /* LockScreenWidget.swift */,
+				E592849E28DD172000DE8E39 /* LockScreenWidget.intentdefinition */,
+				E592849F28DD172000DE8E39 /* Assets.xcassets */,
+				E59284A128DD172000DE8E39 /* Info.plist */,
+			);
+			path = LockScreenWidget;
+			sourceTree = "<group>";
+		};
 		E5E78E3B26B5F7EF00E1B3ED /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -593,11 +649,13 @@
 				E53048992645F422004BB80D /* Resources */,
 				FC43E82F28336913C34D61AC /* [CP] Embed Pods Frameworks */,
 				E57E197026FE7B8A0005DC6C /* Embed Watch Content */,
+				E59284A728DD172000DE8E39 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				E57E196E26FE7B8A0005DC6C /* PBXTargetDependency */,
+				E59284A528DD172000DE8E39 /* PBXTargetDependency */,
 			);
 			name = GatherQR;
 			packageProductDependencies = (
@@ -721,13 +779,30 @@
 			productReference = E57E196526FE7B8A0005DC6C /* WatchGatherQRUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E592849528DD172000DE8E39 /* LockScreenWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E59284AA28DD172000DE8E39 /* Build configuration list for PBXNativeTarget "LockScreenWidgetExtension" */;
+			buildPhases = (
+				E592849228DD172000DE8E39 /* Sources */,
+				E592849328DD172000DE8E39 /* Frameworks */,
+				E592849428DD172000DE8E39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LockScreenWidgetExtension;
+			productName = LockScreenWidgetExtension;
+			productReference = E592849628DD172000DE8E39 /* LockScreenWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		E53048932645F422004BB80D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1300;
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					E530489A2645F422004BB80D = {
@@ -756,6 +831,9 @@
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = E57E193826FE7B880005DC6C;
 					};
+					E592849528DD172000DE8E39 = {
+						CreatedOnToolsVersion = 14.0;
+					};
 				};
 			};
 			buildConfigurationList = E53048962645F422004BB80D /* Build configuration list for PBXProject "GatherQR" */;
@@ -782,6 +860,7 @@
 				E57E194026FE7B8A0005DC6C /* WatchGatherQR WatchKit Extension */,
 				E57E195A26FE7B8A0005DC6C /* WatchGatherQRTests */,
 				E57E196426FE7B8A0005DC6C /* WatchGatherQRUITests */,
+				E592849528DD172000DE8E39 /* LockScreenWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -843,6 +922,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E592849428DD172000DE8E39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E59284A028DD172000DE8E39 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -957,6 +1044,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E56C52B72731018200D33780 /* QRInfoRequest.swift in Sources */,
+				E59284A328DD172000DE8E39 /* LockScreenWidget.intentdefinition in Sources */,
 				E53048D3264684BD004BB80D /* QRInfoModel.swift in Sources */,
 				E53ABD9F264FD1B8009AFAB3 /* CameraPreview.swift in Sources */,
 				E591136126DB1D37007E25B9 /* DeviceRotationViewModifier.swift in Sources */,
@@ -1056,6 +1144,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E592849228DD172000DE8E39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E592849D28DD172000DE8E39 /* LockScreenWidget.swift in Sources */,
+				E59284A228DD172000DE8E39 /* LockScreenWidget.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1088,6 +1185,11 @@
 			isa = PBXTargetDependency;
 			target = E57E193826FE7B880005DC6C /* WatchGatherQR */;
 			targetProxy = E57E196D26FE7B8A0005DC6C /* PBXContainerItemProxy */;
+		};
+		E59284A528DD172000DE8E39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E592849528DD172000DE8E39 /* LockScreenWidgetExtension */;
+			targetProxy = E59284A428DD172000DE8E39 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1235,22 +1337,23 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AE93543294FCF177FE907229 /* Pods-GatherQR.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = GatherQR/GatherQR.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2022011601;
+				CURRENT_PROJECT_VERSION = 2022092301;
 				DEVELOPMENT_ASSET_PATHS = "\"GatherQR/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GatherQR/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.11;
+				MARKETING_VERSION = 1.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1262,22 +1365,23 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 75BA4D4EDBE732051EDC9801 /* Pods-GatherQR.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = GatherQR/GatherQR.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2022011601;
+				CURRENT_PROJECT_VERSION = 2022092301;
 				DEVELOPMENT_ASSET_PATHS = "\"GatherQR/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GatherQR/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.11;
+				MARKETING_VERSION = 1.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1295,7 +1399,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				INFOPLIST_FILE = GatherQRTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1318,7 +1422,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				INFOPLIST_FILE = GatherQRTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1340,6 +1444,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				INFOPLIST_FILE = GatherQRUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1361,6 +1466,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				INFOPLIST_FILE = GatherQRUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1384,7 +1490,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2022011601;
+				CURRENT_PROJECT_VERSION = 2022092301;
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = WatchGatherQR_WatchKit_Extension;
@@ -1395,7 +1501,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.11;
+				MARKETING_VERSION = 1.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR.watchkitapp;
 				PRODUCT_NAME = GatherQR;
 				SDKROOT = watchos;
@@ -1418,7 +1524,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2022011601;
+				CURRENT_PROJECT_VERSION = 2022092301;
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = WatchGatherQR_WatchKit_Extension;
@@ -1429,7 +1535,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.11;
+				MARKETING_VERSION = 1.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR.watchkitapp;
 				PRODUCT_NAME = GatherQR;
 				SDKROOT = watchos;
@@ -1609,6 +1715,66 @@
 			};
 			name = Release;
 		};
+		E59284A828DD172000DE8E39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2022092301;
+				DEVELOPMENT_TEAM = 86W5YV4A4X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LockScreenWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LockScreenWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR.LockScreenWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E59284A928DD172000DE8E39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2022092301;
+				DEVELOPMENT_TEAM = 86W5YV4A4X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LockScreenWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LockScreenWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR.LockScreenWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1680,6 +1846,15 @@
 			buildConfigurations = (
 				E57E197826FE7B8A0005DC6C /* Debug */,
 				E57E197926FE7B8A0005DC6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E59284AA28DD172000DE8E39 /* Build configuration list for PBXNativeTarget "LockScreenWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E59284A828DD172000DE8E39 /* Debug */,
+				E59284A928DD172000DE8E39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
