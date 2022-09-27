@@ -17,6 +17,8 @@
 		E50D56DD2698E4D90057ED8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E50D56DC2698E4D90057ED8C /* GoogleService-Info.plist */; };
 		E50D56DE2698E4D90057ED8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E50D56DC2698E4D90057ED8C /* GoogleService-Info.plist */; };
 		E50D56DF2698E4D90057ED8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E50D56DC2698E4D90057ED8C /* GoogleService-Info.plist */; };
+		E51ADC9C28DE75EA0014600E /* QRCodeScannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51ADC9B28DE75EA0014600E /* QRCodeScannerModel.swift */; };
+		E51ADC9E28E1D53A0014600E /* CameraScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51ADC9D28E1D53A0014600E /* CameraScannerViewController.swift */; };
 		E530489F2645F422004BB80D /* GatherQRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E530489E2645F422004BB80D /* GatherQRApp.swift */; };
 		E53048A12645F422004BB80D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048A02645F422004BB80D /* ContentView.swift */; };
 		E53048A32645F423004BB80D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E53048A22645F423004BB80D /* Assets.xcassets */; };
@@ -189,6 +191,8 @@
 		C81717FF8C4055060801512E /* Pods-WatchGatherQR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchGatherQR.release.xcconfig"; path = "Target Support Files/Pods-WatchGatherQR/Pods-WatchGatherQR.release.xcconfig"; sourceTree = "<group>"; };
 		D0B28D97B35B5C9DCC7CC27C /* Pods-WatchGatherQRTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchGatherQRTests.release.xcconfig"; path = "Target Support Files/Pods-WatchGatherQRTests/Pods-WatchGatherQRTests.release.xcconfig"; sourceTree = "<group>"; };
 		E50D56DC2698E4D90057ED8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E51ADC9B28DE75EA0014600E /* QRCodeScannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerModel.swift; sourceTree = "<group>"; };
+		E51ADC9D28E1D53A0014600E /* CameraScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScannerViewController.swift; sourceTree = "<group>"; };
 		E530489B2645F422004BB80D /* GatherQR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GatherQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E530489E2645F422004BB80D /* GatherQRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatherQRApp.swift; sourceTree = "<group>"; };
 		E53048A02645F422004BB80D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -468,6 +472,7 @@
 				E53ABDA42651482C009AFAB3 /* RegisterQRCodeViewModel.swift */,
 				E5AE06B1269AF778001802B3 /* QRCodeInfoRowViewModel.swift */,
 				E5AB67C726B6AAF6006F34CA /* ObservedInfo.swift */,
+				E51ADC9B28DE75EA0014600E /* QRCodeScannerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -495,6 +500,7 @@
 				E53ABD98264FC81E009AFAB3 /* ScanQRCodeView.swift */,
 				E53ABDA226514682009AFAB3 /* RegisterQRCodeView.swift */,
 				E5AB67C926C60487006F34CA /* QRCodeImageView.swift */,
+				E51ADC9D28E1D53A0014600E /* CameraScannerViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1139,6 +1145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E51ADC9C28DE75EA0014600E /* QRCodeScannerModel.swift in Sources */,
 				E56C52B72731018200D33780 /* QRInfoRequest.swift in Sources */,
 				E59284A328DD172000DE8E39 /* LockScreenWidget.intentdefinition in Sources */,
 				E53048D3264684BD004BB80D /* QRInfoModel.swift in Sources */,
@@ -1172,6 +1179,7 @@
 				E5AB67CA26C60487006F34CA /* QRCodeImageView.swift in Sources */,
 				E56C52942730BBCA00D33780 /* Message.swift in Sources */,
 				E530489F2645F422004BB80D /* GatherQRApp.swift in Sources */,
+				E51ADC9E28E1D53A0014600E /* CameraScannerViewController.swift in Sources */,
 				E53ABD99264FC81E009AFAB3 /* ScanQRCodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

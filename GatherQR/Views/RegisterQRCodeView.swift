@@ -43,8 +43,14 @@ struct RegisterQRCodeView: View {
         GeometryReader { geometry in
             ZStack {
                 // QRコードをスキャンして登録する画面
-                NavigationLink(destination: ScanQRCodeView(mode: .Edit, registerQRCodeViewModel: self.viewModel), isActive: $showingScanView) {
-                    EmptyView()
+                if #available(iOS 16, *) {
+                    NavigationLink(destination: CameraScannerViewController(mode: .Edit, onQRCodeFound: {qrCode in self.onQRCodeUpdate(qrCode) }), isActive: $showingScanView) {
+                        EmptyView()
+                    }
+                } else {
+                    NavigationLink(destination: ScanQRCodeView(mode: .Edit, registerQRCodeViewModel: self.viewModel), isActive: $showingScanView) {
+                        EmptyView()
+                    }
                 }
                 Form {
                     Section {
@@ -104,6 +110,11 @@ struct RegisterQRCodeView: View {
             }
         }
         .navigationTitle(mode.title)
+    }
+    
+    private func onQRCodeUpdate(_ qrCode: String) {
+        viewModel.qrCode = qrCode
+        self.showingScanView = false
     }
 }
 

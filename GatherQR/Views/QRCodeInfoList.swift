@@ -12,9 +12,10 @@ struct QRCodeInfoList: View {
     
     @State private var refresh = UUID()
     var model: QRInfoListProtocol
+    @State var resisterQRCode = ""
 //    @State var qrcodeList: [QRInfoModelProtocol] = []
     @State private var showingScanView = false
-
+    @State private var showQRCodeRegisterView = false
 
     var body: some View {
         NavigationView {
@@ -29,8 +30,19 @@ struct QRCodeInfoList: View {
                     
                 }
                 
-                // QRコードをスキャンして登録する画面
-                NavigationLink(destination: ScanQRCodeView(mode: .Add, registerQRCodeViewModel: RegisterQRCodeViewModel(qrCode: "")), isActive: $showingScanView) {
+                if #available(iOS 16, *) {
+                    NavigationLink(destination: CameraScannerViewController(mode: .Add, onQRCodeFound: {qrCode in self.onQRCodeFound(qrCode) }), isActive: $showingScanView) {
+                        EmptyView()
+                    }
+                } else {
+                    // QRコードをスキャンして登録する画面
+                    NavigationLink(destination: ScanQRCodeView(mode: .Add, registerQRCodeViewModel: RegisterQRCodeViewModel(qrCode: "")), isActive: $showingScanView) {
+                        EmptyView()
+                    }
+                }
+                
+                // iOS16以降の時にQRCodeを登録するための画面遷移
+                NavigationLink(destination: RegisterQRCodeView(viewModel: RegisterQRCodeViewModel(qrCode: resisterQRCode), mode: .Add), isActive: $showQRCodeRegisterView) {
                     EmptyView()
                 }
                 
@@ -100,6 +112,11 @@ struct QRCodeInfoList: View {
                 app.logSelectContent(contentType: .delete_code)
             }
         }
+    }
+    
+    fileprivate func onQRCodeFound(_ qrCode: String) {
+        resisterQRCode = qrCode
+        showQRCodeRegisterView = true
     }
     
 //    func reloadData() {
