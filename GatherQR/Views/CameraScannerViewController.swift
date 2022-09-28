@@ -73,4 +73,8 @@ struct CameraScannerViewController: UIViewControllerRepresentable {
         }
     }
     
+    @MainActor static func isSupported() -> Bool {
+        return DataScannerViewController.isSupported && DataScannerViewController.isAvailable
+    }
+    
 }

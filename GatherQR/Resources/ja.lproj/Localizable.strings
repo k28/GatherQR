@@ -25,6 +25,10 @@
 "Please input the Title" = "タイトルを入力してください。";
 "Rescan" = "再読み込み";
 
+/* alert message */
+"The camera cannot be activated." = "The camera cannot be activated.";
+"Check if the camera function is enabled and if the device is VisionKit enabled." = "カメラが有効か、VisionKitが利用可能な端末かご確認ください。";
+
 /* WatchGatherQR */
 "Data syncing...\nPlease hold your iPhone close." = "データ同期中...\niPhoneを近くにおいてください。";
 

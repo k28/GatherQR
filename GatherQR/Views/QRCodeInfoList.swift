@@ -16,6 +16,7 @@ struct QRCodeInfoList: View {
 //    @State var qrcodeList: [QRInfoModelProtocol] = []
     @State private var showingScanView = false
     @State private var showQRCodeRegisterView = false
+    @State private var showCameraScannerNotSupportDialog = false
 
     var body: some View {
         NavigationView {
@@ -52,7 +53,13 @@ struct QRCodeInfoList: View {
                     HStack {
                         Spacer()
                         Button(action: {
-                            showingScanView = true
+                            if #available(iOS 16, *) {
+                                // VisionKitを使ったDataScannerViewControllerがサポートされていない機器の時にメッセージを表示します
+                                showingScanView = CameraScannerViewController.isSupported()
+                                showCameraScannerNotSupportDialog = !showingScanView
+                            } else {
+                                showingScanView = true
+                            }
                         }) {
                             ZStack {
                                 VStack {
@@ -91,17 +98,9 @@ struct QRCodeInfoList: View {
             .navigationTitle(app.loadString("QR code List"))
         }
         .environmentObject(object)
-//        .onReceive(NotificationCenter.default.publisher(
-//            for: UIApplication.willResignActiveNotification
-//        )) { _ in
-//            let list = model.qrInfoList()
-//            if list.count != qrcodeList.count {
-//                qrcodeList = model.qrInfoList()
-//            }
-//        }
-//        .onAppear() {
-//            reloadData()
-//        }
+        .alert("The camera cannot be activated.", isPresented: $showCameraScannerNotSupportDialog, actions: {}, message: {
+            Text(app.loadString("Check if the camera function is enabled and if the device is VisionKit enabled."))
+        })
     }
     
     func removeItem(offsets: IndexSet) {
