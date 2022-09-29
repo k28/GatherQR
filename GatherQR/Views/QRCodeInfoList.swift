@@ -16,7 +16,8 @@ struct QRCodeInfoList: View {
 //    @State var qrcodeList: [QRInfoModelProtocol] = []
     @State private var showingScanView = false
     @State private var showQRCodeRegisterView = false
-    @State private var showCameraScannerNotSupportDialog = false
+    /// iOS16以降でVisionKitのDataScannerViewControllerに対応している端末の時に表示するView
+    @State private var showCameraScannerView = false
 
     var body: some View {
         NavigationView {
@@ -31,20 +32,19 @@ struct QRCodeInfoList: View {
                     
                 }
                 
-                if #available(iOS 16, *) {
-                    NavigationLink(destination: CameraScannerViewController(mode: .Add, onQRCodeFound: {qrCode in self.onQRCodeFound(qrCode) }), isActive: $showingScanView) {
-                        EmptyView()
-                    }
-                } else {
-                    // QRコードをスキャンして登録する画面
-                    NavigationLink(destination: ScanQRCodeView(mode: .Add, registerQRCodeViewModel: RegisterQRCodeViewModel(qrCode: "")), isActive: $showingScanView) {
-                        EmptyView()
-                    }
-                }
-                
-                // iOS16以降の時にQRCodeを登録するための画面遷移
-                NavigationLink(destination: RegisterQRCodeView(viewModel: RegisterQRCodeViewModel(qrCode: resisterQRCode), mode: .Add), isActive: $showQRCodeRegisterView) {
+                // QRコードをスキャンして登録する画面(iOS15, 16以降のDataScannerViewController非サポート機種)
+                NavigationLink(destination: ScanQRCodeView(mode: .Add, registerQRCodeViewModel: RegisterQRCodeViewModel(qrCode: "")), isActive: $showingScanView) {
                     EmptyView()
+                }
+                if #available(iOS 16, *) {
+                    NavigationLink(destination: CameraScannerViewController(mode: .Add, onQRCodeFound: {qrCode in self.onQRCodeFound(qrCode) }), isActive: $showCameraScannerView) {
+                        EmptyView()
+                    }
+
+                    // iOS16以降の時にQRCodeを登録するための画面遷移
+                    NavigationLink(destination: RegisterQRCodeView(viewModel: RegisterQRCodeViewModel(qrCode: resisterQRCode), mode: .Add), isActive: $showQRCodeRegisterView) {
+                        EmptyView()
+                    }
                 }
                 
                 // Bottom Add Button
@@ -54,9 +54,9 @@ struct QRCodeInfoList: View {
                         Spacer()
                         Button(action: {
                             if #available(iOS 16, *) {
-                                // VisionKitを使ったDataScannerViewControllerがサポートされていない機器の時にメッセージを表示します
-                                showingScanView = CameraScannerViewController.isSupported()
-                                showCameraScannerNotSupportDialog = !showingScanView
+                                // DataScannerViewControllerをサポートしている時にはそっちを使います(多分イケてるから)
+                                showCameraScannerView = CameraScannerViewController.isSupported()
+                                showingScanView = !showCameraScannerView
                             } else {
                                 showingScanView = true
                             }
@@ -98,9 +98,6 @@ struct QRCodeInfoList: View {
             .navigationTitle(app.loadString("QR code List"))
         }
         .environmentObject(object)
-        .alert("The camera cannot be activated.", isPresented: $showCameraScannerNotSupportDialog, actions: {}, message: {
-            Text(app.loadString("Check if the camera function is enabled and if the device is VisionKit enabled."))
-        })
     }
     
     func removeItem(offsets: IndexSet) {
@@ -113,14 +110,12 @@ struct QRCodeInfoList: View {
         }
     }
     
+    /// QRコードが見つかった時にCallされます
     fileprivate func onQRCodeFound(_ qrCode: String) {
         resisterQRCode = qrCode
         showQRCodeRegisterView = true
     }
     
-//    func reloadData() {
-//        qrcodeList = model.qrInfoList()
-//    }
 }
 
 struct QRCodeInfoList_Previews: PreviewProvider {
