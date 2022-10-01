@@ -1442,7 +1442,7 @@
 				CODE_SIGN_ENTITLEMENTS = GatherQR/GatherQR.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2022092301;
+				CURRENT_PROJECT_VERSION = 2022100101;
 				DEVELOPMENT_ASSET_PATHS = "\"GatherQR/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				ENABLE_PREVIEWS = YES;
@@ -1470,7 +1470,7 @@
 				CODE_SIGN_ENTITLEMENTS = GatherQR/GatherQR.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2022092301;
+				CURRENT_PROJECT_VERSION = 2022100101;
 				DEVELOPMENT_ASSET_PATHS = "\"GatherQR/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				ENABLE_PREVIEWS = YES;
@@ -1590,10 +1590,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2022092301;
+				CURRENT_PROJECT_VERSION = 2022100101;
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = GatherQR.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.k28.ios.GatherQR;
@@ -1625,10 +1625,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2022092301;
+				CURRENT_PROJECT_VERSION = 2022100101;
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = GatherQR.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.k28.ios.GatherQR;
@@ -1765,7 +1765,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2022092301;
+				CURRENT_PROJECT_VERSION = 2022100101;
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LockScreenWidget/Info.plist;
@@ -1796,7 +1796,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2022092301;
+				CURRENT_PROJECT_VERSION = 2022100101;
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LockScreenWidget/Info.plist;
