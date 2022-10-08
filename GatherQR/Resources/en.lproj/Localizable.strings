@@ -25,6 +25,10 @@
 "Please input the Title" = "Please input the Title";
 "Rescan" = "Rescan";
 
+/* alert message */
+"The camera cannot be activated." = "The camera cannot be activated.";
+"Check if the camera function is enabled and if the device is VisionKit enabled." = "Check if the camera function is enabled and if the device is VisionKit enabled.";
+
 /* WatchGatherQR */
 "Data syncing...\nPlease hold your iPhone close." = "Data syncing...\nPlease hold your iPhone close.";
 

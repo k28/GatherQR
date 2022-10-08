@@ -38,14 +38,22 @@ struct RegisterQRCodeView: View {
     let mode: Mode
     let maxImageSize: CGFloat = 250
     @State private var showingScanView = false
+    @State private var showCameraScannerView = false
     
     var body: some View {
         GeometryReader { geometry in
             ZStack {
+                // QRコードをスキャンして登録する画面(DataScannerViewControllerサポート時)
+                if #available(iOS 16, *) {
+                    NavigationLink(destination: CameraScannerViewController(mode: .Edit, onQRCodeFound: {qrCode in self.onQRCodeUpdate(qrCode) }), isActive: $showCameraScannerView) {
+                        EmptyView()
+                    }
+                }
                 // QRコードをスキャンして登録する画面
                 NavigationLink(destination: ScanQRCodeView(mode: .Edit, registerQRCodeViewModel: self.viewModel), isActive: $showingScanView) {
                     EmptyView()
                 }
+
                 Form {
                     Section {
                         TextField(app.loadString("Please input the Title"), text: $viewModel.title)
@@ -66,7 +74,12 @@ struct RegisterQRCodeView: View {
                             .foregroundColor(.secondary)
                         if mode == .Edit {
                             Button(action: {
-                                self.showingScanView = true
+                                if #available(iOS 16, *) {
+                                    showCameraScannerView = CameraScannerViewController.isSupported()
+                                    showingScanView = !showCameraScannerView
+                                } else {
+                                    showingScanView = true
+                                }
                             }) {
                                 HStack {
                                     Spacer()
@@ -104,6 +117,11 @@ struct RegisterQRCodeView: View {
             }
         }
         .navigationTitle(mode.title)
+    }
+    
+    private func onQRCodeUpdate(_ qrCode: String) {
+        viewModel.qrCode = qrCode
+        self.showingScanView = false
     }
 }
 

@@ -12,9 +12,12 @@ struct QRCodeInfoList: View {
     
     @State private var refresh = UUID()
     var model: QRInfoListProtocol
+    @State var resisterQRCode = ""
 //    @State var qrcodeList: [QRInfoModelProtocol] = []
     @State private var showingScanView = false
-
+    @State private var showQRCodeRegisterView = false
+    /// iOS16以降でVisionKitのDataScannerViewControllerに対応している端末の時に表示するView
+    @State private var showCameraScannerView = false
 
     var body: some View {
         NavigationView {
@@ -29,9 +32,19 @@ struct QRCodeInfoList: View {
                     
                 }
                 
-                // QRコードをスキャンして登録する画面
+                // QRコードをスキャンして登録する画面(iOS15, 16以降のDataScannerViewController非サポート機種)
                 NavigationLink(destination: ScanQRCodeView(mode: .Add, registerQRCodeViewModel: RegisterQRCodeViewModel(qrCode: "")), isActive: $showingScanView) {
                     EmptyView()
+                }
+                if #available(iOS 16, *) {
+                    NavigationLink(destination: CameraScannerViewController(mode: .Add, onQRCodeFound: {qrCode in self.onQRCodeFound(qrCode) }), isActive: $showCameraScannerView) {
+                        EmptyView()
+                    }
+
+                    // iOS16以降の時にQRCodeを登録するための画面遷移
+                    NavigationLink(destination: RegisterQRCodeView(viewModel: RegisterQRCodeViewModel(qrCode: resisterQRCode), mode: .Add), isActive: $showQRCodeRegisterView) {
+                        EmptyView()
+                    }
                 }
                 
                 // Bottom Add Button
@@ -40,7 +53,13 @@ struct QRCodeInfoList: View {
                     HStack {
                         Spacer()
                         Button(action: {
-                            showingScanView = true
+                            if #available(iOS 16, *) {
+                                // DataScannerViewControllerをサポートしている時にはそっちを使います(多分イケてるから)
+                                showCameraScannerView = CameraScannerViewController.isSupported()
+                                showingScanView = !showCameraScannerView
+                            } else {
+                                showingScanView = true
+                            }
                         }) {
                             ZStack {
                                 VStack {
@@ -79,17 +98,6 @@ struct QRCodeInfoList: View {
             .navigationTitle(app.loadString("QR code List"))
         }
         .environmentObject(object)
-//        .onReceive(NotificationCenter.default.publisher(
-//            for: UIApplication.willResignActiveNotification
-//        )) { _ in
-//            let list = model.qrInfoList()
-//            if list.count != qrcodeList.count {
-//                qrcodeList = model.qrInfoList()
-//            }
-//        }
-//        .onAppear() {
-//            reloadData()
-//        }
     }
     
     func removeItem(offsets: IndexSet) {
@@ -102,9 +110,12 @@ struct QRCodeInfoList: View {
         }
     }
     
-//    func reloadData() {
-//        qrcodeList = model.qrInfoList()
-//    }
+    /// QRコードが見つかった時にCallされます
+    fileprivate func onQRCodeFound(_ qrCode: String) {
+        resisterQRCode = qrCode
+        showQRCodeRegisterView = true
+    }
+    
 }
 
 struct QRCodeInfoList_Previews: PreviewProvider {

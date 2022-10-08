@@ -3,24 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0287938F39FAF8F7BD5D074C /* Pods_GatherQR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C3C5C4BE9C567ABA06575A8 /* Pods_GatherQR.framework */; };
 		059ABF15A51095014E29ADB5 /* Pods_GatherQR_GatherQRUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D3C162CBF9D071E8A480F3 /* Pods_GatherQR_GatherQRUITests.framework */; };
+		1EC6CBC1399AEA13CBF3672F /* Pods_WatchGatherQRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752046CAEA4ECA003F151AE3 /* Pods_WatchGatherQRTests.framework */; };
 		30D4AA644A3B0C98FAE2E2B5 /* Pods_GatherQRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95F98541221BDA2FC235A51B /* Pods_GatherQRTests.framework */; };
+		44F0AC14E3CEF0632E23BE24 /* Pods_LockScreenWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5453328C55DF3F1D47FD546D /* Pods_LockScreenWidgetExtension.framework */; };
+		55F462F82F1378CC1D5F5625 /* Pods_WatchGatherQR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F01F9DA24D2CDE92EC7414 /* Pods_WatchGatherQR.framework */; };
+		CE7C62E5853AB83CD67AB069 /* Pods_WatchGatherQR_WatchGatherQRUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B04B7054F1A7A99052E0C49 /* Pods_WatchGatherQR_WatchGatherQRUITests.framework */; };
 		E50D56DD2698E4D90057ED8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E50D56DC2698E4D90057ED8C /* GoogleService-Info.plist */; };
 		E50D56DE2698E4D90057ED8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E50D56DC2698E4D90057ED8C /* GoogleService-Info.plist */; };
 		E50D56DF2698E4D90057ED8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E50D56DC2698E4D90057ED8C /* GoogleService-Info.plist */; };
+		E51ADC9C28DE75EA0014600E /* QRCodeScannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51ADC9B28DE75EA0014600E /* QRCodeScannerModel.swift */; };
+		E51ADC9E28E1D53A0014600E /* CameraScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51ADC9D28E1D53A0014600E /* CameraScannerViewController.swift */; };
 		E530489F2645F422004BB80D /* GatherQRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E530489E2645F422004BB80D /* GatherQRApp.swift */; };
 		E53048A12645F422004BB80D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048A02645F422004BB80D /* ContentView.swift */; };
 		E53048A32645F423004BB80D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E53048A22645F423004BB80D /* Assets.xcassets */; };
 		E53048A62645F423004BB80D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E53048A52645F423004BB80D /* Preview Assets.xcassets */; };
 		E53048B12645F423004BB80D /* GatherQRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048B02645F423004BB80D /* GatherQRTests.swift */; };
 		E53048BC2645F423004BB80D /* GatherQRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048BB2645F423004BB80D /* GatherQRUITests.swift */; };
-		E53048CB2646800A004BB80D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E53048CA2646800A004BB80D /* Realm */; };
-		E53048CD2646800A004BB80D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E53048CC2646800A004BB80D /* RealmSwift */; };
 		E53048D026468339004BB80D /* QRInfoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048CF26468339004BB80D /* QRInfoEntity.swift */; };
 		E53048D3264684BD004BB80D /* QRInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048D2264684BD004BB80D /* QRInfoModel.swift */; };
 		E53048D626468610004BB80D /* QRCodeUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53048D526468610004BB80D /* QRCodeUtility.swift */; };
@@ -53,8 +57,6 @@
 		E56C529B2730BFE100D33780 /* GetListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C52992730BFE100D33780 /* GetListResponse.swift */; };
 		E56C529D2730DA1600D33780 /* PhoneSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C529C2730DA1600D33780 /* PhoneSyncManager.swift */; };
 		E56C52A02730DC7100D33780 /* WatchRealmUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C529F2730DC7100D33780 /* WatchRealmUtility.swift */; };
-		E56C52A22730DDAF00D33780 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E56C52A12730DDAF00D33780 /* Realm */; };
-		E56C52A42730DDAF00D33780 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E56C52A32730DDAF00D33780 /* RealmSwift */; };
 		E56C52A62730DEE600D33780 /* WatchQRInfoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C52A52730DEE600D33780 /* WatchQRInfoEntity.swift */; };
 		E56C52A82730E79200D33780 /* AppResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C52A72730E79200D33780 /* AppResult.swift */; };
 		E56C52A92730E79200D33780 /* AppResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C52A72730E79200D33780 /* AppResult.swift */; };
@@ -69,7 +71,6 @@
 		E56C52BA2731025700D33780 /* QRInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C52B92731025700D33780 /* QRInfoResponse.swift */; };
 		E56C52BC273113F200D33780 /* WatchQRInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C52B22730FB2F00D33780 /* WatchQRInfoProtocol.swift */; };
 		E57E193C26FE7B8A0005DC6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E57E193B26FE7B8A0005DC6C /* Assets.xcassets */; };
-		E57E194226FE7B8A0005DC6C /* WatchGatherQR WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E57E194126FE7B8A0005DC6C /* WatchGatherQR WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E57E194726FE7B8A0005DC6C /* GatherQRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57E194626FE7B8A0005DC6C /* GatherQRApp.swift */; };
 		E57E194926FE7B8A0005DC6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57E194826FE7B8A0005DC6C /* ContentView.swift */; };
 		E57E194B26FE7B8A0005DC6C /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57E194A26FE7B8A0005DC6C /* NotificationController.swift */; };
@@ -82,6 +83,13 @@
 		E57E196C26FE7B8A0005DC6C /* WatchGatherQRUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57E196B26FE7B8A0005DC6C /* WatchGatherQRUITestsLaunchTests.swift */; };
 		E57E196F26FE7B8A0005DC6C /* GatherQR.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E57E193926FE7B880005DC6C /* GatherQR.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E591136126DB1D37007E25B9 /* DeviceRotationViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591136026DB1D37007E25B9 /* DeviceRotationViewModifier.swift */; };
+		E592849828DD172000DE8E39 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E592849728DD172000DE8E39 /* WidgetKit.framework */; };
+		E592849A28DD172000DE8E39 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E592849928DD172000DE8E39 /* SwiftUI.framework */; };
+		E592849D28DD172000DE8E39 /* LockScreenWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592849C28DD172000DE8E39 /* LockScreenWidget.swift */; };
+		E59284A028DD172000DE8E39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E592849F28DD172000DE8E39 /* Assets.xcassets */; };
+		E59284A228DD172000DE8E39 /* LockScreenWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E592849E28DD172000DE8E39 /* LockScreenWidget.intentdefinition */; };
+		E59284A328DD172000DE8E39 /* LockScreenWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E592849E28DD172000DE8E39 /* LockScreenWidget.intentdefinition */; };
+		E59284A628DD172000DE8E39 /* LockScreenWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E592849628DD172000DE8E39 /* LockScreenWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E5AB67C826B6AAF6006F34CA /* ObservedInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB67C726B6AAF6006F34CA /* ObservedInfo.swift */; };
 		E5AB67CA26C60487006F34CA /* QRCodeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB67C926C60487006F34CA /* QRCodeImageView.swift */; };
 		E5AE06B2269AF778001802B3 /* QRCodeInfoRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AE06B1269AF778001802B3 /* QRCodeInfoRowViewModel.swift */; };
@@ -105,20 +113,6 @@
 			remoteGlobalIDString = E530489A2645F422004BB80D;
 			remoteInfo = GatherQR;
 		};
-		E57E194326FE7B8A0005DC6C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E53048932645F422004BB80D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E57E194026FE7B8A0005DC6C;
-			remoteInfo = "WatchGatherQR WatchKit Extension";
-		};
-		E57E195C26FE7B8A0005DC6C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E53048932645F422004BB80D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E57E194026FE7B8A0005DC6C;
-			remoteInfo = "WatchGatherQR WatchKit Extension";
-		};
 		E57E196626FE7B8A0005DC6C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E53048932645F422004BB80D /* Project object */;
@@ -127,6 +121,20 @@
 			remoteInfo = WatchGatherQR;
 		};
 		E57E196D26FE7B8A0005DC6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E53048932645F422004BB80D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E57E193826FE7B880005DC6C;
+			remoteInfo = WatchGatherQR;
+		};
+		E59284A428DD172000DE8E39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E53048932645F422004BB80D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E592849528DD172000DE8E39;
+			remoteInfo = LockScreenWidgetExtension;
+		};
+		E5C9401828DD4CEF00FD9BCB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E53048932645F422004BB80D /* Project object */;
 			proxyType = 1;
@@ -147,29 +155,44 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E57E197326FE7B8A0005DC6C /* Embed App Extensions */ = {
+		E59284A728DD172000DE8E39 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				E57E194226FE7B8A0005DC6C /* WatchGatherQR WatchKit Extension.appex in Embed App Extensions */,
+				E59284A628DD172000DE8E39 /* LockScreenWidgetExtension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03011D4D5F785ACF61B4878F /* Pods-LockScreenWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LockScreenWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-LockScreenWidgetExtension/Pods-LockScreenWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		060D80D79D7EDA074703D2B6 /* Pods-GatherQRTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GatherQRTests.release.xcconfig"; path = "Target Support Files/Pods-GatherQRTests/Pods-GatherQRTests.release.xcconfig"; sourceTree = "<group>"; };
 		1C3C5C4BE9C567ABA06575A8 /* Pods_GatherQR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GatherQR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2760BFF0A841197704B5E737 /* Pods-GatherQR-WatchGatherQR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GatherQR-WatchGatherQR.release.xcconfig"; path = "Target Support Files/Pods-GatherQR-WatchGatherQR/Pods-GatherQR-WatchGatherQR.release.xcconfig"; sourceTree = "<group>"; };
 		46D3C162CBF9D071E8A480F3 /* Pods_GatherQR_GatherQRUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GatherQR_GatherQRUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5453328C55DF3F1D47FD546D /* Pods_LockScreenWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LockScreenWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B66385C55CF144C8D19D07C /* Pods-GatherQR-WatchGatherQR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GatherQR-WatchGatherQR.debug.xcconfig"; path = "Target Support Files/Pods-GatherQR-WatchGatherQR/Pods-GatherQR-WatchGatherQR.debug.xcconfig"; sourceTree = "<group>"; };
+		67F01F9DA24D2CDE92EC7414 /* Pods_WatchGatherQR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchGatherQR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		752046CAEA4ECA003F151AE3 /* Pods_WatchGatherQRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchGatherQRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75BA4D4EDBE732051EDC9801 /* Pods-GatherQR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GatherQR.release.xcconfig"; path = "Target Support Files/Pods-GatherQR/Pods-GatherQR.release.xcconfig"; sourceTree = "<group>"; };
 		8413ED43541D367C7D73A88B /* Pods-GatherQR-GatherQRUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GatherQR-GatherQRUITests.release.xcconfig"; path = "Target Support Files/Pods-GatherQR-GatherQRUITests/Pods-GatherQR-GatherQRUITests.release.xcconfig"; sourceTree = "<group>"; };
+		887ABEC0A075B9B3753B3DBD /* Pods-WatchGatherQR-WatchGatherQRUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchGatherQR-WatchGatherQRUITests.debug.xcconfig"; path = "Target Support Files/Pods-WatchGatherQR-WatchGatherQRUITests/Pods-WatchGatherQR-WatchGatherQRUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9270CE1B903EB1276F03D856 /* Pods-GatherQRTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GatherQRTests.debug.xcconfig"; path = "Target Support Files/Pods-GatherQRTests/Pods-GatherQRTests.debug.xcconfig"; sourceTree = "<group>"; };
 		95F98541221BDA2FC235A51B /* Pods_GatherQRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GatherQRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B04B7054F1A7A99052E0C49 /* Pods_WatchGatherQR_WatchGatherQRUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchGatherQR_WatchGatherQRUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C833288E1EA3E8669A32B41 /* Pods-WatchGatherQR-WatchGatherQRUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchGatherQR-WatchGatherQRUITests.release.xcconfig"; path = "Target Support Files/Pods-WatchGatherQR-WatchGatherQRUITests/Pods-WatchGatherQR-WatchGatherQRUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A45E2A810466C6948A7A07DA /* Pods-WatchGatherQRTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchGatherQRTests.debug.xcconfig"; path = "Target Support Files/Pods-WatchGatherQRTests/Pods-WatchGatherQRTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE93543294FCF177FE907229 /* Pods-GatherQR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GatherQR.debug.xcconfig"; path = "Target Support Files/Pods-GatherQR/Pods-GatherQR.debug.xcconfig"; sourceTree = "<group>"; };
+		B22F5EFF43A55F045B0C15A2 /* Pods-WatchGatherQR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchGatherQR.debug.xcconfig"; path = "Target Support Files/Pods-WatchGatherQR/Pods-WatchGatherQR.debug.xcconfig"; sourceTree = "<group>"; };
+		C81717FF8C4055060801512E /* Pods-WatchGatherQR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchGatherQR.release.xcconfig"; path = "Target Support Files/Pods-WatchGatherQR/Pods-WatchGatherQR.release.xcconfig"; sourceTree = "<group>"; };
+		D0B28D97B35B5C9DCC7CC27C /* Pods-WatchGatherQRTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchGatherQRTests.release.xcconfig"; path = "Target Support Files/Pods-WatchGatherQRTests/Pods-WatchGatherQRTests.release.xcconfig"; sourceTree = "<group>"; };
 		E50D56DC2698E4D90057ED8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E51ADC9B28DE75EA0014600E /* QRCodeScannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerModel.swift; sourceTree = "<group>"; };
+		E51ADC9D28E1D53A0014600E /* CameraScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScannerViewController.swift; sourceTree = "<group>"; };
 		E530489B2645F422004BB80D /* GatherQR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GatherQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E530489E2645F422004BB80D /* GatherQRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatherQRApp.swift; sourceTree = "<group>"; };
 		E53048A02645F422004BB80D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -219,7 +242,6 @@
 		E56C52B92731025700D33780 /* QRInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRInfoResponse.swift; sourceTree = "<group>"; };
 		E57E193926FE7B880005DC6C /* GatherQR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GatherQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57E193B26FE7B8A0005DC6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E57E194126FE7B8A0005DC6C /* WatchGatherQR WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchGatherQR WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57E194626FE7B8A0005DC6C /* GatherQRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatherQRApp.swift; sourceTree = "<group>"; };
 		E57E194826FE7B8A0005DC6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E57E194A26FE7B8A0005DC6C /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -236,6 +258,13 @@
 		E57E196B26FE7B8A0005DC6C /* WatchGatherQRUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchGatherQRUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E57E197E26FE84AB0005DC6C /* GatherQR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GatherQR.entitlements; sourceTree = "<group>"; };
 		E591136026DB1D37007E25B9 /* DeviceRotationViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRotationViewModifier.swift; sourceTree = "<group>"; };
+		E592849628DD172000DE8E39 /* LockScreenWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LockScreenWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E592849728DD172000DE8E39 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		E592849928DD172000DE8E39 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		E592849C28DD172000DE8E39 /* LockScreenWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenWidget.swift; sourceTree = "<group>"; };
+		E592849E28DD172000DE8E39 /* LockScreenWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = LockScreenWidget.intentdefinition; sourceTree = "<group>"; };
+		E592849F28DD172000DE8E39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E59284A128DD172000DE8E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5AB67C726B6AAF6006F34CA /* ObservedInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedInfo.swift; sourceTree = "<group>"; };
 		E5AB67C926C60487006F34CA /* QRCodeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeImageView.swift; sourceTree = "<group>"; };
 		E5AE06B1269AF778001802B3 /* QRCodeInfoRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeInfoRowViewModel.swift; sourceTree = "<group>"; };
@@ -244,6 +273,7 @@
 		E5E4E78C26B6013A00377898 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Infoplist.strings; sourceTree = "<group>"; };
 		E5E78E3E26B5FA7A00E1B3ED /* AppCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCommon.swift; sourceTree = "<group>"; };
 		E5E78E4126B5FC7300E1B3ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F338F4FA8CEB4236BD56DA0E /* Pods-LockScreenWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LockScreenWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-LockScreenWidgetExtension/Pods-LockScreenWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 		FA58F7778495429C4E7B52AB /* Pods-GatherQR-GatherQRUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GatherQR-GatherQRUITests.debug.xcconfig"; path = "Target Support Files/Pods-GatherQR-GatherQRUITests/Pods-GatherQR-GatherQRUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -252,8 +282,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E53048CD2646800A004BB80D /* RealmSwift in Frameworks */,
-				E53048CB2646800A004BB80D /* Realm in Frameworks */,
 				0287938F39FAF8F7BD5D074C /* Pods_GatherQR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,8 +306,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E56C52A42730DDAF00D33780 /* RealmSwift in Frameworks */,
-				E56C52A22730DDAF00D33780 /* Realm in Frameworks */,
+				55F462F82F1378CC1D5F5625 /* Pods_WatchGatherQR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +314,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EC6CBC1399AEA13CBF3672F /* Pods_WatchGatherQRTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +322,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7C62E5853AB83CD67AB069 /* Pods_WatchGatherQR_WatchGatherQRUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E592849328DD172000DE8E39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E592849A28DD172000DE8E39 /* SwiftUI.framework in Frameworks */,
+				E592849828DD172000DE8E39 /* WidgetKit.framework in Frameworks */,
+				44F0AC14E3CEF0632E23BE24 /* Pods_LockScreenWidgetExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +345,12 @@
 				1C3C5C4BE9C567ABA06575A8 /* Pods_GatherQR.framework */,
 				46D3C162CBF9D071E8A480F3 /* Pods_GatherQR_GatherQRUITests.framework */,
 				95F98541221BDA2FC235A51B /* Pods_GatherQRTests.framework */,
+				E592849728DD172000DE8E39 /* WidgetKit.framework */,
+				E592849928DD172000DE8E39 /* SwiftUI.framework */,
+				5453328C55DF3F1D47FD546D /* Pods_LockScreenWidgetExtension.framework */,
+				67F01F9DA24D2CDE92EC7414 /* Pods_WatchGatherQR.framework */,
+				9B04B7054F1A7A99052E0C49 /* Pods_WatchGatherQR_WatchGatherQRUITests.framework */,
+				752046CAEA4ECA003F151AE3 /* Pods_WatchGatherQRTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -319,6 +364,16 @@
 				8413ED43541D367C7D73A88B /* Pods-GatherQR-GatherQRUITests.release.xcconfig */,
 				9270CE1B903EB1276F03D856 /* Pods-GatherQRTests.debug.xcconfig */,
 				060D80D79D7EDA074703D2B6 /* Pods-GatherQRTests.release.xcconfig */,
+				5B66385C55CF144C8D19D07C /* Pods-GatherQR-WatchGatherQR.debug.xcconfig */,
+				2760BFF0A841197704B5E737 /* Pods-GatherQR-WatchGatherQR.release.xcconfig */,
+				03011D4D5F785ACF61B4878F /* Pods-LockScreenWidgetExtension.debug.xcconfig */,
+				F338F4FA8CEB4236BD56DA0E /* Pods-LockScreenWidgetExtension.release.xcconfig */,
+				B22F5EFF43A55F045B0C15A2 /* Pods-WatchGatherQR.debug.xcconfig */,
+				C81717FF8C4055060801512E /* Pods-WatchGatherQR.release.xcconfig */,
+				887ABEC0A075B9B3753B3DBD /* Pods-WatchGatherQR-WatchGatherQRUITests.debug.xcconfig */,
+				9C833288E1EA3E8669A32B41 /* Pods-WatchGatherQR-WatchGatherQRUITests.release.xcconfig */,
+				A45E2A810466C6948A7A07DA /* Pods-WatchGatherQRTests.debug.xcconfig */,
+				D0B28D97B35B5C9DCC7CC27C /* Pods-WatchGatherQRTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -333,6 +388,7 @@
 				E57E194526FE7B8A0005DC6C /* WatchGatherQR WatchKit Extension */,
 				E57E195E26FE7B8A0005DC6C /* WatchGatherQRTests */,
 				E57E196826FE7B8A0005DC6C /* WatchGatherQRUITests */,
+				E592849B28DD172000DE8E39 /* LockScreenWidget */,
 				E530489C2645F422004BB80D /* Products */,
 				CDE79B38CB95E34114EFA35B /* Pods */,
 				A1CEE315C274DF0F9887124C /* Frameworks */,
@@ -346,9 +402,9 @@
 				E53048AC2645F423004BB80D /* GatherQRTests.xctest */,
 				E53048B72645F423004BB80D /* GatherQRUITests.xctest */,
 				E57E193926FE7B880005DC6C /* GatherQR.app */,
-				E57E194126FE7B8A0005DC6C /* WatchGatherQR WatchKit Extension.appex */,
 				E57E195B26FE7B8A0005DC6C /* WatchGatherQRTests.xctest */,
 				E57E196526FE7B8A0005DC6C /* WatchGatherQRUITests.xctest */,
+				E592849628DD172000DE8E39 /* LockScreenWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -416,6 +472,7 @@
 				E53ABDA42651482C009AFAB3 /* RegisterQRCodeViewModel.swift */,
 				E5AE06B1269AF778001802B3 /* QRCodeInfoRowViewModel.swift */,
 				E5AB67C726B6AAF6006F34CA /* ObservedInfo.swift */,
+				E51ADC9B28DE75EA0014600E /* QRCodeScannerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -443,6 +500,7 @@
 				E53ABD98264FC81E009AFAB3 /* ScanQRCodeView.swift */,
 				E53ABDA226514682009AFAB3 /* RegisterQRCodeView.swift */,
 				E5AB67C926C60487006F34CA /* QRCodeImageView.swift */,
+				E51ADC9D28E1D53A0014600E /* CameraScannerViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -567,6 +625,17 @@
 			path = Extention;
 			sourceTree = "<group>";
 		};
+		E592849B28DD172000DE8E39 /* LockScreenWidget */ = {
+			isa = PBXGroup;
+			children = (
+				E592849C28DD172000DE8E39 /* LockScreenWidget.swift */,
+				E592849E28DD172000DE8E39 /* LockScreenWidget.intentdefinition */,
+				E592849F28DD172000DE8E39 /* Assets.xcassets */,
+				E59284A128DD172000DE8E39 /* Info.plist */,
+			);
+			path = LockScreenWidget;
+			sourceTree = "<group>";
+		};
 		E5E78E3B26B5F7EF00E1B3ED /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -593,17 +662,15 @@
 				E53048992645F422004BB80D /* Resources */,
 				FC43E82F28336913C34D61AC /* [CP] Embed Pods Frameworks */,
 				E57E197026FE7B8A0005DC6C /* Embed Watch Content */,
+				E59284A728DD172000DE8E39 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				E57E196E26FE7B8A0005DC6C /* PBXTargetDependency */,
+				E59284A528DD172000DE8E39 /* PBXTargetDependency */,
 			);
 			name = GatherQR;
-			packageProductDependencies = (
-				E53048CA2646800A004BB80D /* Realm */,
-				E53048CC2646800A004BB80D /* RealmSwift */,
-			);
 			productName = GatherQR;
 			productReference = E530489B2645F422004BB80D /* GatherQR.app */;
 			productType = "com.apple.product-type.application";
@@ -651,44 +718,26 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E57E197B26FE7B8A0005DC6C /* Build configuration list for PBXNativeTarget "WatchGatherQR" */;
 			buildPhases = (
+				B9D63C172F5EE7B6AEBF1C13 /* [CP] Check Pods Manifest.lock */,
 				E57E193726FE7B880005DC6C /* Resources */,
-				E57E197326FE7B8A0005DC6C /* Embed App Extensions */,
+				E57E193D26FE7B8A0005DC6C /* Sources */,
+				E57E193E26FE7B8A0005DC6C /* Frameworks */,
+				49FF444A86F4CAD5923423AB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E57E194426FE7B8A0005DC6C /* PBXTargetDependency */,
 			);
 			name = WatchGatherQR;
 			productName = WatchGatherQR;
 			productReference = E57E193926FE7B880005DC6C /* GatherQR.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		E57E194026FE7B8A0005DC6C /* WatchGatherQR WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E57E197A26FE7B8A0005DC6C /* Build configuration list for PBXNativeTarget "WatchGatherQR WatchKit Extension" */;
-			buildPhases = (
-				E57E193D26FE7B8A0005DC6C /* Sources */,
-				E57E193E26FE7B8A0005DC6C /* Frameworks */,
-				E57E193F26FE7B8A0005DC6C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "WatchGatherQR WatchKit Extension";
-			packageProductDependencies = (
-				E56C52A12730DDAF00D33780 /* Realm */,
-				E56C52A32730DDAF00D33780 /* RealmSwift */,
-			);
-			productName = "WatchGatherQR WatchKit Extension";
-			productReference = E57E194126FE7B8A0005DC6C /* WatchGatherQR WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
+			productType = "com.apple.product-type.application";
 		};
 		E57E195A26FE7B8A0005DC6C /* WatchGatherQRTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E57E197C26FE7B8A0005DC6C /* Build configuration list for PBXNativeTarget "WatchGatherQRTests" */;
 			buildPhases = (
+				F3E7CE154A1839FEC8951A53 /* [CP] Check Pods Manifest.lock */,
 				E57E195726FE7B8A0005DC6C /* Sources */,
 				E57E195826FE7B8A0005DC6C /* Frameworks */,
 				E57E195926FE7B8A0005DC6C /* Resources */,
@@ -696,7 +745,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				E57E195D26FE7B8A0005DC6C /* PBXTargetDependency */,
+				E5C9401928DD4CEF00FD9BCB /* PBXTargetDependency */,
 			);
 			name = WatchGatherQRTests;
 			productName = WatchGatherQRTests;
@@ -707,9 +756,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E57E197D26FE7B8A0005DC6C /* Build configuration list for PBXNativeTarget "WatchGatherQRUITests" */;
 			buildPhases = (
+				4A5B114B129AC21DDB75237B /* [CP] Check Pods Manifest.lock */,
 				E57E196126FE7B8A0005DC6C /* Sources */,
 				E57E196226FE7B8A0005DC6C /* Frameworks */,
 				E57E196326FE7B8A0005DC6C /* Resources */,
+				EA01AFCBB8C9E0700CCA0802 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -721,14 +772,32 @@
 			productReference = E57E196526FE7B8A0005DC6C /* WatchGatherQRUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E592849528DD172000DE8E39 /* LockScreenWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E59284AA28DD172000DE8E39 /* Build configuration list for PBXNativeTarget "LockScreenWidgetExtension" */;
+			buildPhases = (
+				E38920D3059006E0D087A21D /* [CP] Check Pods Manifest.lock */,
+				E592849228DD172000DE8E39 /* Sources */,
+				E592849328DD172000DE8E39 /* Frameworks */,
+				E592849428DD172000DE8E39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LockScreenWidgetExtension;
+			productName = LockScreenWidgetExtension;
+			productReference = E592849628DD172000DE8E39 /* LockScreenWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		E53048932645F422004BB80D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1250;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					E530489A2645F422004BB80D = {
 						CreatedOnToolsVersion = 12.5;
@@ -745,16 +814,16 @@
 						CreatedOnToolsVersion = 13.0;
 						LastSwiftMigration = 1310;
 					};
-					E57E194026FE7B8A0005DC6C = {
-						CreatedOnToolsVersion = 13.0;
-					};
 					E57E195A26FE7B8A0005DC6C = {
 						CreatedOnToolsVersion = 13.0;
-						TestTargetID = E57E194026FE7B8A0005DC6C;
+						TestTargetID = E57E193826FE7B880005DC6C;
 					};
 					E57E196426FE7B8A0005DC6C = {
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = E57E193826FE7B880005DC6C;
+					};
+					E592849528DD172000DE8E39 = {
+						CreatedOnToolsVersion = 14.0;
 					};
 				};
 			};
@@ -768,9 +837,6 @@
 				ja,
 			);
 			mainGroup = E53048922645F422004BB80D;
-			packageReferences = (
-				E53048C92646800A004BB80D /* XCRemoteSwiftPackageReference "realm-cocoa" */,
-			);
 			productRefGroup = E530489C2645F422004BB80D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -779,9 +845,9 @@
 				E53048AB2645F423004BB80D /* GatherQRTests */,
 				E53048B62645F423004BB80D /* GatherQRUITests */,
 				E57E193826FE7B880005DC6C /* WatchGatherQR */,
-				E57E194026FE7B8A0005DC6C /* WatchGatherQR WatchKit Extension */,
 				E57E195A26FE7B8A0005DC6C /* WatchGatherQRTests */,
 				E57E196426FE7B8A0005DC6C /* WatchGatherQRUITests */,
+				E592849528DD172000DE8E39 /* LockScreenWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -819,16 +885,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E57E193C26FE7B8A0005DC6C /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E57E193F26FE7B8A0005DC6C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 				E57E195426FE7B8A0005DC6C /* Preview Assets.xcassets in Resources */,
 				E57E195126FE7B8A0005DC6C /* Assets.xcassets in Resources */,
+				E57E193C26FE7B8A0005DC6C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -843,6 +902,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E592849428DD172000DE8E39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E59284A028DD172000DE8E39 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -865,6 +932,45 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-GatherQRTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49FF444A86F4CAD5923423AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WatchGatherQR/Pods-WatchGatherQR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WatchGatherQR/Pods-WatchGatherQR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WatchGatherQR/Pods-WatchGatherQR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A5B114B129AC21DDB75237B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WatchGatherQR-WatchGatherQRUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -910,6 +1016,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GatherQR-GatherQRUITests/Pods-GatherQR-GatherQRUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B9D63C172F5EE7B6AEBF1C13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WatchGatherQR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D5CC315958B5279B9D9598A9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -926,6 +1054,67 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-GatherQR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E38920D3059006E0D087A21D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LockScreenWidgetExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA01AFCBB8C9E0700CCA0802 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WatchGatherQR-WatchGatherQRUITests/Pods-WatchGatherQR-WatchGatherQRUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WatchGatherQR-WatchGatherQRUITests/Pods-WatchGatherQR-WatchGatherQRUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WatchGatherQR-WatchGatherQRUITests/Pods-WatchGatherQR-WatchGatherQRUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3E7CE154A1839FEC8951A53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WatchGatherQRTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -956,7 +1145,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E51ADC9C28DE75EA0014600E /* QRCodeScannerModel.swift in Sources */,
 				E56C52B72731018200D33780 /* QRInfoRequest.swift in Sources */,
+				E59284A328DD172000DE8E39 /* LockScreenWidget.intentdefinition in Sources */,
 				E53048D3264684BD004BB80D /* QRInfoModel.swift in Sources */,
 				E53ABD9F264FD1B8009AFAB3 /* CameraPreview.swift in Sources */,
 				E591136126DB1D37007E25B9 /* DeviceRotationViewModifier.swift in Sources */,
@@ -988,6 +1179,7 @@
 				E5AB67CA26C60487006F34CA /* QRCodeImageView.swift in Sources */,
 				E56C52942730BBCA00D33780 /* Message.swift in Sources */,
 				E530489F2645F422004BB80D /* GatherQRApp.swift in Sources */,
+				E51ADC9E28E1D53A0014600E /* CameraScannerViewController.swift in Sources */,
 				E53ABD99264FC81E009AFAB3 /* ScanQRCodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1056,6 +1248,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E592849228DD172000DE8E39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E592849D28DD172000DE8E39 /* LockScreenWidget.swift in Sources */,
+				E59284A228DD172000DE8E39 /* LockScreenWidget.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1069,16 +1270,6 @@
 			target = E530489A2645F422004BB80D /* GatherQR */;
 			targetProxy = E53048B82645F423004BB80D /* PBXContainerItemProxy */;
 		};
-		E57E194426FE7B8A0005DC6C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E57E194026FE7B8A0005DC6C /* WatchGatherQR WatchKit Extension */;
-			targetProxy = E57E194326FE7B8A0005DC6C /* PBXContainerItemProxy */;
-		};
-		E57E195D26FE7B8A0005DC6C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E57E194026FE7B8A0005DC6C /* WatchGatherQR WatchKit Extension */;
-			targetProxy = E57E195C26FE7B8A0005DC6C /* PBXContainerItemProxy */;
-		};
 		E57E196726FE7B8A0005DC6C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E57E193826FE7B880005DC6C /* WatchGatherQR */;
@@ -1088,6 +1279,16 @@
 			isa = PBXTargetDependency;
 			target = E57E193826FE7B880005DC6C /* WatchGatherQR */;
 			targetProxy = E57E196D26FE7B8A0005DC6C /* PBXContainerItemProxy */;
+		};
+		E59284A528DD172000DE8E39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E592849528DD172000DE8E39 /* LockScreenWidgetExtension */;
+			targetProxy = E59284A428DD172000DE8E39 /* PBXContainerItemProxy */;
+		};
+		E5C9401928DD4CEF00FD9BCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E57E193826FE7B880005DC6C /* WatchGatherQR */;
+			targetProxy = E5C9401828DD4CEF00FD9BCB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1235,22 +1436,23 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AE93543294FCF177FE907229 /* Pods-GatherQR.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = GatherQR/GatherQR.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2022011001;
+				CURRENT_PROJECT_VERSION = 2022100101;
 				DEVELOPMENT_ASSET_PATHS = "\"GatherQR/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GatherQR/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.11;
+				MARKETING_VERSION = 1.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1262,22 +1464,23 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 75BA4D4EDBE732051EDC9801 /* Pods-GatherQR.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = GatherQR/GatherQR.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2022011001;
+				CURRENT_PROJECT_VERSION = 2022100101;
 				DEVELOPMENT_ASSET_PATHS = "\"GatherQR/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GatherQR/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.11;
+				MARKETING_VERSION = 1.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1295,7 +1498,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				INFOPLIST_FILE = GatherQRTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1318,7 +1521,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				INFOPLIST_FILE = GatherQRTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1340,6 +1543,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				INFOPLIST_FILE = GatherQRUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1361,6 +1565,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				INFOPLIST_FILE = GatherQRUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1376,26 +1581,27 @@
 		};
 		E57E197126FE7B8A0005DC6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B22F5EFF43A55F045B0C15A2 /* Pods-WatchGatherQR.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2022011001;
+				CURRENT_PROJECT_VERSION = 2022100101;
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				GENERATE_INFOPLIST_FILE = YES;
-				IBSC_MODULE = WatchGatherQR_WatchKit_Extension;
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = GatherQR.ComplicationController;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.k28.ios.GatherQR;
 				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.11;
+				MARKETING_VERSION = 1.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR.watchkitapp;
 				PRODUCT_NAME = GatherQR;
 				SDKROOT = watchos;
@@ -1410,26 +1616,27 @@
 		};
 		E57E197226FE7B8A0005DC6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C81717FF8C4055060801512E /* Pods-WatchGatherQR.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2022011001;
+				CURRENT_PROJECT_VERSION = 2022100101;
 				DEVELOPMENT_TEAM = 86W5YV4A4X;
 				GENERATE_INFOPLIST_FILE = YES;
-				IBSC_MODULE = WatchGatherQR_WatchKit_Extension;
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = GatherQR.ComplicationController;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.k28.ios.GatherQR;
 				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.11;
+				MARKETING_VERSION = 1.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR.watchkitapp;
 				PRODUCT_NAME = GatherQR;
 				SDKROOT = watchos;
@@ -1441,72 +1648,9 @@
 			};
 			name = Release;
 		};
-		E57E197426FE7B8A0005DC6C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2022011001;
-				DEVELOPMENT_ASSET_PATHS = "\"WatchGatherQR WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = 86W5YV4A4X;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "WatchGatherQR WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "GatherQR WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = WatchGatherQR_WatchKit_Extension.ComplicationController;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
-			};
-			name = Debug;
-		};
-		E57E197526FE7B8A0005DC6C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2022011001;
-				DEVELOPMENT_ASSET_PATHS = "\"WatchGatherQR WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = 86W5YV4A4X;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "WatchGatherQR WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "GatherQR WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = WatchGatherQR_WatchKit_Extension.ComplicationController;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
-			};
-			name = Release;
-		};
 		E57E197626FE7B8A0005DC6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A45E2A810466C6948A7A07DA /* Pods-WatchGatherQRTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1527,13 +1671,14 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchGatherQR WatchKit Extension.appex/WatchGatherQR WatchKit Extension";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GatherQR.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GatherQR";
 				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
 		E57E197726FE7B8A0005DC6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0B28D97B35B5C9DCC7CC27C /* Pods-WatchGatherQRTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1554,13 +1699,14 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchGatherQR WatchKit Extension.appex/WatchGatherQR WatchKit Extension";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GatherQR.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GatherQR";
 				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};
 		E57E197826FE7B8A0005DC6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 887ABEC0A075B9B3753B3DBD /* Pods-WatchGatherQR-WatchGatherQRUITests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
@@ -1586,6 +1732,7 @@
 		};
 		E57E197926FE7B8A0005DC6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C833288E1EA3E8669A32B41 /* Pods-WatchGatherQR-WatchGatherQRUITests.release.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
@@ -1606,6 +1753,68 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_TARGET_NAME = WatchGatherQR;
 				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Release;
+		};
+		E59284A828DD172000DE8E39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03011D4D5F785ACF61B4878F /* Pods-LockScreenWidgetExtension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2022100101;
+				DEVELOPMENT_TEAM = 86W5YV4A4X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LockScreenWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LockScreenWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR.LockScreenWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E59284A928DD172000DE8E39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F338F4FA8CEB4236BD56DA0E /* Pods-LockScreenWidgetExtension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2022100101;
+				DEVELOPMENT_TEAM = 86W5YV4A4X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LockScreenWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LockScreenWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.k28.ios.GatherQR.LockScreenWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1648,15 +1857,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E57E197A26FE7B8A0005DC6C /* Build configuration list for PBXNativeTarget "WatchGatherQR WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E57E197426FE7B8A0005DC6C /* Debug */,
-				E57E197526FE7B8A0005DC6C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		E57E197B26FE7B8A0005DC6C /* Build configuration list for PBXNativeTarget "WatchGatherQR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1684,41 +1884,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		E59284AA28DD172000DE8E39 /* Build configuration list for PBXNativeTarget "LockScreenWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E59284A828DD172000DE8E39 /* Debug */,
+				E59284A928DD172000DE8E39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		E53048C92646800A004BB80D /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-cocoa";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.7.5;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		E53048CA2646800A004BB80D /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E53048C92646800A004BB80D /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = Realm;
-		};
-		E53048CC2646800A004BB80D /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E53048C92646800A004BB80D /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = RealmSwift;
-		};
-		E56C52A12730DDAF00D33780 /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E53048C92646800A004BB80D /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = Realm;
-		};
-		E56C52A32730DDAF00D33780 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E53048C92646800A004BB80D /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = RealmSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E53048932645F422004BB80D /* Project object */;
 }

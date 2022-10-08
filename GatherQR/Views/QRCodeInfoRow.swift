@@ -32,7 +32,7 @@ struct QRCodeInfoRow: View {
             
             // RegisterQRCodeViewに渡すViewModel. 後で情報を更新する必要があるのでインスタンスを生成して保持しておく。
             let registerQRCodeViewModel = RegisterQRCodeViewModel(info: item.qrInfoModel, onUpdate: { model in
-                item.title = model.title
+                self.onQRCodeViewUpdate(model)
             })
             NavigationLink(destination: RegisterQRCodeView(viewModel: registerQRCodeViewModel, mode: .Edit),
                            isActive: $editButtonDidSelect) {
@@ -46,6 +46,12 @@ struct QRCodeInfoRow: View {
                 // 「登録」した時もCallされるが、その時にはitemのqrInfoModelも更新されている状態なので問題ない。
                 registerQRCodeViewModel.updateInfo(item.qrInfoModel)
             })
+        }
+    }
+    
+    fileprivate func onQRCodeViewUpdate(_ model: RegisterQRCodeViewModel) {
+        DispatchQueue.main.async {
+            self.item.title = model.title
         }
     }
 }
